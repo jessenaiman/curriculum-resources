@@ -8,7 +8,8 @@ The visible website text lives in this folder. You do not need to edit React com
 2. Save the copy in `lessons/` using a short lowercase filename such as `comparing-numbers.mdx`.
 3. Edit the frontmatter between the two `---` lines.
 4. Replace the Grade 1 and Grade 2 lesson content.
-5. Add one import and one entry in `lib/mdx-content.ts` until automatic folder discovery is introduced.
+
+The website automatically discovers every `.mdx` file in `content/lessons/`. No application-code change is required.
 
 ## Resource states
 

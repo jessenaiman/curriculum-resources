@@ -1,7 +1,5 @@
 import aboutRaw from "../content/pages/about.mdx?raw";
 import homeRaw from "../content/pages/home.mdx?raw";
-import mathRaw from "../content/lessons/addition-subtraction-word-problems.mdx?raw";
-import phonicsRaw from "../content/lessons/long-short-vowels.mdx?raw";
 
 export type Step = { label: string; title: string; teacher: string; students: string; lookFor: string; resourceState: "ready" | "missing" | "none"; resourceTitle: string; resourceSource: string; resourceUrl: string; resourceRole: string; resourceNote: string };
 export type SearchPrompt = { short: string; label: string; prompt: string };
@@ -92,7 +90,12 @@ export function parsePage(raw: string): PageContent {
   return { meta, sections };
 }
 
-const lessons = [parseLesson(phonicsRaw), parseLesson(mathRaw)];
+const lessonFiles = import.meta.glob("../content/lessons/*.mdx", {
+  query: "?raw",
+  import: "default",
+  eager: true,
+}) as Record<string, string>;
+const lessons = Object.values(lessonFiles).map(parseLesson).sort((a, b) => a.meta.title.localeCompare(b.meta.title));
 export function getAllLessons() { return lessons; }
 export function getLesson(slug: string) { return lessons.find((lesson) => lesson.meta.slug === slug); }
 export function getPageContent(slug: "home" | "about") { return parsePage(slug === "home" ? homeRaw : aboutRaw); }
