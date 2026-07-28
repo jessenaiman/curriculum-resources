@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Long & Short Vowels | Old MacDonald Had a School",
+  title: "Teacher Resources | Old MacDonald Had a School",
   description:
-    "A practical Grade 1/2 lesson workspace with a four-step teaching sequence and curated starting resources.",
+    "Curriculum-organized Grade 1/2 lesson starting points with clear teaching sequences, curated resources, and targeted searches.",
   icons: {
     icon: "/brand-emblem.png",
     shortcut: "/brand-emblem.png",
