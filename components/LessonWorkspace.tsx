@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { GatherChecklist } from "./GatherChecklist";
+import { StepIcon } from "./icons";
 import type { GradeLesson, LessonTopic, Step } from "../lib/mdx-content";
 
 function ResourceState({ step }: { step: Step }) {
@@ -16,7 +18,7 @@ function ResourceState({ step }: { step: Step }) {
   );
 }
 
-function GradeWorkspace({ grade }: { grade: GradeLesson }) {
+function GradeWorkspace({ grade, lessonSlug }: { grade: GradeLesson; lessonSlug: string }) {
   const [activeStep, setActiveStep] = useState(0);
   const [activeSearch, setActiveSearch] = useState(0);
   const [copied, setCopied] = useState(false);
@@ -37,16 +39,17 @@ function GradeWorkspace({ grade }: { grade: GradeLesson }) {
         <h2>{grade.goal}</h2>
         <p className="standards">{grade.standards}</p>
       </header>
+      <GatherChecklist lessonSlug={lessonSlug} grade={grade} />
       <div className="lesson-map" role="tablist" aria-label={`${grade.grade} lesson sequence`}>
         {grade.steps.map((item, index) => (
           <button key={item.label} role="tab" aria-selected={index === activeStep} className={index === activeStep ? "active" : ""} onClick={() => setActiveStep(index)}>
-            <span>{index + 1}</span><div><small>{item.label}</small><strong>{item.title}</strong></div>
+            <span><StepIcon label={item.label} /></span><div><small>{item.label}</small><strong>{item.title}</strong></div>
           </button>
         ))}
       </div>
       <section className="focus-panel" aria-live="polite">
         <div className="step-copy">
-          <div className="eyebrow">Step {activeStep + 1} · {step.label}</div>
+          <div className="eyebrow"><StepIcon label={step.label} /> Step {activeStep + 1} · {step.label}</div>
           <h3>{step.title}</h3>
           {step.teacher && <p><strong>Teacher:</strong> {step.teacher}</p>}
           {step.students && <p><strong>Students:</strong> {step.students}</p>}
@@ -72,7 +75,7 @@ export function LessonWorkspace({ lesson }: { lesson: LessonTopic }) {
         <div><div className="breadcrumb">{lesson.meta.subject} / {lesson.meta.category} / {lesson.meta.gradeBand}</div><h1>{lesson.meta.title}</h1></div>
         <p><strong>{lesson.meta.focus}</strong> {lesson.meta.summary}</p>
       </header>
-      <section className="split-workspace" aria-label="Grade 1 and Grade 2 lesson workspaces">{lesson.grades.map((grade) => <GradeWorkspace grade={grade} key={grade.grade} />)}</section>
+      <section className="split-workspace" aria-label="Grade 1 and Grade 2 lesson workspaces">{lesson.grades.map((grade) => <GradeWorkspace grade={grade} lessonSlug={lesson.meta.slug} key={grade.grade} />)}</section>
       <aside className="diagnostic-note"><strong>Planning lens</strong><span>{lesson.planningNote}</span></aside>
       <nav className="curriculum-path" aria-label="Curriculum path">
         {lesson.meta.previousSlug ? <Link href={`/topics/${lesson.meta.previousSlug}`}><span>← Previous topic</span><strong>{lesson.meta.previousTitle}</strong></Link> : <div><span>Previous topic</span><strong>{lesson.meta.previousTitle}</strong></div>}
