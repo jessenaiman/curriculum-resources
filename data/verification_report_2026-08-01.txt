@@ -1,0 +1,141 @@
+CURRICULUM DATABASE VERIFICATION & POPULATION REPORT
+=====================================================
+Date: 2026-08-01
+Database: C:\Users\jesse\OneDrive\Documents\New project\data\curriculum.db
+
+================================================================
+TASK 1: SONG VERIFICATION (523 songs)
+================================================================
+
+SUMMARY
+-------
+Total songs in database:  523
+Originally loaded:        499
+Discrepancy:              +24 songs (IDs 500-523, added later without album info)
+
+(1) DUPLICATE SONGS
+-------------------
+EXACT DUPLICATES (same name + same album + same track): 21 pairs
+
+  All 21 are on the album "It's a Beautiful Day". The album has 42 rows
+  but only 21 unique tracks — every track was entered twice.
+
+  Duplicate ID pairs (original -> duplicate):
+    413 -> 479   "It's a Beautiful Day / C'est une belle journee"
+    414 -> 480   "Sweetest Little Baby"
+    415 -> 481   "Mon petit lapin a bien du chagrin"
+    416 -> 482   "Stroke The Bunny"
+    417 -> 483   "Un jour dans sa cabane"
+    418 -> 484   "Rockin' my Baby"
+    419 -> 485   "Jean Petit qui danse"
+    420 -> 486   "Edward Loves His Mommy"
+    421 -> 487   "Boom Boom Baby Goes Boom Boom"
+    422 -> 488   "A Monkey and a Hound / Le singe et le chien"
+    423 -> 489   "You Can Shake"
+    424 -> 490   "I Have a Little Drum"
+    425 -> 491   "A Chubby Little Snowman / Voici un bonhomme de neige"
+    426 -> 492   "Toboggan Hill"
+    427 -> 493   "The Cookie Song"
+    428 -> 494   "Dans la foret lointaine"
+    429 -> 495   "Sweet and Low"
+    430 -> 496   "Trot Trot to Grandma's House"
+    431 -> 497   "Michaud"
+    432 -> 498   "Button it Up / J'ai des mitaines"
+    433 -> 499   "Wiggle Your Fingers"
+
+  RECOMMENDATION: Delete IDs 479-499 (the duplicates). This restores
+  "It's a Beautiful Day" to 21 tracks.
+
+CROSS-ALBUM DUPLICATES (same song name, different albums): 47 songs
+
+  These are LEGITIMATE — the same song appearing on multiple albums is
+  normal for the Kathy Reid-Naiman catalog (compilations, re-releases).
+  Examples:
+    "Welcome Summer" appears on 4 albums (Baby's Boat, Welcome Summer,
+      Timeless Tickles and Tuens, + 1 more)
+    "The Train Wheels are Rolling" appears on 4 albums
+    "Zoom, Zoom, Zoom" appears on 3 albums
+
+  No action needed on cross-album duplicates.
+
+(2) MISSING ALBUM/TRACK INFO
+-----------------------------
+  Missing cd_title:    24 songs (ALL are IDs 500-523)
+  Missing track_num:    0 songs
+  Missing artist:     499 songs (only the 24 newest have artist data)
+  Missing catalog_id: 499 songs (same)
+
+  The 24 songs without cd_title (IDs 500-523) appear to be from
+  "Timeless Tickles and Tuens" based on cross-album matching.
+  They have track numbers 1-24 but no album name was recorded.
+
+  RECOMMENDATION: Set cd_title = 'Timeless Tickles and Tuens' for
+  IDs 500-523, and backfill artist/catalog_id for all 523 songs.
+
+(3) TOPICS ASSIGNED vs BLANK
+------------------------------
+  With topic assigned:    129 songs (24.7%)
+  Without topic (blank):  394 songs (75.3%)
+
+  Top topics: ponies (16), numbers (11), animals (11), counting (9),
+  instruments (6), bees (6), bunnies (5)
+
+  41 distinct topics across 129 songs. Many topics have only 1-2 songs.
+
+  RECOMMENDATION: Topic coverage is sparse. Prioritize tagging songs
+  that map to active curriculum categories (colours, numbers, animals,
+  seasons, body/movement).
+
+(4) DUPLICATE FLAG SUMMARY
+---------------------------
+  ACTION REQUIRED:  21 exact duplicates on "It's a Beautiful Day"
+                    (delete IDs 479-499)
+  LEGITIMATE:       47 cross-album appearances (no action)
+  DATA ENTRY:       24 songs missing album name (IDs 500-523)
+
+
+================================================================
+TASK 2: JUNCTION TABLE POPULATION
+================================================================
+
+BEFORE: standards_codes = 0, resources_topics = 0, reference_images = 0
+
+(A) standards_codes: +126 rows
+    - Mapped from 264 curriculum_topics rows
+    - Extracted Ontario codes: Math (B1.x, B2.x, C1.x, D1, E1, F1.x),
+      Language (A1, B2.x, B3.x, C1, C2), Science & Technology (1.x-3.x),
+      Health & PE (A1, B1)
+    - Skipped 61 rows with non-code notes ("Enrichment", "No direct
+      Ontario equivalent", "Ontario alignment described in Notes")
+    - Fields populated: jurisdiction, grade, strand, code, full_text,
+      strand_description, source, notes
+
+(B) resources_topics: +242 rows
+    - Linked 40 resources to curriculum_topics by subject + category
+    - Matching logic: resource category mapped to curriculum category
+      (e.g., "Operations" -> "Operations & Algebraic Thinking")
+    - Grade-aware: "Grade 1-3" resources match all grades; specific
+      grade resources match only their grade + split-grade combos
+    - Relevance tagged: "primary" (category match) or "secondary"
+      (subject-only match)
+
+(C) reference_images: +7 rows
+    - Added 7 of 8 staff characters with verified image paths
+    - All files confirmed to exist at public/staff/*.png
+    - Mr Maisy SKIPPED: no image file found (Mr_Maisy.png missing)
+    - Fields populated: filename, filepath, type, character_name,
+      description, tags, grade, category, status, date_added
+
+AFTER: standards_codes = 126, resources_topics = 242, reference_images = 7
+
+
+================================================================
+ACTION ITEMS
+================================================================
+  1. DELETE duplicate song IDs 479-499 (21 rows)
+  2. SET cd_title for IDs 500-523 to 'Timeless Tickles and Tuens'
+  3. BACKFILL artist field for all 523 songs (Kathy Reid-Naiman)
+  4. CREATE Mr_Maisy.png character reference image
+  5. TAG topics for the 394 untagged songs (priority: curriculum-aligned)
+  6. VERIFY standards_codes against official Ontario PDFs before
+     using them in lesson generation

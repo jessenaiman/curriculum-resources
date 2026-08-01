@@ -4,7 +4,7 @@ export function SiteShell({ children, active }: { children: React.ReactNode; act
   return (
     <main>
       <nav className="topbar" aria-label="Primary navigation">
-        <Link className="brand" href="/"><img src="/brand-emblem.png" alt="" /><span>Old MacDonald<br />Had a School</span></Link>
+        <Link className="brand" href="/"><img src="/brand-emblem.png" alt="" /><span><strong>Old MacDonald<br />Had a School</strong><small>Teacher lesson resources</small></span></Link>
         <div className="nav-links">
           <Link href="/" className={active === "home" ? "active" : ""}>Home</Link>
           <Link href="/topics" className={active === "topics" ? "active" : ""}>Browse Topics</Link>

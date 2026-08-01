@@ -1,0 +1,428 @@
+[
+  {
+    "row": 2,
+    "age": "Grade 1",
+    "subcat": "Operations & Algebraic Thinking",
+    "topic": "Represent and solve addition & subtraction word problems within 2"
+  },
+  {
+    "row": 3,
+    "age": "Grade 1",
+    "subcat": "Operations & Algebraic Thinking",
+    "topic": "Apply properties of operations (commutative, associative) to add/"
+  },
+  {
+    "row": 4,
+    "age": "Grade 1",
+    "subcat": "Operations & Algebraic Thinking",
+    "topic": "Understand subtraction as an unknown-addend problem"
+  },
+  {
+    "row": 5,
+    "age": "Grade 1",
+    "subcat": "Operations & Algebraic Thinking",
+    "topic": "Relate counting to addition and subtraction"
+  },
+  {
+    "row": 6,
+    "age": "Grade 1",
+    "subcat": "Operations & Algebraic Thinking",
+    "topic": "Fluently add and subtract within 20"
+  },
+  {
+    "row": 7,
+    "age": "Grade 1",
+    "subcat": "Operations & Algebraic Thinking",
+    "topic": "Determine the unknown number in addition/subtraction equations"
+  },
+  {
+    "row": 8,
+    "age": "Grade 2",
+    "subcat": "Operations & Algebraic Thinking",
+    "topic": "Use addition & subtraction within 50 to solve one- and two-step w"
+  },
+  {
+    "row": 9,
+    "age": "Grade 2",
+    "subcat": "Operations & Algebraic Thinking",
+    "topic": "Fluently add and subtract within 20; know all one-digit sums from"
+  },
+  {
+    "row": 10,
+    "age": "Grade 2",
+    "subcat": "Operations & Algebraic Thinking",
+    "topic": "Determine odd or even; write an equation as a sum of equal addend"
+  },
+  {
+    "row": 11,
+    "age": "Grade 2",
+    "subcat": "Operations & Algebraic Thinking",
+    "topic": "Use addition to find totals in rectangular arrays (equal groups -"
+  },
+  {
+    "row": 12,
+    "age": "Grade 1",
+    "subcat": "Number & Operations in Base Ten",
+    "topic": "Count to 50 starting at any number; read and write numerals"
+  },
+  {
+    "row": 13,
+    "age": "Grade 1",
+    "subcat": "Number & Operations in Base Ten",
+    "topic": "Understand place value: tens and ones"
+  },
+  {
+    "row": 14,
+    "age": "Grade 1",
+    "subcat": "Number & Operations in Base Ten",
+    "topic": "Compare two two-digit numbers using >, =, <"
+  },
+  {
+    "row": 15,
+    "age": "Grade 1",
+    "subcat": "Number & Operations in Base Ten",
+    "topic": "Add within 100 using concrete models and place-value strategies"
+  },
+  {
+    "row": 16,
+    "age": "Grade 1",
+    "subcat": "Number & Operations in Base Ten",
+    "topic": "Mentally find 10 more or 10 less than a given number"
+  },
+  {
+    "row": 17,
+    "age": "Grade 1",
+    "subcat": "Number & Operations in Base Ten",
+    "topic": "Subtract multiples of 10 from multiples of 10 (10-90)"
+  },
+  {
+    "row": 18,
+    "age": "Grade 2",
+    "subcat": "Number & Operations in Base Ten",
+    "topic": "Understand place value to 200 (hundreds, tens, ones); compare 2-d"
+  },
+  {
+    "row": 19,
+    "age": "Grade 2",
+    "subcat": "Number & Operations in Base Ten",
+    "topic": "Fluently add and subtract within 50 using place-value strategies"
+  },
+  {
+    "row": 20,
+    "age": "Grade 2",
+    "subcat": "Number & Operations in Base Ten",
+    "topic": "Add up to four two-digit numbers"
+  },
+  {
+    "row": 21,
+    "age": "Grade 2",
+    "subcat": "Number & Operations in Base Ten",
+    "topic": "Add and subtract within 1000 using models, drawings, and strategi"
+  },
+  {
+    "row": 22,
+    "age": "Grade 2",
+    "subcat": "Number & Operations in Base Ten",
+    "topic": "Mentally add or subtract 10 or 100 to/from a given number"
+  },
+  {
+    "row": 23,
+    "age": "Grade 1",
+    "subcat": "Measurement & Data",
+    "topic": "Measure lengths using non-standard/standard units; order objects "
+  },
+  {
+    "row": 24,
+    "age": "Grade 3",
+    "subcat": "Measurement & Data",
+    "topic": "Tell and write time in hours and half-hours"
+  },
+  {
+    "row": 25,
+    "age": "Grade 1",
+    "subcat": "Measurement & Data",
+    "topic": "Represent and interpret data with up to 3 categories"
+  },
+  {
+    "row": 26,
+    "age": "Grade 2",
+    "subcat": "Measurement & Data",
+    "topic": "Measure and estimate lengths in standard units"
+  },
+  {
+    "row": 27,
+    "age": "Grade 3",
+    "subcat": "Measurement & Data",
+    "topic": "Tell and write time to the nearest 5 minutes (a.m./p.m.)"
+  },
+  {
+    "row": 28,
+    "age": "Grade 2",
+    "subcat": "Measurement & Data",
+    "topic": "Solve word problems involving Canadian coins and bills up to $50"
+  },
+  {
+    "row": 29,
+    "age": "Grade 2",
+    "subcat": "Measurement & Data",
+    "topic": "Generate measurement data; represent/interpret with line plots an"
+  },
+  {
+    "row": 30,
+    "age": "Grade 1",
+    "subcat": "Geometry",
+    "topic": "Distinguish defining vs. non-defining attributes of shapes; build"
+  },
+  {
+    "row": 31,
+    "age": "Grade 1",
+    "subcat": "Geometry",
+    "topic": "Partition shapes into two/four equal shares; describe as halves/f"
+  },
+  {
+    "row": 32,
+    "age": "Grade 2",
+    "subcat": "Geometry",
+    "topic": "Recognize and draw shapes with a specified number of angles/faces"
+  },
+  {
+    "row": 33,
+    "age": "Grade 2",
+    "subcat": "Geometry",
+    "topic": "Partition a rectangle into rows and columns of equal-size squares"
+  },
+  {
+    "row": 34,
+    "age": "Grade 2",
+    "subcat": "Geometry",
+    "topic": "Partition circles/rectangles into 2, 3, or 4 equal shares (halves"
+  },
+  {
+    "row": 143,
+    "age": "Grade 1",
+    "subcat": "Patterns & Algebra",
+    "topic": "Identify, describe, extend, and create patterns (AB, ABC, AABB)"
+  },
+  {
+    "row": 144,
+    "age": "Grade 1",
+    "subcat": "Patterns & Algebra",
+    "topic": "Demonstrate an understanding of variables and equalities"
+  },
+  {
+    "row": 145,
+    "age": "Grade 1",
+    "subcat": "Patterns & Algebra",
+    "topic": "Solve problems using sequential code (coding basics)"
+  },
+  {
+    "row": 146,
+    "age": "Grade 2",
+    "subcat": "Patterns & Algebra",
+    "topic": "Identify, describe, extend, and create more complex patterns (inc"
+  },
+  {
+    "row": 147,
+    "age": "Grade 2",
+    "subcat": "Patterns & Algebra",
+    "topic": "Demonstrate understanding of equality, inequality, and missing va"
+  },
+  {
+    "row": 148,
+    "age": "Grade 2",
+    "subcat": "Patterns & Algebra",
+    "topic": "Use coding to solve problems (loops, conditionals)"
+  },
+  {
+    "row": 149,
+    "age": "Grade 1",
+    "subcat": "Probability",
+    "topic": "Use impossible/possible/certain to describe likelihood of events"
+  },
+  {
+    "row": 150,
+    "age": "Grade 2",
+    "subcat": "Probability",
+    "topic": "Predict and test likelihood of events; compare expected vs. obser"
+  },
+  {
+    "row": 151,
+    "age": "Grade 1",
+    "subcat": "Financial Literacy",
+    "topic": "Identify Canadian coins and bills up to $50; compare their values"
+  },
+  {
+    "row": 152,
+    "age": "Grade 2",
+    "subcat": "Financial Literacy",
+    "topic": "Count mixed sets of Canadian coins; solve money problems to $100"
+  },
+  {
+    "row": 153,
+    "age": "Grade 1",
+    "subcat": "Number & Operations in Base Ten",
+    "topic": "Estimate the number of objects in collections up to 50; verify by"
+  },
+  {
+    "row": 154,
+    "age": "Grade 2",
+    "subcat": "Number & Operations in Base Ten",
+    "topic": "Estimate the number of objects in collections up to 200; verify b"
+  },
+  {
+    "row": 155,
+    "age": "Grade 1",
+    "subcat": "Measurement & Data",
+    "topic": "Read the date on a calendar; identify days, weeks, months, holida"
+  },
+  {
+    "row": 156,
+    "age": "Grade 3",
+    "subcat": "Number & Operations in Base Ten",
+    "topic": "Read, represent, and order whole numbers to 1000"
+  },
+  {
+    "row": 157,
+    "age": "Grade 3",
+    "subcat": "Number & Operations in Base Ten",
+    "topic": "Compose and decompose three-digit numbers by place value"
+  },
+  {
+    "row": 158,
+    "age": "Grade 3",
+    "subcat": "Number & Operations in Base Ten",
+    "topic": "Count by 1s, 2s, 5s, 10s, 25s to 1000"
+  },
+  {
+    "row": 159,
+    "age": "Grade 3",
+    "subcat": "Number & Operations in Base Ten",
+    "topic": "Estimate quantities to 1000 using rounding and benchmarks"
+  },
+  {
+    "row": 160,
+    "age": "Grade 3",
+    "subcat": "Operations & Algebraic Thinking",
+    "topic": "Add and subtract three-digit numbers using strategies and algorit"
+  },
+  {
+    "row": 161,
+    "age": "Grade 3",
+    "subcat": "Operations & Algebraic Thinking",
+    "topic": "Multiply and divide within 100 using strategies (arrays, equal gr"
+  },
+  {
+    "row": 162,
+    "age": "Grade 3",
+    "subcat": "Operations & Algebraic Thinking",
+    "topic": "Solve two-step word problems using all four operations"
+  },
+  {
+    "row": 163,
+    "age": "Grade 3",
+    "subcat": "Operations & Algebraic Thinking",
+    "topic": "Demonstrate fluency with multiplication facts to 10\u00d710 and relate"
+  },
+  {
+    "row": 164,
+    "age": "Grade 3",
+    "subcat": "Fractions",
+    "topic": "Represent, solve, and compare results of fair-share problems (sha"
+  },
+  {
+    "row": 165,
+    "age": "Grade 3",
+    "subcat": "Fractions",
+    "topic": "Read and represent fractions using drawings and concrete material"
+  },
+  {
+    "row": 166,
+    "age": "Grade 3",
+    "subcat": "Fractions",
+    "topic": "Compare and order fractions with like denominators"
+  },
+  {
+    "row": 167,
+    "age": "Grade 3",
+    "subcat": "Patterns & Algebra",
+    "topic": "Identify and describe repeating, growing, and shrinking patterns;"
+  },
+  {
+    "row": 168,
+    "age": "Grade 3",
+    "subcat": "Patterns & Algebra",
+    "topic": "Demonstrate understanding of variables, equality, and inequality"
+  },
+  {
+    "row": 169,
+    "age": "Grade 3",
+    "subcat": "Patterns & Algebra",
+    "topic": "Use coding to solve problems (sequences, loops, events)"
+  },
+  {
+    "row": 170,
+    "age": "Grade 3",
+    "subcat": "Patterns & Algebra",
+    "topic": "Apply the process of mathematical modelling to real-life situatio"
+  },
+  {
+    "row": 171,
+    "age": "Grade 3",
+    "subcat": "Measurement & Data",
+    "topic": "Collect, organize, and display data using tables, bar graphs, and"
+  },
+  {
+    "row": 172,
+    "age": "Grade 3",
+    "subcat": "Measurement & Data",
+    "topic": "Analyse data; determine the mode; make convincing arguments using"
+  },
+  {
+    "row": 173,
+    "age": "Grade 3",
+    "subcat": "Probability",
+    "topic": "Predict probability of outcomes; compare predicted vs. observed r"
+  },
+  {
+    "row": 174,
+    "age": "Grade 3",
+    "subcat": "Geometry",
+    "topic": "Identify and describe 2D shapes and 3D objects by geometric prope"
+  },
+  {
+    "row": 175,
+    "age": "Grade 3",
+    "subcat": "Geometry",
+    "topic": "Identify right angles; compare angles using benchmarks (greater/l"
+  },
+  {
+    "row": 176,
+    "age": "Grade 3",
+    "subcat": "Geometry",
+    "topic": "Describe movement along a grid path (translations, reflections)"
+  },
+  {
+    "row": 177,
+    "age": "Grade 3",
+    "subcat": "Measurement & Data",
+    "topic": "Measure length, mass, and capacity using standard units (cm, m, k"
+  },
+  {
+    "row": 178,
+    "age": "Grade 3",
+    "subcat": "Measurement & Data",
+    "topic": "Explain the relationship between centimetres and metres; use benc"
+  },
+  {
+    "row": 179,
+    "age": "Grade 3",
+    "subcat": "Measurement & Data",
+    "topic": "Tell time to the nearest 5 minutes; relate time to daily events"
+  },
+  {
+    "row": 180,
+    "age": "Grade 3",
+    "subcat": "Financial Literacy",
+    "topic": "Count mixed sets of coins and bills; make change to $10; solve mo"
+  }
+]

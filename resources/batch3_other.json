@@ -1,0 +1,314 @@
+[
+  {
+    "row": 85,
+    "age": "Grade 1",
+    "subcat": "Physical Science",
+    "topic": "Sound and Vibrating Materials"
+  },
+  {
+    "row": 86,
+    "age": "Grade 1",
+    "subcat": "Physical Science",
+    "topic": "Illumination and Darkness - objects are seen only when illuminate"
+  },
+  {
+    "row": 87,
+    "age": "Grade 1",
+    "subcat": "Physical Science",
+    "topic": "Light and Materials - how light behaves with different materials"
+  },
+  {
+    "row": 88,
+    "age": "Grade 1",
+    "subcat": "Physical Science",
+    "topic": "Communication Device Design using light or sound"
+  },
+  {
+    "row": 89,
+    "age": "Grade 1",
+    "subcat": "Physical Science",
+    "topic": "Material Properties"
+  },
+  {
+    "row": 90,
+    "age": "Grade 1",
+    "subcat": "Physical Science",
+    "topic": "Materials Testing - which material best suits a purpose"
+  },
+  {
+    "row": 91,
+    "age": "Grade 1",
+    "subcat": "Physical Science",
+    "topic": "Objects and Pieces - objects can be built from smaller pieces"
+  },
+  {
+    "row": 92,
+    "age": "Grade 2",
+    "subcat": "Physical Science",
+    "topic": "Reversible and Irreversible Changes"
+  },
+  {
+    "row": 93,
+    "age": "Grade 1",
+    "subcat": "Life Science",
+    "topic": "Plant/animal structures that help survival (biomimicry)"
+  },
+  {
+    "row": 94,
+    "age": "Grade 2",
+    "subcat": "Life Science",
+    "topic": "Behavior: Parents and Offspring"
+  },
+  {
+    "row": 95,
+    "age": "Grade 1",
+    "subcat": "Life Science",
+    "topic": "Plant and Animal Structures - offspring resemble parents"
+  },
+  {
+    "row": 96,
+    "age": "Grade 1",
+    "subcat": "Life Science",
+    "topic": "Environmental Plant Needs"
+  },
+  {
+    "row": 97,
+    "age": "Grade 2",
+    "subcat": "Life Science",
+    "topic": "Seed Dispersal and Pollination"
+  },
+  {
+    "row": 98,
+    "age": "Grade 2",
+    "subcat": "Life Science",
+    "topic": "Habitats and Biodiversity"
+  },
+  {
+    "row": 99,
+    "age": "Grade 1",
+    "subcat": "Earth & Space Science",
+    "topic": "Sun, Moon, and Star Patterns"
+  },
+  {
+    "row": 100,
+    "age": "Grade 1",
+    "subcat": "Earth & Space Science",
+    "topic": "Seasonal Sunlight patterns (sunrise/sunset)"
+  },
+  {
+    "row": 101,
+    "age": "Grade 2",
+    "subcat": "Earth & Space Science",
+    "topic": "Evidence that Earth events can occur quickly or slowly"
+  },
+  {
+    "row": 102,
+    "age": "Grade 2",
+    "subcat": "Earth & Space Science",
+    "topic": "Processes that shape the Earth - wind/water changing land; modeli"
+  },
+  {
+    "row": 201,
+    "age": "Grade 3",
+    "subcat": "Life Science",
+    "topic": "Life Cycles - describe the stages of life cycles for different or"
+  },
+  {
+    "row": 202,
+    "age": "Grade 3",
+    "subcat": "Life Science",
+    "topic": "Growth & Changes in Plants - plant structures and their functions"
+  },
+  {
+    "row": 203,
+    "age": "Grade 3",
+    "subcat": "Earth & Space Science",
+    "topic": "Soil composition and properties; layers of soil"
+  },
+  {
+    "row": 204,
+    "age": "Grade 3",
+    "subcat": "Earth & Space Science",
+    "topic": "Strong and Stable Structures - forces on structures; design proce"
+  },
+  {
+    "row": 103,
+    "age": "Grade 1-2",
+    "subcat": "Self-Awareness",
+    "topic": "Identifying and naming a range of emotions"
+  },
+  {
+    "row": 104,
+    "age": "Grade 1-2",
+    "subcat": "Self-Management",
+    "topic": "Using strategies to manage stress and impulses (breathing, counti"
+  },
+  {
+    "row": 105,
+    "age": "Grade 1-2",
+    "subcat": "Self-Management",
+    "topic": "Setting and working toward a simple personal goal"
+  },
+  {
+    "row": 106,
+    "age": "Grade 1-2",
+    "subcat": "Social Awareness",
+    "topic": "Recognizing and respecting others' perspectives and feelings"
+  },
+  {
+    "row": 107,
+    "age": "Grade 1-2",
+    "subcat": "Relationship Skills",
+    "topic": "Communicating clearly and listening actively"
+  },
+  {
+    "row": 108,
+    "age": "Grade 1-2",
+    "subcat": "Relationship Skills",
+    "topic": "Working cooperatively and resolving simple conflicts"
+  },
+  {
+    "row": 109,
+    "age": "Grade 1-2",
+    "subcat": "Responsible Decision-Making",
+    "topic": "Identifying a problem, considering options, and understanding imp"
+  },
+  {
+    "row": 205,
+    "age": "Grade 3",
+    "subcat": "Self-Awareness & Relationships",
+    "topic": "Identify and manage emotions; recognize sources of stress; demons"
+  },
+  {
+    "row": 206,
+    "age": "Grade 3",
+    "subcat": "Self-Awareness & Relationships",
+    "topic": "Set personal goals; demonstrate responsible decision-making"
+  },
+  {
+    "row": 110,
+    "age": "Grade 1-2",
+    "subcat": "Executive Function & Routine",
+    "topic": "Morning arrival and settling-in routine"
+  },
+  {
+    "row": 111,
+    "age": "Grade 1-2",
+    "subcat": "Executive Function & Routine",
+    "topic": "Transitioning between activities/subjects"
+  },
+  {
+    "row": 112,
+    "age": "Grade 1-2",
+    "subcat": "Executive Function & Routine",
+    "topic": "Following 2-3 step verbal directions"
+  },
+  {
+    "row": 113,
+    "age": "Grade 1-2",
+    "subcat": "Executive Function & Routine",
+    "topic": "Independent work routine / staying on task"
+  },
+  {
+    "row": 114,
+    "age": "Grade 1-2",
+    "subcat": "Executive Function & Routine",
+    "topic": "Organizing personal materials and workspace"
+  },
+  {
+    "row": 115,
+    "age": "Grade 1-2",
+    "subcat": "Executive Function & Routine",
+    "topic": "Clean-up and end-of-day routine"
+  },
+  {
+    "row": 116,
+    "age": "Grade 1-2",
+    "subcat": "Movement Skills",
+    "topic": "Locomotor skills: running, jumping, hopping, skipping, galloping"
+  },
+  {
+    "row": 117,
+    "age": "Grade 1-2",
+    "subcat": "Movement Skills",
+    "topic": "Balance and body control (static and moving)"
+  },
+  {
+    "row": 118,
+    "age": "Grade 1-2",
+    "subcat": "Movement Skills",
+    "topic": "Object control: throwing, catching, kicking, striking"
+  },
+  {
+    "row": 119,
+    "age": "Grade 1-2",
+    "subcat": "Movement Skills",
+    "topic": "Moving to rhythm and tempo"
+  },
+  {
+    "row": 120,
+    "age": "Grade 1-2",
+    "subcat": "Movement Skills",
+    "topic": "Following multi-step movement directions / spatial awareness"
+  },
+  {
+    "row": 121,
+    "age": "Grade 1-2",
+    "subcat": "Fine Motor Development",
+    "topic": "Pencil grip and letter formation"
+  },
+  {
+    "row": 122,
+    "age": "Grade 1-2",
+    "subcat": "Fine Motor Development",
+    "topic": "Cutting along curved and straight lines"
+  },
+  {
+    "row": 123,
+    "age": "Grade 1-2",
+    "subcat": "Fine Motor Development",
+    "topic": "Using tools: glue, scissors, rulers"
+  },
+  {
+    "row": 124,
+    "age": "Grade 1-2",
+    "subcat": "Fine Motor Development",
+    "topic": "Drawing with increasing detail and control"
+  },
+  {
+    "row": 207,
+    "age": "Grade 3",
+    "subcat": "Locomotor & Physical Skills",
+    "topic": "Combine locomotor skills in movement sequences (skip, gallop, sli"
+  },
+  {
+    "row": 208,
+    "age": "Grade 3",
+    "subcat": "Locomotor & Physical Skills",
+    "topic": "Send and receive objects using different body parts and equipment"
+  },
+  {
+    "row": 125,
+    "age": "Grade 1-2",
+    "subcat": "Self-Regulation Practice",
+    "topic": "Guided breathing / breath counting"
+  },
+  {
+    "row": 126,
+    "age": "Grade 1-2",
+    "subcat": "Self-Regulation Practice",
+    "topic": "Simple mindfulness / body-scan awareness"
+  },
+  {
+    "row": 127,
+    "age": "Grade 1-2",
+    "subcat": "Self-Regulation Practice",
+    "topic": "Self-selected calming strategy (\"calm corner\" routine)"
+  },
+  {
+    "row": 128,
+    "age": "Grade 1-2",
+    "subcat": "Self-Regulation Practice",
+    "topic": "Reflection / gratitude practice"
+  }
+]

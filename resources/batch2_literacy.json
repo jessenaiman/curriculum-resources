@@ -1,0 +1,506 @@
+[
+  {
+    "row": 35,
+    "age": "Grade 1",
+    "subcat": "Print Concepts",
+    "topic": "Recognize distinguishing features of a sentence (first word, capi"
+  },
+  {
+    "row": 36,
+    "age": "Grade 1",
+    "subcat": "Phonological Awareness (oral, no print)",
+    "topic": "Distinguish long from short vowel sounds in spoken single-syllabl"
+  },
+  {
+    "row": 37,
+    "age": "Grade 1",
+    "subcat": "Phonological Awareness (oral, no print)",
+    "topic": "Orally blend sounds into single-syllable words, including consona"
+  },
+  {
+    "row": 38,
+    "age": "Grade 1",
+    "subcat": "Phonological Awareness (oral, no print)",
+    "topic": "Isolate and pronounce initial, medial, and final sounds in spoken"
+  },
+  {
+    "row": 39,
+    "age": "Grade 1",
+    "subcat": "Phonological Awareness (oral, no print)",
+    "topic": "Segment spoken single-syllable words into their complete sequence"
+  },
+  {
+    "row": 40,
+    "age": "Grade 1",
+    "subcat": "Phonics & Word Recognition",
+    "topic": "Short vowel sound: a (reading/decoding)"
+  },
+  {
+    "row": 41,
+    "age": "Grade 1",
+    "subcat": "Phonics & Word Recognition",
+    "topic": "Short vowel sound: e (reading/decoding)"
+  },
+  {
+    "row": 42,
+    "age": "Grade 1",
+    "subcat": "Phonics & Word Recognition",
+    "topic": "Short vowel sound: i (reading/decoding)"
+  },
+  {
+    "row": 43,
+    "age": "Grade 1",
+    "subcat": "Phonics & Word Recognition",
+    "topic": "Short vowel sound: o (reading/decoding)"
+  },
+  {
+    "row": 44,
+    "age": "Grade 1",
+    "subcat": "Phonics & Word Recognition",
+    "topic": "Short vowel sound: u (reading/decoding)"
+  },
+  {
+    "row": 45,
+    "age": "Grade 1",
+    "subcat": "Phonics & Word Recognition",
+    "topic": "Decode regularly spelled one-syllable words"
+  },
+  {
+    "row": 46,
+    "age": "Grade 1",
+    "subcat": "Phonics & Word Recognition",
+    "topic": "Consonant digraph spelling-sound correspondences"
+  },
+  {
+    "row": 47,
+    "age": "Grade 1",
+    "subcat": "Phonics & Word Recognition",
+    "topic": "Consonant blends (bl, cr, st, nd, nk)"
+  },
+  {
+    "row": 48,
+    "age": "Grade 1",
+    "subcat": "Phonics & Word Recognition",
+    "topic": "Long vowel sound: a (final -e / vowel teams)"
+  },
+  {
+    "row": 49,
+    "age": "Grade 1",
+    "subcat": "Phonics & Word Recognition",
+    "topic": "Long vowel sound: e (final -e / vowel teams)"
+  },
+  {
+    "row": 50,
+    "age": "Grade 1",
+    "subcat": "Phonics & Word Recognition",
+    "topic": "Long vowel sound: i (final -e / vowel teams)"
+  },
+  {
+    "row": 51,
+    "age": "Grade 1",
+    "subcat": "Phonics & Word Recognition",
+    "topic": "Long vowel sound: o (final -e / vowel teams)"
+  },
+  {
+    "row": 52,
+    "age": "Grade 1",
+    "subcat": "Phonics & Word Recognition",
+    "topic": "Long vowel sound: u (final -e / vowel teams)"
+  },
+  {
+    "row": 53,
+    "age": "Grade 1",
+    "subcat": "Phonics & Word Recognition",
+    "topic": "Use knowledge that every syllable has a vowel sound to count syll"
+  },
+  {
+    "row": 54,
+    "age": "Grade 1",
+    "subcat": "Phonics & Word Recognition",
+    "topic": "Decode two-syllable words by breaking them into syllables"
+  },
+  {
+    "row": 55,
+    "age": "Grade 1",
+    "subcat": "Phonics & Word Recognition",
+    "topic": "Read words with inflectional endings (-ed, -s, -ing)"
+  },
+  {
+    "row": 56,
+    "age": "Grade 1",
+    "subcat": "Phonics & Word Recognition",
+    "topic": "Recognize grade-appropriate irregularly spelled (sight) words"
+  },
+  {
+    "row": 57,
+    "age": "Grade 2",
+    "subcat": "Phonics & Word Recognition",
+    "topic": "Distinguish long and short vowels when reading one-syllable words"
+  },
+  {
+    "row": 58,
+    "age": "Grade 2",
+    "subcat": "Phonics & Word Recognition",
+    "topic": "Additional common vowel team spelling-sound correspondences"
+  },
+  {
+    "row": 59,
+    "age": "Grade 2",
+    "subcat": "Phonics & Word Recognition",
+    "topic": "Decode regularly spelled two-syllable words with long vowels"
+  },
+  {
+    "row": 60,
+    "age": "Grade 2",
+    "subcat": "Phonics & Word Recognition",
+    "topic": "Decode words with common prefixes and suffixes"
+  },
+  {
+    "row": 61,
+    "age": "Grade 2",
+    "subcat": "Phonics & Word Recognition",
+    "topic": "Identify words with inconsistent but common spelling-sound corres"
+  },
+  {
+    "row": 62,
+    "age": "Grade 2",
+    "subcat": "Phonics & Word Recognition",
+    "topic": "Recognize grade-appropriate irregularly spelled (sight) words"
+  },
+  {
+    "row": 63,
+    "age": "Grade 1",
+    "subcat": "Fluency",
+    "topic": "Read on-level text with purpose and understanding"
+  },
+  {
+    "row": 64,
+    "age": "Grade 1",
+    "subcat": "Fluency",
+    "topic": "Read on-level prose and poetry orally with accuracy, rate, and ex"
+  },
+  {
+    "row": 65,
+    "age": "Grade 1",
+    "subcat": "Fluency",
+    "topic": "Use context to confirm or self-correct word recognition, rereadin"
+  },
+  {
+    "row": 66,
+    "age": "Grade 2",
+    "subcat": "Fluency",
+    "topic": "Read grade-level text with purpose and understanding"
+  },
+  {
+    "row": 67,
+    "age": "Grade 2",
+    "subcat": "Fluency",
+    "topic": "Read grade-level text orally with accuracy, appropriate rate, and"
+  },
+  {
+    "row": 129,
+    "age": "Grade 2",
+    "subcat": "Phonics & Word Recognition",
+    "topic": "R-controlled vowel sounds (ar, er, ir, or, ur)"
+  },
+  {
+    "row": 130,
+    "age": "Grade 2",
+    "subcat": "Phonics & Word Recognition",
+    "topic": "Diphthong sounds (ow, oi, ou, oy)"
+  },
+  {
+    "row": 181,
+    "age": "Grade 3",
+    "subcat": "Phonics & Word Recognition",
+    "topic": "Decode multisyllabic words using syllable types and patterns"
+  },
+  {
+    "row": 182,
+    "age": "Grade 3",
+    "subcat": "Phonics & Word Recognition",
+    "topic": "Read grade-appropriate irregularly spelled words with automaticit"
+  },
+  {
+    "row": 183,
+    "age": "Grade 3",
+    "subcat": "Fluency",
+    "topic": "Read grade-level text with purpose, understanding, accuracy, and "
+  },
+  {
+    "row": 184,
+    "age": "Grade 3",
+    "subcat": "Fluency",
+    "topic": "Use context to confirm or self-correct word recognition; reread a"
+  },
+  {
+    "row": 68,
+    "age": "Grade 1",
+    "subcat": "Speaking & Listening",
+    "topic": "Participate in collaborative conversations; follow agreed-upon di"
+  },
+  {
+    "row": 69,
+    "age": "Grade 1",
+    "subcat": "Speaking & Listening",
+    "topic": "Ask and answer questions about key details in a text/media read a"
+  },
+  {
+    "row": 70,
+    "age": "Grade 1",
+    "subcat": "Speaking & Listening",
+    "topic": "Ask and answer questions about what a speaker says"
+  },
+  {
+    "row": 71,
+    "age": "Grade 1",
+    "subcat": "Speaking & Listening",
+    "topic": "Describe people, places, things, and events with relevant details"
+  },
+  {
+    "row": 72,
+    "age": "Grade 1",
+    "subcat": "Speaking & Listening",
+    "topic": "Add drawings or other visual displays to descriptions"
+  },
+  {
+    "row": 73,
+    "age": "Grade 1",
+    "subcat": "Speaking & Listening",
+    "topic": "Produce complete sentences when appropriate to task and situation"
+  },
+  {
+    "row": 74,
+    "age": "Grade 2",
+    "subcat": "Speaking & Listening",
+    "topic": "Participate in collaborative conversations; build on others' talk"
+  },
+  {
+    "row": 75,
+    "age": "Grade 2",
+    "subcat": "Speaking & Listening",
+    "topic": "Recount or describe key ideas from a text read aloud or informati"
+  },
+  {
+    "row": 76,
+    "age": "Grade 2",
+    "subcat": "Speaking & Listening",
+    "topic": "Ask and answer questions about what a speaker says"
+  },
+  {
+    "row": 77,
+    "age": "Grade 2",
+    "subcat": "Speaking & Listening",
+    "topic": "Tell a story or recount an experience with facts and relevant, de"
+  },
+  {
+    "row": 78,
+    "age": "Grade 2",
+    "subcat": "Speaking & Listening",
+    "topic": "Create audio recordings of stories/poems; add drawings or visual "
+  },
+  {
+    "row": 79,
+    "age": "Grade 2",
+    "subcat": "Speaking & Listening",
+    "topic": "Produce complete sentences when appropriate to task and situation"
+  },
+  {
+    "row": 80,
+    "age": "Grade 1",
+    "subcat": "Language: Vocabulary Acquisition & Use",
+    "topic": "Determine or clarify the meaning of unknown words using context a"
+  },
+  {
+    "row": 81,
+    "age": "Grade 1",
+    "subcat": "Language: Vocabulary Acquisition & Use",
+    "topic": "Explore word relationships and nuances (categories, real-life con"
+  },
+  {
+    "row": 82,
+    "age": "Grade 1",
+    "subcat": "Language: Vocabulary Acquisition & Use",
+    "topic": "Use words/phrases acquired through conversation and reading, incl"
+  },
+  {
+    "row": 83,
+    "age": "Grade 2",
+    "subcat": "Language: Vocabulary Acquisition & Use",
+    "topic": "Use knowledge of language conventions; compare formal and informa"
+  },
+  {
+    "row": 84,
+    "age": "Grade 2",
+    "subcat": "Language: Vocabulary Acquisition & Use",
+    "topic": "Determine or clarify meaning of unknown/multiple-meaning words us"
+  },
+  {
+    "row": 185,
+    "age": "Grade 1",
+    "subcat": "Reading Comprehension",
+    "topic": "Retell a familiar story with key details, in sequence"
+  },
+  {
+    "row": 186,
+    "age": "Grade 1",
+    "subcat": "Reading Comprehension",
+    "topic": "Identify characters, settings, and major events in a story"
+  },
+  {
+    "row": 187,
+    "age": "Grade 1",
+    "subcat": "Reading Comprehension",
+    "topic": "Ask and answer questions about key details in a text read aloud"
+  },
+  {
+    "row": 188,
+    "age": "Grade 1",
+    "subcat": "Reading Comprehension",
+    "topic": "Make predictions about what will happen next in a story"
+  },
+  {
+    "row": 189,
+    "age": "Grade 2",
+    "subcat": "Reading Comprehension",
+    "topic": "Retell stories including central message or lesson"
+  },
+  {
+    "row": 190,
+    "age": "Grade 2",
+    "subcat": "Reading Comprehension",
+    "topic": "Describe how characters respond to major events and challenges"
+  },
+  {
+    "row": 191,
+    "age": "Grade 2",
+    "subcat": "Reading Comprehension",
+    "topic": "Identify the main topic and key details of an informational text"
+  },
+  {
+    "row": 192,
+    "age": "Grade 2",
+    "subcat": "Reading Comprehension",
+    "topic": "Use text features (headings, captions, glossary) to locate inform"
+  },
+  {
+    "row": 193,
+    "age": "Grade 3",
+    "subcat": "Reading Comprehension",
+    "topic": "Ask and answer questions to demonstrate understanding of a text ("
+  },
+  {
+    "row": 194,
+    "age": "Grade 3",
+    "subcat": "Reading Comprehension",
+    "topic": "Identify the main idea and supporting details in a text"
+  },
+  {
+    "row": 195,
+    "age": "Grade 3",
+    "subcat": "Reading Comprehension",
+    "topic": "Describe characters, settings, and events in a story using eviden"
+  },
+  {
+    "row": 196,
+    "age": "Grade 3",
+    "subcat": "Reading Comprehension",
+    "topic": "Determine the meaning of words and phrases in context (literal an"
+  },
+  {
+    "row": 197,
+    "age": "Grade 3",
+    "subcat": "Speaking & Listening",
+    "topic": "Engage in collaborative discussions; build on others' ideas; expr"
+  },
+  {
+    "row": 198,
+    "age": "Grade 3",
+    "subcat": "Speaking & Listening",
+    "topic": "Report on a topic; speak clearly and at an appropriate pace"
+  },
+  {
+    "row": 199,
+    "age": "Grade 3",
+    "subcat": "Language: Vocabulary Acquisition & Use",
+    "topic": "Determine meaning of unknown words using context, prefixes, suffi"
+  },
+  {
+    "row": 200,
+    "age": "Grade 3",
+    "subcat": "Language: Vocabulary Acquisition & Use",
+    "topic": "Use knowledge of language conventions when writing and speaking; "
+  },
+  {
+    "row": 131,
+    "age": "Grade 1",
+    "subcat": "Writing Process",
+    "topic": "Write simple sentences with a capital letter and ending punctuati"
+  },
+  {
+    "row": 132,
+    "age": "Grade 1",
+    "subcat": "Writing Process",
+    "topic": "Write short texts for familiar audiences (labels, lists, captions"
+  },
+  {
+    "row": 133,
+    "age": "Grade 1",
+    "subcat": "Writing Process",
+    "topic": "Spell simple CVC and high-frequency words correctly"
+  },
+  {
+    "row": 134,
+    "age": "Grade 1",
+    "subcat": "Writing Process",
+    "topic": "Print legibly, forming letters correctly (uppercase and lowercase"
+  },
+  {
+    "row": 135,
+    "age": "Grade 2",
+    "subcat": "Writing Process",
+    "topic": "Write multi-sentence texts with a beginning, middle, and end"
+  },
+  {
+    "row": 136,
+    "age": "Grade 2",
+    "subcat": "Writing Process",
+    "topic": "Write for different purposes and audiences (stories, letters, rep"
+  },
+  {
+    "row": 137,
+    "age": "Grade 2",
+    "subcat": "Writing Process",
+    "topic": "Use spelling patterns, word families, and rules to spell new word"
+  },
+  {
+    "row": 138,
+    "age": "Grade 2",
+    "subcat": "Writing Process",
+    "topic": "Revise and edit writing with guidance (capitalization, punctuatio"
+  },
+  {
+    "row": 139,
+    "age": "Grade 3",
+    "subcat": "Writing Process",
+    "topic": "Write multi-paragraph texts with an introduction, supporting deta"
+  },
+  {
+    "row": 140,
+    "age": "Grade 3",
+    "subcat": "Writing Process",
+    "topic": "Write narratives, reports, and procedural texts for different aud"
+  },
+  {
+    "row": 141,
+    "age": "Grade 3",
+    "subcat": "Writing Process",
+    "topic": "Use spelling strategies and resources (dictionaries, word walls) "
+  },
+  {
+    "row": 142,
+    "age": "Grade 3",
+    "subcat": "Writing Process",
+    "topic": "Cursive writing introduction; maintain legible print"
+  }
+]

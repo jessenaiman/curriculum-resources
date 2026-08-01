@@ -75,7 +75,7 @@ export function LessonWorkspace({ lesson }: { lesson: LessonTopic }) {
         <div><div className="breadcrumb">{lesson.meta.subject} / {lesson.meta.category} / {lesson.meta.gradeBand}</div><h1>{lesson.meta.title}</h1></div>
         <p><strong>{lesson.meta.focus}</strong> {lesson.meta.summary}</p>
       </header>
-      <section className="split-workspace" aria-label="Grade 1 and Grade 2 lesson workspaces">{lesson.grades.map((grade) => <GradeWorkspace grade={grade} lessonSlug={lesson.meta.slug} key={grade.grade} />)}</section>
+      <section className={`split-workspace${lesson.grades.length === 1 ? " single-workspace" : ""}`} aria-label={lesson.grades.length === 1 ? `${lesson.grades[0].grade} lesson workspace` : "Grade 1 and Grade 2 lesson workspaces"}>{lesson.grades.map((grade) => <GradeWorkspace grade={grade} lessonSlug={lesson.meta.slug} key={grade.grade} />)}</section>
       <aside className="diagnostic-note"><strong>Planning lens</strong><span>{lesson.planningNote}</span></aside>
       <nav className="curriculum-path" aria-label="Curriculum path">
         {lesson.meta.previousSlug ? <Link href={`/topics/${lesson.meta.previousSlug}`}><span>← Previous topic</span><strong>{lesson.meta.previousTitle}</strong></Link> : <div><span>Previous topic</span><strong>{lesson.meta.previousTitle}</strong></div>}

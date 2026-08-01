@@ -8,6 +8,31 @@ export type LessonTopic = { meta: Record<string, string>; grades: GradeLesson[];
 export type ContentSection = { title: string; kicker: string; paragraphs: string[]; bullets: string[] };
 export type PageContent = { meta: Record<string, string>; sections: ContentSection[] };
 
+/* ── Single-grade lesson types (merged 5-step + rich content format) ── */
+export type ExtendCategory = { label: string; icon: string };
+export type WatchStep = { key: "watch"; label: string; subtitle: string; title: string; description: string; url: string; source: string; viewLabel: string; openLabel: string; thumbnailNote: string };
+export type TryStep = { key: "try"; label: string; subtitle: string; title: string; teacher: string; students: string; lookFor: string; tip: string; resourceState: "ready" | "missing" | "none"; resourceTitle: string; resourceSource: string; resourceUrl: string; resourceRole: string; resourceNote: string };
+export type PracticeStep = { key: "practice"; label: string; subtitle: string; title: string; teacher: string; students: string; lookFor: string; printable: boolean; printableLabel: string; printableURL: string; printableSource: string; printableFormat: string; icons: string[]; resourceState: "ready" | "missing" | "none"; resourceTitle: string; resourceSource: string; resourceUrl: string; resourceRole: string; resourceNote: string };
+export type CheckStep = { key: "check"; label: string; subtitle: string; title: string; teacher: string; students: string; lookFor: string; tip: string };
+export type ExtendStep = { key: "extend"; label: string; subtitle: string; searchPrompt: string; categories: ExtendCategory[] };
+export type SingleStep = WatchStep | TryStep | PracticeStep | CheckStep | ExtendStep;
+export type SingleLessonTopic = {
+  format: "single";
+  meta: Record<string, string>;
+  goal: string;
+  materials: string[];
+  steps: SingleStep[];
+  watch: WatchStep;
+  try: TryStep;
+  practice: PracticeStep;
+  check: CheckStep;
+  extend: ExtendStep;
+  searches: SearchPrompt[];
+  planningNote: string;
+  curriculumPath: string[];
+};
+export type AnyLesson = LessonTopic | SingleLessonTopic;
+
 function splitDocument(raw: string) {
   const normalized = raw.replace(/\r\n/g, "\n");
   const match = normalized.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/);
@@ -90,12 +115,148 @@ export function parsePage(raw: string): PageContent {
   return { meta, sections };
 }
 
+/* ── Single-grade lesson parser ── */
+function parseSingleLesson(raw: string): SingleLessonTopic {
+  const { meta, body } = splitDocument(raw);
+  const lines = body.split("\n").map((l) => l.trim());
+
+  function sectionContent(heading: string): string[] {
+    const idx = lines.indexOf(`## ${heading}`);
+    if (idx < 0) return [];
+    const nextIdx = lines.findIndex((l, i) => i > idx && l.startsWith("## "));
+    return lines.slice(idx + 1, nextIdx >= 0 ? nextIdx : lines.length).filter(Boolean);
+  }
+
+  function fieldFrom(lines: string[], name: string): string {
+    const prefix = `- ${name}:`;
+    return lines.find((l) => l.startsWith(prefix))?.slice(prefix.length).trim() || "";
+  }
+
+  // Watch
+  const watchLines = sectionContent("Watch");
+  const watch: WatchStep = {
+    key: "watch",
+    label: "Watch",
+    subtitle: "Best starting resource",
+    title: fieldFrom(watchLines, "Title"),
+    description: fieldFrom(watchLines, "Description"),
+    url: fieldFrom(watchLines, "URL"),
+    source: fieldFrom(watchLines, "Source"),
+    viewLabel: fieldFrom(watchLines, "ViewLabel") || "View Full Screen",
+    openLabel: fieldFrom(watchLines, "OpenLabel") || "Open Link",
+    thumbnailNote: fieldFrom(watchLines, "ThumbnailNote"),
+  };
+
+  // Try
+  const tryLines = sectionContent("Try");
+  const tryStep: TryStep = {
+    key: "try",
+    label: "Try",
+    subtitle: "Teacher-led activity",
+    title: fieldFrom(tryLines, "Title"),
+    description: fieldFrom(tryLines, "Description"),
+    teacher: fieldFrom(tryLines, "Teacher"),
+    students: fieldFrom(tryLines, "Students"),
+    lookFor: fieldFrom(tryLines, "LookFor"),
+    tip: fieldFrom(tryLines, "Tip"),
+    resourceState: (fieldFrom(tryLines, "ResourceState") || "none") as TryStep["resourceState"],
+    resourceTitle: fieldFrom(tryLines, "Resource"),
+    resourceSource: fieldFrom(tryLines, "Source"),
+    resourceUrl: fieldFrom(tryLines, "URL"),
+    resourceRole: fieldFrom(tryLines, "ResourceRole"),
+    resourceNote: fieldFrom(tryLines, "ResourceNote"),
+  };
+
+  // Practice
+  const practiceLines = sectionContent("Practice");
+  const iconsRaw = fieldFrom(practiceLines, "Icons");
+  const practice: PracticeStep = {
+    key: "practice",
+    label: "Practice",
+    subtitle: "Student practice",
+    title: fieldFrom(practiceLines, "Title"),
+    description: fieldFrom(practiceLines, "Description"),
+    teacher: fieldFrom(practiceLines, "Teacher"),
+    students: fieldFrom(practiceLines, "Students"),
+    lookFor: fieldFrom(practiceLines, "LookFor"),
+    printable: fieldFrom(practiceLines, "Printable") === "true",
+    printableLabel: fieldFrom(practiceLines, "PrintableLabel") || "Download Printable",
+    printableURL: fieldFrom(practiceLines, "PrintableURL"),
+    printableSource: fieldFrom(practiceLines, "PrintableSource"),
+    printableFormat: fieldFrom(practiceLines, "PrintableFormat") || "PDF",
+    icons: iconsRaw ? iconsRaw.split(",").map((s) => s.trim()) : [],
+    resourceState: (fieldFrom(practiceLines, "ResourceState") || "none") as PracticeStep["resourceState"],
+    resourceTitle: fieldFrom(practiceLines, "Resource"),
+    resourceSource: fieldFrom(practiceLines, "Source"),
+    resourceUrl: fieldFrom(practiceLines, "URL"),
+    resourceRole: fieldFrom(practiceLines, "ResourceRole"),
+    resourceNote: fieldFrom(practiceLines, "ResourceNote"),
+  };
+
+  // Check
+  const checkLines = sectionContent("Check");
+  const check: CheckStep = {
+    key: "check",
+    label: "Check",
+    subtitle: "Quick assessment",
+    title: fieldFrom(checkLines, "Title"),
+    description: fieldFrom(checkLines, "Description"),
+    teacher: fieldFrom(checkLines, "Teacher"),
+    students: fieldFrom(checkLines, "Students"),
+    lookFor: fieldFrom(checkLines, "LookFor"),
+    tip: fieldFrom(checkLines, "Tip"),
+  };
+
+  // Extend
+  const extendLines = sectionContent("Extend");
+  const categories: ExtendCategory[] = [];
+  let inCategories = false;
+  let currentCat: Partial<ExtendCategory> = {};
+  for (const line of extendLines) {
+    if (line === "- Categories:") { inCategories = true; continue; }
+    if (inCategories && line.startsWith("- label:")) {
+      if (currentCat.label) categories.push(currentCat as ExtendCategory);
+      currentCat = { label: line.slice("- label:".length).trim() };
+    } else if (inCategories && line.startsWith("icon:")) {
+      currentCat.icon = line.slice("icon:".length).trim();
+    }
+  }
+  if (currentCat.label) categories.push(currentCat as ExtendCategory);
+  const extend: ExtendStep = {
+    key: "extend",
+    label: "Extend",
+    subtitle: "Search more",
+    searchPrompt: fieldFrom(extendLines, "SearchPrompt"),
+    categories,
+  };
+
+  // Planning note
+  const planningLines = sectionContent("Planning note");
+  const planningNote = planningLines.find((l) => l && !l.startsWith("#")) || "";
+
+  // Curriculum path from frontmatter
+  const curriculumPathRaw = meta.curriculumPath || "";
+  const curriculumPath = curriculumPathRaw ? curriculumPathRaw.split(",").map((s) => s.trim()) : [];
+
+  return { format: "single", meta, goal: meta.goal || meta.summary || "", materials: [], steps: [], watch, try: tryStep, practice, check, extend, searches: [], planningNote, curriculumPath };
+}
+
+function parseAnyLesson(raw: string): AnyLesson {
+  const normalized = raw.replace(/\r\n/g, "\n");
+  const match = normalized.match(/^---\n([\s\S]*?)\n---/);
+  if (match && match[1].includes("format: single")) {
+    return parseSingleLesson(raw);
+  }
+  return parseLesson(raw);
+}
+
 const lessonFiles = import.meta.glob("../content/lessons/*.mdx", {
   query: "?raw",
   import: "default",
   eager: true,
 }) as Record<string, string>;
-const lessons = Object.values(lessonFiles).map(parseLesson).sort((a, b) => a.meta.title.localeCompare(b.meta.title));
+const lessons = Object.values(lessonFiles).map(parseAnyLesson).sort((a, b) => a.meta.title.localeCompare(b.meta.title));
 export function getAllLessons() { return lessons; }
-export function getLesson(slug: string) { return lessons.find((lesson) => lesson.meta.slug === slug); }
+export function getLesson(slug: string): AnyLesson | undefined { return lessons.find((lesson) => lesson.meta.slug === slug); }
+export function isSingleLesson(lesson: AnyLesson): lesson is SingleLessonTopic { return "format" in lesson && lesson.format === "single"; }
 export function getPageContent(slug: "home" | "about") { return parsePage(slug === "home" ? homeRaw : aboutRaw); }

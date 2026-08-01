@@ -8,10 +8,12 @@ export default function Home() {
 
   return (
     <SiteShell active="home">
-      <section className="home-hero paper-panel">
+      <section className="home-hero">
+        <div className="hero-badge"><img src="/brand-emblem.png" alt="Embroidered tree and music-note emblem" /></div>
         <div className="hero-copy">
           <div className="breadcrumb">{page.meta.eyebrow}</div>
           <h1>{page.meta.title}</h1>
+          <p className="hero-byline">Where familiar songs become new places to learn.</p>
           <p className="hero-summary">{page.meta.summary}</p>
           <div className="hero-actions">
             <Link className="primary-button" href="/topics">Browse lesson topics</Link>
@@ -23,6 +25,14 @@ export default function Home() {
           <strong>Open a topic. See the lesson. Start planning.</strong>
           <p>No accounts, ratings, link dumps, or complicated planning system.</p>
         </div>
+      </section>
+
+      <section className="grade-rail" aria-label="Browse by grade band">
+        <div className="rail-intro"><span className="eyebrow">Start where your class is</span><strong>Browse by grade band</strong></div>
+        <Link className="grade-chip daycare" href="/topics"><small>0–2 yrs</small><span>Daycare</span><b>→</b></Link>
+        <Link className="grade-chip preschool" href="/topics"><small>3–4 yrs</small><span>Preschool</span><b>→</b></Link>
+        <Link className="grade-chip grade-one" href="/topics"><small>5–6 yrs</small><span>Grade 1</span><b>→</b></Link>
+        <Link className="grade-chip grade-two" href="/topics"><small>6–7 yrs</small><span>Grade 2</span><b>→</b></Link>
       </section>
 
       <section className="home-section">
@@ -41,6 +51,16 @@ export default function Home() {
             </Link>
           ))}
         </div>
+      </section>
+
+      <section className="featured-lesson paper-panel">
+        <div className="featured-copy">
+          <span className="eyebrow">A sample planning trail</span>
+          <h2>Make the next lesson feel ready to teach.</h2>
+          <p>Each topic turns a promising resource into a small, usable sequence: introduce, practise, notice, and carry the idea forward.</p>
+          <Link className="secondary-button" href="/topics">See the lesson trails →</Link>
+        </div>
+        <div className="featured-image"><img src="/early-years-worksheet-example.png" alt="Illustrated early-years lesson sequence" /></div>
       </section>
 
       <section className="home-section how-it-works paper-panel">
