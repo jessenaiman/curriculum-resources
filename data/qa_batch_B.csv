@@ -1,0 +1,439 @@
+issue_id|song_id|song_name|suggested_cu_id|issue_type|description|fix_action
+1|14|All around the Kitchen|CU#226|UNDERLINKED|3 themes but only 3 CU(s)|Add more mappings for uncovered themes
+2|14|All around the Kitchen|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+3|14|All around the Kitchen|CU#256|UNDERLINKED|3 themes but only 3 CU(s)|Add more mappings for uncovered themes
+4|14|All around the Kitchen|CU#257|UNDERLINKED|3 themes but only 3 CU(s)|Add more mappings for uncovered themes
+5|15|Face Tickles|CU#219|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#219|Add song-specific details
+6|15|Face Tickles|CU#221|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#221|Add song-specific details
+7|15|Face Tickles|CU#222|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#222|Add song-specific details
+8|38|Toe Titley|CU#219|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#219|Add song-specific details
+9|38|Toe Titley|CU#221|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#221|Add song-specific details
+10|38|Toe Titley|CU#222|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#222|Add song-specific details
+11|39|Hey Ho Little Fish|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+12|39|Hey Ho Little Fish|CU#248|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#248|Add song-specific details
+13|55|Jack Jingle|CU#210|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#210|Add song-specific details
+14|55|Jack Jingle|CU#221|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#221|Add song-specific details
+15|58|Catch her Crow / Way up High in an Apple Tree|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+16|60|On my Toe there is a flea|CU#219|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#219|Add song-specific details
+17|60|On my Toe there is a flea|CU#221|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#221|Add song-specific details
+18|60|On my Toe there is a flea|CU#222|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#222|Add song-specific details
+19|68|Walk Daniel|CU#218|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#218|Add song-specific details
+20|68|Walk Daniel|CU#219|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#219|Add song-specific details
+21|68|Walk Daniel|CU#222|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#222|Add song-specific details
+22|68|Walk Daniel|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+23|70|Chop-Nose Day|CU#219|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#219|Add song-specific details
+24|70|Chop-Nose Day|CU#221|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#221|Add song-specific details
+25|70|Chop-Nose Day|CU#222|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#222|Add song-specific details
+26|73|See saw Marjorie Daw / See Saw Sacradown|CU#219|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#219|Add song-specific details
+27|73|See saw Marjorie Daw / See Saw Sacradown|CU#221|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#221|Add song-specific details
+28|73|See saw Marjorie Daw / See Saw Sacradown|CU#222|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#222|Add song-specific details
+29|77|My Pony Boy|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+30|77|My Pony Boy|CU#248|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#248|Add song-specific details
+31|86|Knees Up Mary Muffet|CU#219|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#219|Add song-specific details
+32|86|Knees Up Mary Muffet|CU#221|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#221|Add song-specific details
+33|86|Knees Up Mary Muffet|CU#222|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#222|Add song-specific details
+34|88|The Train Wheels are Rolling|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+35|89|Here is The Little Boy|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+36|92|There Was a Little Mouse/ Mouse and Cheese / Little mice go creeping|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+37|94|One Cold and Frosty Morning|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+38|95|This little boy found an egg,|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+39|95|This little boy found an egg,|CU#248|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#248|Add song-specific details
+40|99|The Baby Bear Waltz|CU#219|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#219|Add song-specific details
+41|99|The Baby Bear Waltz|CU#221|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#221|Add song-specific details
+42|99|The Baby Bear Waltz|CU#222|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#222|Add song-specific details
+43|99|The Baby Bear Waltz|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+44|101|Kangaroo Brown|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+45|101|Kangaroo Brown|CU#248|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#248|Add song-specific details
+46|102|Jubilee|CU#219|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#219|Add song-specific details
+47|102|Jubilee|CU#221|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#221|Add song-specific details
+48|102|Jubilee|CU#222|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#222|Add song-specific details
+49|104|Ho Young Rider|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+50|104|Ho Young Rider|CU#248|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#248|Add song-specific details
+51|107|Train is A'leaving|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+52|114|Pretty Painted butterfly|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+53|115|She Didn't Dance, Dance, Dance|CU#219|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#219|Add song-specific details
+54|115|She Didn't Dance, Dance, Dance|CU#222|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#222|Add song-specific details
+55|117|Sailing Sailing Over the Ocean|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+56|120|Rags the Dog|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+57|120|Rags the Dog|CU#248|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#248|Add song-specific details
+58|122|Watch the Stars See How They Run|CU#218|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#218|Add song-specific details
+59|122|Watch the Stars See How They Run|CU#219|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#219|Add song-specific details
+60|122|Watch the Stars See How They Run|CU#222|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#222|Add song-specific details
+61|133|Baby's Boat|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+62|139|My Pigeon Coop|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+63|141|Little Lap Dog|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+64|141|Little Lap Dog|CU#248|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#248|Add song-specific details
+65|143|Come Row The Boat|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+66|145|Turn Around|CU#218|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#218|Add song-specific details
+67|145|Turn Around|CU#219|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#219|Add song-specific details
+68|145|Turn Around|CU#222|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#222|Add song-specific details
+69|147|Kitty Alone|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+70|147|Kitty Alone|CU#248|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#248|Add song-specific details
+71|153|Dreams Of Harmony|CU#210|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#210|Add song-specific details
+72|153|Dreams Of Harmony|CU#221|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#221|Add song-specific details
+73|155|Going for a Walk|CU#218|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#218|Add song-specific details
+74|155|Going for a Walk|CU#219|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#219|Add song-specific details
+75|155|Going for a Walk|CU#222|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#222|Add song-specific details
+76|159|Truck Song|CU#210|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#210|Add song-specific details
+77|159|Truck Song|CU#221|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#221|Add song-specific details
+78|160|We're tapping, ringing, shaking|CU#210|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#210|Add song-specific details
+79|160|We're tapping, ringing, shaking|CU#221|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#221|Add song-specific details
+80|165|Hello Rain|CU#226|UNDERLINKED|3 themes but only 3 CU(s)|Add more mappings for uncovered themes
+81|165|Hello Rain|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+82|165|Hello Rain|CU#256|UNDERLINKED|3 themes but only 3 CU(s)|Add more mappings for uncovered themes
+83|165|Hello Rain|CU#257|UNDERLINKED|3 themes but only 3 CU(s)|Add more mappings for uncovered themes
+84|166|Picking buttercups|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+85|167|I Went Down into the Barnyard|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+86|168|Ducks in the Millpond|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+87|168|Ducks in the Millpond|CU#248|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#248|Add song-specific details
+88|169|The Pie Song|CU#210|UNDERLINKED|3 themes but only 3 CU(s)|Add more mappings for uncovered themes
+89|169|The Pie Song|CU#210|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#210|Add song-specific details
+90|169|The Pie Song|CU#221|UNDERLINKED|3 themes but only 3 CU(s)|Add more mappings for uncovered themes
+91|169|The Pie Song|CU#221|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#221|Add song-specific details
+92|169|The Pie Song|CU#240|UNDERLINKED|3 themes but only 3 CU(s)|Add more mappings for uncovered themes
+93|171|Walk Horsey Walk|CU#218|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#218|Add song-specific details
+94|171|Walk Horsey Walk|CU#219|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#219|Add song-specific details
+95|171|Walk Horsey Walk|CU#222|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#222|Add song-specific details
+96|171|Walk Horsey Walk|CU#248|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#248|Add song-specific details
+97|172|Here is the Boat|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+98|173|There was a Little Boat|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+99|174|The Little Cat|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+100|175|Shake it to the east|CU#218|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#218|Add song-specific details
+101|175|Shake it to the east|CU#219|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#219|Add song-specific details
+102|175|Shake it to the east|CU#222|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#222|Add song-specific details
+103|177|Tom Thumb|CU#219|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#219|Add song-specific details
+104|177|Tom Thumb|CU#221|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#221|Add song-specific details
+105|177|Tom Thumb|CU#222|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#222|Add song-specific details
+106|183|Dance to your Daddy|CU#219|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#219|Add song-specific details
+107|183|Dance to your Daddy|CU#222|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#222|Add song-specific details
+108|184|Monday Night the Banjo|CU#210|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#210|Add song-specific details
+109|184|Monday Night the Banjo|CU#221|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#221|Add song-specific details
+110|186|The Baby Bear Waltz|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+111|187|Everybody knows I love my toes|CU#219|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#219|Add song-specific details
+112|187|Everybody knows I love my toes|CU#221|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#221|Add song-specific details
+113|187|Everybody knows I love my toes|CU#222|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#222|Add song-specific details
+114|188|Tommy Thumb|CU#219|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#219|Add song-specific details
+115|188|Tommy Thumb|CU#221|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#221|Add song-specific details
+116|190|Here goes the rabbit,|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+117|190|Here goes the rabbit,|CU#248|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#248|Add song-specific details
+118|191|Mr. Rabbit|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+119|191|Mr. Rabbit|CU#248|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#248|Add song-specific details
+120|195|Put one foot in front of the other|CU#219|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#219|Add song-specific details
+121|195|Put one foot in front of the other|CU#221|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#221|Add song-specific details
+122|195|Put one foot in front of the other|CU#222|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#222|Add song-specific details
+123|201|Baby Shark|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+124|202|Walk Through the Farmyard|CU#218|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#218|Add song-specific details
+125|202|Walk Through the Farmyard|CU#219|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#219|Add song-specific details
+126|202|Walk Through the Farmyard|CU#222|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#222|Add song-specific details
+127|203|Grampa's farm rhyme|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+128|204|Down on Grampa's farm|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+129|205|Peck, peck, peck goes the little red hen,|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+130|206|Shoo Fly|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+131|213|My Bonnie Lies Over the Ocean|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+132|230|Ducks on the Pond|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+133|230|Ducks on the Pond|CU#248|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#248|Add song-specific details
+134|231|Round and Round the Garden / Knock at the Door|CU#219|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#219|Add song-specific details
+135|231|Round and Round the Garden / Knock at the Door|CU#221|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#221|Add song-specific details
+136|231|Round and Round the Garden / Knock at the Door|CU#222|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#222|Add song-specific details
+137|233|Slowly Garden Snail|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+138|234|Sailing Sailing Over the Ocean|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+139|235|The Little Mice Go Creeping|CU#219|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#219|Add song-specific details
+140|235|The Little Mice Go Creeping|CU#221|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#221|Add song-specific details
+141|235|The Little Mice Go Creeping|CU#222|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#222|Add song-specific details
+142|235|The Little Mice Go Creeping|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+143|235|The Little Mice Go Creeping|CU#248|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#248|Add song-specific details
+144|237|Sleeping Bunnies|CU#219|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#219|Add song-specific details
+145|237|Sleeping Bunnies|CU#221|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#221|Add song-specific details
+146|237|Sleeping Bunnies|CU#222|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#222|Add song-specific details
+147|237|Sleeping Bunnies|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+148|237|Sleeping Bunnies|CU#248|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#248|Add song-specific details
+149|239|Shoo Fly|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+150|240|I Want Someone To Buy Me A pony|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+151|240|I Want Someone To Buy Me A pony|CU#248|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#248|Add song-specific details
+152|242|She Didn't Dance, Dance, Dance|CU#219|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#219|Add song-specific details
+153|242|She Didn't Dance, Dance, Dance|CU#222|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#222|Add song-specific details
+154|243|Tumbledown Hill|CU#219|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#219|Add song-specific details
+155|243|Tumbledown Hill|CU#221|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#221|Add song-specific details
+156|243|Tumbledown Hill|CU#222|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#222|Add song-specific details
+157|244|Sugar Lamb|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+158|245|This is the Boat|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+159|246|Mister Moon / The Cuckoo|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+160|246|Mister Moon / The Cuckoo|CU#248|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#248|Add song-specific details
+161|248|Maloney the Pony|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+162|248|Maloney the Pony|CU#248|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#248|Add song-specific details
+163|250|Watch the Stars See How They Run|CU#218|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#218|Add song-specific details
+164|250|Watch the Stars See How They Run|CU#219|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#219|Add song-specific details
+165|250|Watch the Stars See How They Run|CU#222|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#222|Add song-specific details
+166|257|Snow Flakes|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+167|258|Chubby Little Snowman|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+168|259|It's Going to be a Long Winter|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+169|260|Snow On the Rooftops|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+170|261|Rum Tum Tiddle|CU#210|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#210|Add song-specific details
+171|261|Rum Tum Tiddle|CU#221|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#221|Add song-specific details
+172|264|Our Turkey Ran Away|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+173|267|Big Belly Ben|CU#219|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#219|Add song-specific details
+174|267|Big Belly Ben|CU#221|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#221|Add song-specific details
+175|267|Big Belly Ben|CU#222|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#222|Add song-specific details
+176|268|Ring, ring, ring your Bells|CU#210|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#210|Add song-specific details
+177|268|Ring, ring, ring your Bells|CU#221|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#221|Add song-specific details
+178|270|Almost Day|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+179|271|There was a Pig Went out to Dig|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+180|271|There was a Pig Went out to Dig|CU#248|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#248|Add song-specific details
+181|274|reindeer|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+182|274|reindeer|CU#248|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#248|Add song-specific details
+183|280|The Solstice Song|CU#210|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#210|Add song-specific details
+184|280|The Solstice Song|CU#221|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#221|Add song-specific details
+185|284|I love to Hear the Sounds|CU#210|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#210|Add song-specific details
+186|284|I love to Hear the Sounds|CU#221|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#221|Add song-specific details
+187|285|Aikendrum|CU#210|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#210|Add song-specific details
+188|285|Aikendrum|CU#221|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#221|Add song-specific details
+189|286|I'm tapping on my sticks|CU#210|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#210|Add song-specific details
+190|286|I'm tapping on my sticks|CU#221|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#221|Add song-specific details
+191|288|Bow Wow Wow|CU#210|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#210|Add song-specific details
+192|288|Bow Wow Wow|CU#221|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#221|Add song-specific details
+193|289|I have a little Hammer and I Tap tap tap|CU#210|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#210|Add song-specific details
+194|289|I have a little Hammer and I Tap tap tap|CU#221|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#221|Add song-specific details
+195|293|1,2,3,4, Jingle at the cottage door|CU#210|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#210|Add song-specific details
+196|293|1,2,3,4, Jingle at the cottage door|CU#221|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#221|Add song-specific details
+197|294|Oh Children Ring Your Bells|CU#210|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#210|Add song-specific details
+198|294|Oh Children Ring Your Bells|CU#221|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#221|Add song-specific details
+199|295|Ring them on the floor (Jimmy Crack Corn)|CU#210|OVERLINKED|Song has 10 CU mappings (max: 8)|Remove least-relevant CUs
+200|295|Ring them on the floor (Jimmy Crack Corn)|CU#210|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#210|Add song-specific details
+201|295|Ring them on the floor (Jimmy Crack Corn)|CU#221|OVERLINKED|Song has 10 CU mappings (max: 8)|Remove least-relevant CUs
+202|295|Ring them on the floor (Jimmy Crack Corn)|CU#221|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#221|Add song-specific details
+203|295|Ring them on the floor (Jimmy Crack Corn)|CU#226|OVERLINKED|Song has 10 CU mappings (max: 8)|Remove least-relevant CUs
+204|295|Ring them on the floor (Jimmy Crack Corn)|CU#240|OVERLINKED|Song has 10 CU mappings (max: 8)|Remove least-relevant CUs
+205|295|Ring them on the floor (Jimmy Crack Corn)|CU#248|OVERLINKED|Song has 10 CU mappings (max: 8)|Remove least-relevant CUs
+206|295|Ring them on the floor (Jimmy Crack Corn)|CU#250|OVERLINKED|Song has 10 CU mappings (max: 8)|Remove least-relevant CUs
+207|295|Ring them on the floor (Jimmy Crack Corn)|CU#251|OVERLINKED|Song has 10 CU mappings (max: 8)|Remove least-relevant CUs
+208|295|Ring them on the floor (Jimmy Crack Corn)|CU#253|OVERLINKED|Song has 10 CU mappings (max: 8)|Remove least-relevant CUs
+209|295|Ring them on the floor (Jimmy Crack Corn)|CU#255|OVERLINKED|Song has 10 CU mappings (max: 8)|Remove least-relevant CUs
+210|295|Ring them on the floor (Jimmy Crack Corn)|CU#256|OVERLINKED|Song has 10 CU mappings (max: 8)|Remove least-relevant CUs
+211|296|Ride a Cock Horse|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+212|296|Ride a Cock Horse|CU#248|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#248|Add song-specific details
+213|297|Bell Horses|CU#210|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#210|Add song-specific details
+214|297|Bell Horses|CU#221|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#221|Add song-specific details
+215|298|We can play on our violins|CU#221|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#221|Add song-specific details
+216|299|Shake your shakers slowly|CU#210|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#210|Add song-specific details
+217|299|Shake your shakers slowly|CU#221|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#221|Add song-specific details
+218|300|We're Going to the Market|CU#210|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#210|Add song-specific details
+219|300|We're Going to the Market|CU#221|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#221|Add song-specific details
+220|301|I am a Fine Musician|CU#210|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#210|Add song-specific details
+221|301|I am a Fine Musician|CU#221|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#221|Add song-specific details
+222|303|We're walking walking walking|CU#210|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#210|Add song-specific details
+223|303|We're walking walking walking|CU#221|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#221|Add song-specific details
+224|304|Old MacDonald's band|CU#210|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#210|Add song-specific details
+225|304|Old MacDonald's band|CU#221|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#221|Add song-specific details
+226|308|Put on My Dancing Shoes|CU#219|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#219|Add song-specific details
+227|308|Put on My Dancing Shoes|CU#221|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#221|Add song-specific details
+228|308|Put on My Dancing Shoes|CU#222|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#222|Add song-specific details
+229|309|How shall we March|CU#218|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#218|Add song-specific details
+230|309|How shall we March|CU#219|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#219|Add song-specific details
+231|309|How shall we March|CU#222|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#222|Add song-specific details
+232|312|Mice Rhymes|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+233|312|Mice Rhymes|CU#248|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#248|Add song-specific details
+234|315|Clap your Hands|CU#219|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#219|Add song-specific details
+235|315|Clap your Hands|CU#221|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#221|Add song-specific details
+236|316|Toe Tittly|CU#219|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#219|Add song-specific details
+237|316|Toe Tittly|CU#221|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#221|Add song-specific details
+238|316|Toe Tittly|CU#222|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#222|Add song-specific details
+239|317|The Truck Song|CU#210|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#210|Add song-specific details
+240|317|The Truck Song|CU#221|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#221|Add song-specific details
+241|320|Pterodactyl Song|CU#210|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#210|Add song-specific details
+242|320|Pterodactyl Song|CU#221|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#221|Add song-specific details
+243|320|Pterodactyl Song|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+244|320|Pterodactyl Song|CU#248|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#248|Add song-specific details
+245|322|A Chubby Little Snowman? Voici in ...|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+246|324|Snowflakes|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+247|325|Spring is Coming|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+248|326|Welcome Summer|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+249|328|The Pie Song|CU#210|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#210|Add song-specific details
+250|328|The Pie Song|CU#221|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#221|Add song-specific details
+251|329|Keeper of the Bees|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+252|330|What will we Do|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+253|333|We're Jumping|CU#219|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#219|Add song-specific details
+254|333|We're Jumping|CU#221|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#221|Add song-specific details
+255|333|We're Jumping|CU#222|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#222|Add song-specific details
+256|334|Pony Rides|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+257|334|Pony Rides|CU#248|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#248|Add song-specific details
+258|337|Baby's Boat|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+259|340|When Its Autumn|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+260|342|Walk Old  Squirrel|CU#218|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#218|Add song-specific details
+261|342|Walk Old  Squirrel|CU#219|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#219|Add song-specific details
+262|342|Walk Old  Squirrel|CU#222|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#222|Add song-specific details
+263|342|Walk Old  Squirrel|CU#248|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#248|Add song-specific details
+264|343|Gray Squirrel|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+265|343|Gray Squirrel|CU#248|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#248|Add song-specific details
+266|344|The Gate Swings Open|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+267|344|The Gate Swings Open|CU#248|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#248|Add song-specific details
+268|345|The Turkey is a funny bird|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+269|346|The Turkey Song|CU#210|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#210|Add song-specific details
+270|346|The Turkey Song|CU#221|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#221|Add song-specific details
+271|346|The Turkey Song|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+272|347|Owl Moon|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+273|350|Skin and Bones|CU#219|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#219|Add song-specific details
+274|350|Skin and Bones|CU#221|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#221|Add song-specific details
+275|350|Skin and Bones|CU#222|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#222|Add song-specific details
+276|355|Halloween farm|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+277|356|I'm a Scarecrow Tall|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+278|357|Tigers are Sleeping|CU#219|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#219|Add song-specific details
+279|357|Tigers are Sleeping|CU#221|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#221|Add song-specific details
+280|357|Tigers are Sleeping|CU#222|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#222|Add song-specific details
+281|357|Tigers are Sleeping|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+282|357|Tigers are Sleeping|CU#248|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#248|Add song-specific details
+283|358|I Shut the Door|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+284|359|Creepy Crawly Spiders|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+285|360|There's a Spider on the Floor|CU#219|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#219|Add song-specific details
+286|360|There's a Spider on the Floor|CU#221|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#221|Add song-specific details
+287|360|There's a Spider on the Floor|CU#222|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#222|Add song-specific details
+288|360|There's a Spider on the Floor|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+289|361|Brush your Teeth|CU#219|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#219|Add song-specific details
+290|361|Brush your Teeth|CU#221|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#221|Add song-specific details
+291|361|Brush your Teeth|CU#222|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#222|Add song-specific details
+292|362|Clap When the Spirit Says Clap|CU#210|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#210|Add song-specific details
+293|362|Clap When the Spirit Says Clap|CU#221|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#221|Add song-specific details
+294|364|Welcome Summer|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+295|365|Wahoo Wahoo Wahoo|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+296|365|Wahoo Wahoo Wahoo|CU#248|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#248|Add song-specific details
+297|368|Phoebe|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+298|368|Phoebe|CU#248|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#248|Add song-specific details
+299|369|The Fishing Song|CU#210|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#210|Add song-specific details
+300|369|The Fishing Song|CU#221|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#221|Add song-specific details
+301|369|The Fishing Song|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+302|369|The Fishing Song|CU#248|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#248|Add song-specific details
+303|370|The Swimming Song|CU#210|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#210|Add song-specific details
+304|370|The Swimming Song|CU#221|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#221|Add song-specific details
+305|370|The Swimming Song|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+306|371|Swimming, Swimming  in the Swimming Pool|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+307|372|This Fine Old Woman|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+308|372|This Fine Old Woman|CU#248|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#248|Add song-specific details
+309|373|My Little Dog|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+310|374|Maggie's in the Weeds|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+311|374|Maggie's in the Weeds|CU#248|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#248|Add song-specific details
+312|376|Wild Bee|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+313|377|Head and Thorax|CU#219|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#219|Add song-specific details
+314|377|Head and Thorax|CU#221|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#221|Add song-specific details
+315|377|Head and Thorax|CU#222|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#222|Add song-specific details
+316|377|Head and Thorax|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+317|381|I'm Going to Take a Bath|CU#219|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#219|Add song-specific details
+318|381|I'm Going to Take a Bath|CU#221|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#221|Add song-specific details
+319|381|I'm Going to Take a Bath|CU#222|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#222|Add song-specific details
+320|383|Spring is Coming|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+321|386|Springtime Lullabye|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+322|387|Crocuses and Scilla|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+323|391|The Wiggly Worm|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+324|392|I had a little piggy|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+325|392|I had a little piggy|CU#248|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#248|Add song-specific details
+326|394|Little Robin Red Breast|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+327|395|Where are the Froggies?|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+328|395|Where are the Froggies?|CU#248|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#248|Add song-specific details
+329|396|Hippity Hop|CU#219|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#219|Add song-specific details
+330|396|Hippity Hop|CU#222|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#222|Add song-specific details
+331|396|Hippity Hop|CU#248|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#248|Add song-specific details
+332|398|Pat-a-cake|CU#219|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#219|Add song-specific details
+333|398|Pat-a-cake|CU#221|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#221|Add song-specific details
+334|398|Pat-a-cake|CU#222|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#222|Add song-specific details
+335|401|I Hear Thunder/ I see blue skies|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+336|402|Puddles|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+337|403|We're Jumping|CU#219|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#219|Add song-specific details
+338|403|We're Jumping|CU#221|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#221|Add song-specific details
+339|403|We're Jumping|CU#222|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#222|Add song-specific details
+340|404|Ring around my Rosy|CU#219|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#219|Add song-specific details
+341|404|Ring around my Rosy|CU#221|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#221|Add song-specific details
+342|404|Ring around my Rosy|CU#222|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#222|Add song-specific details
+343|405|See My Fingers|CU#219|UNDERLINKED|3 themes but only 3 CU(s)|Add more mappings for uncovered themes
+344|405|See My Fingers|CU#219|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#219|Add song-specific details
+345|405|See My Fingers|CU#221|UNDERLINKED|3 themes but only 3 CU(s)|Add more mappings for uncovered themes
+346|405|See My Fingers|CU#221|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#221|Add song-specific details
+347|405|See My Fingers|CU#222|UNDERLINKED|3 themes but only 3 CU(s)|Add more mappings for uncovered themes
+348|405|See My Fingers|CU#222|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#222|Add song-specific details
+349|406|What Do You Suppose?/ Bee Freeze|CU#210|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#210|Add song-specific details
+350|406|What Do You Suppose?/ Bee Freeze|CU#221|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#221|Add song-specific details
+351|406|What Do You Suppose?/ Bee Freeze|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+352|407|Mosquitos|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+353|407|Mosquitos|CU#248|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#248|Add song-specific details
+354|408|Poor Little Sandy Girl|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+355|410|Close your eyes and Dream|CU#219|UNDERLINKED|3 themes but only 3 CU(s)|Add more mappings for uncovered themes
+356|410|Close your eyes and Dream|CU#219|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#219|Add song-specific details
+357|410|Close your eyes and Dream|CU#221|UNDERLINKED|3 themes but only 3 CU(s)|Add more mappings for uncovered themes
+358|410|Close your eyes and Dream|CU#221|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#221|Add song-specific details
+359|410|Close your eyes and Dream|CU#222|UNDERLINKED|3 themes but only 3 CU(s)|Add more mappings for uncovered themes
+360|410|Close your eyes and Dream|CU#222|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#222|Add song-specific details
+361|415|Mon petit lapin a bien du chagrin|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+362|415|Mon petit lapin a bien du chagrin|CU#248|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#248|Add song-specific details
+363|416|Stroke The Bunny|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+364|416|Stroke The Bunny|CU#248|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#248|Add song-specific details
+365|419|Jean Petit qui danse|CU#219|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#219|Add song-specific details
+366|419|Jean Petit qui danse|CU#221|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#221|Add song-specific details
+367|419|Jean Petit qui danse|CU#222|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#222|Add song-specific details
+368|422|A Monkey and a Hound  / Le singe et le chien|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+369|422|A Monkey and a Hound  / Le singe et le chien|CU#248|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#248|Add song-specific details
+370|424|I Have a Little Drum|CU#210|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#210|Add song-specific details
+371|424|I Have a Little Drum|CU#221|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#221|Add song-specific details
+372|427|The Cookie Song|CU#210|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#210|Add song-specific details
+373|427|The Cookie Song|CU#221|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#221|Add song-specific details
+374|433|Wiggle Your Fingers|CU#218|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#218|Add song-specific details
+375|433|Wiggle Your Fingers|CU#219|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#219|Add song-specific details
+376|433|Wiggle Your Fingers|CU#221|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#221|Add song-specific details
+377|433|Wiggle Your Fingers|CU#222|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#222|Add song-specific details
+378|434|Jump Jim Joe|CU#219|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#219|Add song-specific details
+379|434|Jump Jim Joe|CU#222|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#222|Add song-specific details
+380|435|Here We Go Zodeo|CU#219|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#219|Add song-specific details
+381|435|Here We Go Zodeo|CU#221|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#221|Add song-specific details
+382|435|Here We Go Zodeo|CU#222|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#222|Add song-specific details
+383|444|Alabama Gals|CU#219|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#219|Add song-specific details
+384|444|Alabama Gals|CU#221|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#221|Add song-specific details
+385|444|Alabama Gals|CU#222|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#222|Add song-specific details
+386|446|We're floating down the river|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+387|448|Old Bald Eagle|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+388|457|Mice Rhymes|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+389|457|Mice Rhymes|CU#248|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#248|Add song-specific details
+390|460|Clap your Hands|CU#219|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#219|Add song-specific details
+391|460|Clap your Hands|CU#221|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#221|Add song-specific details
+392|461|Toe Tittly|CU#219|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#219|Add song-specific details
+393|461|Toe Tittly|CU#221|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#221|Add song-specific details
+394|461|Toe Tittly|CU#222|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#222|Add song-specific details
+395|462|The Truck Song|CU#210|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#210|Add song-specific details
+396|462|The Truck Song|CU#221|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#221|Add song-specific details
+397|465|Pterodactyl Song|CU#210|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#210|Add song-specific details
+398|465|Pterodactyl Song|CU#221|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#221|Add song-specific details
+399|465|Pterodactyl Song|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+400|465|Pterodactyl Song|CU#248|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#248|Add song-specific details
+401|473|The Pie Song|CU#210|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#210|Add song-specific details
+402|473|The Pie Song|CU#221|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#221|Add song-specific details
+403|474|Keeper of the Bees|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+404|478|We're Jumping|CU#219|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#219|Add song-specific details
+405|478|We're Jumping|CU#221|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#221|Add song-specific details
+406|478|We're Jumping|CU#222|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#222|Add song-specific details
+407|482|Stroke The Bunny|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+408|482|Stroke The Bunny|CU#248|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#248|Add song-specific details
+409|488|A Monkey and a Hound  / Le singe et le chien|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+410|488|A Monkey and a Hound  / Le singe et le chien|CU#248|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#248|Add song-specific details
+411|490|I Have a Little Drum|CU#210|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#210|Add song-specific details
+412|490|I Have a Little Drum|CU#221|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#221|Add song-specific details
+413|493|The Cookie Song|CU#210|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#210|Add song-specific details
+414|493|The Cookie Song|CU#221|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#221|Add song-specific details
+415|499|Wiggle Your Fingers|CU#218|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#218|Add song-specific details
+416|499|Wiggle Your Fingers|CU#219|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#219|Add song-specific details
+417|499|Wiggle Your Fingers|CU#221|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#221|Add song-specific details
+418|499|Wiggle Your Fingers|CU#222|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#222|Add song-specific details
+419|502|Mice Rhymes|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+420|502|Mice Rhymes|CU#248|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#248|Add song-specific details
+421|505|Clap your Hands|CU#219|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#219|Add song-specific details
+422|505|Clap your Hands|CU#221|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#221|Add song-specific details
+423|506|Toe Tittly|CU#219|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#219|Add song-specific details
+424|506|Toe Tittly|CU#221|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#221|Add song-specific details
+425|506|Toe Tittly|CU#222|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#222|Add song-specific details
+426|507|The Truck Song|CU#210|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#210|Add song-specific details
+427|507|The Truck Song|CU#221|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#221|Add song-specific details
+428|510|Pterodactyl Song|CU#210|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#210|Add song-specific details
+429|510|Pterodactyl Song|CU#221|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#221|Add song-specific details
+430|510|Pterodactyl Song|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+431|510|Pterodactyl Song|CU#248|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#248|Add song-specific details
+432|518|The Pie Song|CU#210|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#210|Add song-specific details
+433|518|The Pie Song|CU#221|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#221|Add song-specific details
+434|523|We're Jumping|CU#219|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#219|Add song-specific details
+435|523|We're Jumping|CU#221|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#221|Add song-specific details
+436|523|We're Jumping|CU#222|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#222|Add song-specific details
+437|530|Nage, nage, nage|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details
+438|531|Un bateau, Mamie, Mamie|CU#226|RATIONALE_WEAK|Completely generic template — no song-specific reference for CU#226|Add song-specific details

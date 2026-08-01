@@ -1,6 +1,8 @@
 import Link from "next/link";
+import type { SiteTheme } from "../lib/site-theme";
+import { ThemeSwitcher } from "./ThemeSwitcher";
 
-export function SiteShell({ children, active }: { children: React.ReactNode; active?: "home" | "topics" | "about" }) {
+export function SiteShell({ children, active, suggestedTheme = "farm-day" }: { children: React.ReactNode; active?: "home" | "topics" | "about"; suggestedTheme?: SiteTheme }) {
   return (
     <main>
       <nav className="topbar" aria-label="Primary navigation">
@@ -9,6 +11,7 @@ export function SiteShell({ children, active }: { children: React.ReactNode; act
           <Link href="/" className={active === "home" ? "active" : ""}>Home</Link>
           <Link href="/topics" className={active === "topics" ? "active" : ""}>Browse Topics</Link>
           <Link href="/about" className={active === "about" ? "active" : ""}>About</Link>
+          <ThemeSwitcher suggestedTheme={suggestedTheme} />
         </div>
       </nav>
       <div className="site-page">{children}</div>
