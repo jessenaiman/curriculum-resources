@@ -16,11 +16,13 @@ export type PracticeStep = { key: "practice"; label: string; subtitle: string; t
 export type CheckStep = { key: "check"; label: string; subtitle: string; title: string; teacher: string; students: string; lookFor: string; tip: string };
 export type ExtendStep = { key: "extend"; label: string; subtitle: string; searchPrompt: string; categories: ExtendCategory[] };
 export type SingleStep = WatchStep | TryStep | PracticeStep | CheckStep | ExtendStep;
+export type PrintableDoc = { title: string; image: string; format: string; url: string };
 export type SingleLessonTopic = {
   format: "single";
   meta: Record<string, string>;
   goal: string;
   materials: string[];
+  printables: PrintableDoc[];
   steps: SingleStep[];
   watch: WatchStep;
   try: TryStep;
@@ -230,6 +232,13 @@ function parseSingleLesson(raw: string): SingleLessonTopic {
     categories,
   };
 
+  // Parsed from a `## Printables` list of `title | image | format` lines.
+  // The image doubles as the download target until real PDFs exist.
+  const printables: PrintableDoc[] = sectionContent("Printables")
+    .filter((l) => l.startsWith("- "))
+    .map((l) => { const p = l.slice(2).split("|").map((s) => s.trim()); return { title: p[0] || "", image: p[1] || "", format: p[2] || "PDF", url: p[1] || "" }; })
+    .filter((d) => d.title || d.image);
+
   // Planning note
   const planningLines = sectionContent("Planning note");
   const planningNote = planningLines.find((l) => l && !l.startsWith("#")) || "";
@@ -238,7 +247,7 @@ function parseSingleLesson(raw: string): SingleLessonTopic {
   const curriculumPathRaw = meta.curriculumPath || "";
   const curriculumPath = curriculumPathRaw ? curriculumPathRaw.split(",").map((s) => s.trim()) : [];
 
-  return { format: "single", meta, goal: meta.goal || meta.summary || "", materials: [], steps: [], watch, try: tryStep, practice, check, extend, searches: [], planningNote, curriculumPath };
+  return { format: "single", meta, goal: meta.goal || meta.summary || "", materials: [], steps: [], watch, try: tryStep, practice, check, extend, searches: [], printables, planningNote, curriculumPath };
 }
 
 function parseAnyLesson(raw: string): AnyLesson {

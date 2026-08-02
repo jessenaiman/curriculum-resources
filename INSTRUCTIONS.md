@@ -1,4 +1,6 @@
-# Curriculum Database
+# Curriculum Database — Single Source of Truth
+
+All data for the "Old MacDonald's School" teacher resource app lives in `curriculum.db`. The `resources/` folder is a legacy archive — do not edit files there.
 
 ## Quick Start
 
@@ -10,75 +12,98 @@ sqlite3 "C:\Users\jesse\OneDrive\Documents\New project\data\curriculum.db"
 python3 -c "import sqlite3; conn = sqlite3.connect('data/curriculum.db'); c = conn.cursor(); c.execute('SELECT * FROM curriculum_topics WHERE grade=\"Grade 1\"'); print(c.fetchall())"
 ```
 
-## Tables
+## All Tables
 
-| Table | What It Holds |
-|-------|---------------|
-| `curriculum_topics` | Every lesson row from the tracker (subject, grade, codes, notes) |
-| `resources` | Free printable links organized by subject/category/grade |
-| `standards_codes` | Ontario + US standard codes (reference lookup) |
-| `reference_images` | Character/art reference images (file paths, tags) |
-| `resources_topics` | Maps resources to curriculum topics |
+| Table | Rows | What It Holds |
+|-------|------|---------------|
+| `curriculum_topics` | 264 | Every lesson row (subject, grade, codes, notes, taught status) |
+| `songs` | 561 | Kathy Reid-Naiman song catalog with lyrics, actions, URLs |
+| `songs_curriculum` | 1,991 | Links songs → curriculum topics (543/561 songs linked = 96.8%) |
+| `songs_early_years` | 58 | Links songs → early years ELOF goals |
+| `songs_music_stages` | 55 | Links songs → Gordon MLT preparatory audiation stages |
+| `circle_time_songs` | 64 | Circle time song reference with actions, age groups |
+| `circle_time_songs_curriculum` | 68 | Links circle time songs → curriculum topics |
+| `circle_time_songs_early_years` | 73 | Links circle time songs → early years goals |
+| `circle_time_songs_songs` | 7 | Links circle time songs → full songs table |
+| `resources` | 40 | Curated educational links (worksheets, videos, activities, games) |
+| `resources_topics` | 242 | Links resources → curriculum topics |
+| `standards_codes` | 126 | Ontario curriculum codes with full text (Grades 1-3) |
+| `staff` | 8 | Staff puppet characters (species, personality, costume, props, friendships) |
+| `students` | 8 | Student puppet characters (species, personality, color, learning style) |
+| `reference_images` | 7 | Character art reference image paths and tags |
+| `early_years_topics` | 129 | ELOF-aligned developmental goals (Infant→Kindergarten) |
+| `music_arts_stages` | 31 | Gordon MLT preparatory audiation stages (birth-6) |
+| `unit_templates` | 10 | Song/Story/Movement/Sensory/Craft-led unit plans (all need content) |
+| `music_units` | — | Music unit structure (ready for content) |
 
-## Common Queries
+## Generate a Curriculum Page
+
+Two files work together to turn DB data into classroom materials:
+
+### 1. Assembly Query
+`data/curriculum_topic_assembly.sql` — Run this with a topic ID to get all songs, resources, standards, characters, and pacing for that topic.
+
+Example usage:
+```bash
+# Replace "WHERE id = 1" with your topic ID, then:
+sqlite3 "data/curriculum.db" < "data/curriculum_topic_assembly.sql"
+```
+
+### 2. Generation Prompt
+`data/curriculum_page_prompt_template.md` — Feed the query output into an LLM with this template to generate a complete, printable teacher curriculum page.
+
+The template instructs the AI to generate:
+- Lesson overview and learning goals
+- Materials list with audio/resource links
+- Step-by-step lesson plan with puppet characters
+- Differentiation for diverse learners
+- Assessment ideas
+- Cross-curricular connections
+- Character moments (Old MacDonald, Mr Rusty, etc.)
+
+## Key Queries
 
 ```sql
--- What topics does Grade 1 Math cover?
-SELECT lesson_topic, category FROM curriculum_topics WHERE grade='Grade 1' AND subject='Math & Numeracy';
+-- Full topic assembly (replace 1 with topic ID)
+SELECT * FROM curriculum_topic_assembly WHERE curriculum_topic_id = 1;
 
--- Which Ontario codes are missing?
-SELECT lesson_topic, category FROM curriculum_topics WHERE ontario_code IS NULL;
+-- Find topics with songs
+SELECT ct.id, ct.subject, ct.lesson_topic, COUNT(sc.song_id) as songs
+FROM curriculum_topics ct
+LEFT JOIN songs_curriculum sc ON ct.id = sc.curriculum_id
+GROUP BY ct.id HAVING songs > 0
+ORDER BY songs DESC;
 
--- Find free worksheets for Grade 2 fractions
-SELECT name, url, description FROM resources WHERE subject='Math & Numeracy' AND grade='Grade 2' AND type='worksheet' AND free=1;
+-- Find topics with no songs yet (18 remaining unlinked)
+SELECT ct.id, ct.subject, ct.lesson_topic
+FROM curriculum_topics ct
+LEFT JOIN songs_curriculum sc ON ct.id = sc.curriculum_id
+WHERE sc.id IS NULL AND ct.grade NOT LIKE '%Grade 1-2%'
+ORDER BY ct.subject, ct.grade;
 
--- What resources exist for a specific topic?
-SELECT r.name, r.url FROM resources r WHERE r.subject='Math & Numeracy' AND r.category='Operations';
+-- All resources for a given subject
+SELECT name, type, url, description FROM resources WHERE subject = 'Math & Numeracy';
 
--- List all paywalled resources
-SELECT name, url FROM resources WHERE paywalled=1;
+-- Staff who teach a specific subject
+SELECT name, species, shown_doing FROM staff WHERE teaches LIKE '%Phonics%';
 
--- Show all resources for Grade 3
-SELECT name, url, type, description FROM resources WHERE grade LIKE '%Grade 3%';
+-- Weekly pacing for Grade 2 Math
+SELECT week, month, lesson_name, ontario_code
+FROM curriculum_map WHERE grade = 'Grade 2' AND strand = 'Math & Numeracy';
 ```
 
-## Adding Data
+## Current Status (Aug 1, 2026)
 
-```sql
--- Add a new curriculum topic
-INSERT INTO curriculum_topics (subject, category, subcategory, grade, seq_num, lesson_topic, lesson_description, skills_covered, ontario_code, us_code)
-VALUES ('Literacy & Phonics', 'Phonics', 'Short Vowels', 'Grade 1', 1.1, 'Short Vowel Sounds', 'Identify and produce short vowel sounds', 'B2.1', 'RF.2.3');
-
--- Add a new resource
-INSERT INTO resources (name, url, type, subject, category, grade, description, free, tags)
-VALUES ('New Worksheet', 'https://example.com', 'worksheet', 'Math & Numeracy', 'Operations', 'Grade 1', 'Addition practice', 1, 'free,printable');
-
--- Link a resource to a topic
-INSERT INTO resources_topics (resource_id, topic_id, relevance) VALUES (1, 11, 'primary');
-```
-
-## Directory Structure
-
-```
-New project/
-├── data/
-│   └── curriculum.db          ← this database
-├── images/
-│   ├── characters/            ← reference images go here
-│   ├── worksheets/
-│   └── resources/
-├── resources/                 ← markdown resource files (legacy)
-│   ├── math/
-│   ├── literacy/
-│   ├── science/
-│   ├── sel/
-│   └── motor/
-└── INSTRUCTIONS.md            ← this file
-```
-
-## Notes
-
-- `curriculum_topics` has Math & Numeracy seeded (59 rows). Literacy, Science, SEL, Motor will be added as research completes.
-- `resources` has 40 free resource links. More will be added as research completes.
-- `standards_codes` is empty — waiting for a standards agent to populate Ontario expectation codes.
-- `reference_images` is empty — waiting for character/art reference images.
+| Metric | Value |
+|--------|-------|
+| Curriculum topics | 264 across 8 subjects, 0 taught |
+| Songs in catalog | 561 (all Kathy Reid-Naiman) |
+| Songs with lyrics | 46 (imported from verified track_data.json) |
+| Songs with audio URL | 80 (linked to kathyreidnaiman.com) |
+| Songs linked to curriculum | 543 of 561 (96.8%) |
+| Total song-curriculum links | 1,991 (718 primary, 1,273 secondary) |
+| Resources | 40 curated links (free) |
+| Unit templates | 10 placeholders (need content) |
+| Staff/Student characters | 8 staff + 8 students, fully defined |
+| Ontario standards | 126 codes across Grades 1-3 |
+| US Common Core | 262 codes inline in curriculum_topics |
