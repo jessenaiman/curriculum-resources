@@ -16,7 +16,7 @@ export default function AboutPage() {
       <section className="about-layout">
         <div className="about-story">
           {page.sections.map((section) => (
-            <article key={section.title}>
+            <article className="stitch" key={section.title}>
               <span className="eyebrow">{section.kicker}</span>
               <h2>{section.title}</h2>
               {section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}

@@ -2,6 +2,8 @@
 
 A small static teacher-resource website where each topic is an editable MDX file. The spreadsheet remains the curriculum reference; the website turns selected rows into practical lesson-starting pages.
 
+The SQLite source in `data/curriculum.db` also contains a structured lesson-authoring layer. `lesson_blueprints` stores the page-ready lesson brief, `lesson_steps` stores the teaching sequence, `worksheet_briefs` stores printable-generation inputs, and the guidance/review tables preserve optional songs, resources, search fallbacks, provenance, and review flags. Rebuild that layer with `python data/populate_lesson_content.py`; inspect one topic with `data/lesson_content_assembly.sql` and review the full set with `data/lesson_content_review.sql`.
+
 ## Edit lesson content
 
 Lesson pages live in `content/lessons/`. Copy `content/templates/topic-template.mdx`, rename it, and edit the frontmatter and lesson sections. New lesson files are discovered automatically.

@@ -3,6 +3,8 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import type { PrintableDoc, SingleLessonTopic } from "../lib/mdx-content";
+import { charKey } from "../lib/char-key";
+import { iconPath } from "../lib/char-icon";
 
 /* ── icons ── */
 const WatchIcon = () => (<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="2" y="4" width="20" height="14" rx="2" /><polygon points="10,8 16,11 10,14" fill="currentColor" stroke="none" /></svg>);
@@ -86,7 +88,7 @@ export function SingleLessonPage({ lesson }: { lesson: SingleLessonTopic }) {
   const previewDoc = preview !== null ? docs[preview] : null;
 
   return (
-    <div className="lp-page lesson-page">
+    <div className="lp-page lesson-page" data-char={charKey(lead.name)}>
       <div className="lp-topbar">
         <nav className="lp-breadcrumb" aria-label="Breadcrumb">
           <Link href="/" className="lp-bc-home" aria-label="Home"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /><polyline points="9 22 9 12 15 12 15 22" /></svg></Link>
@@ -103,7 +105,7 @@ export function SingleLessonPage({ lesson }: { lesson: SingleLessonTopic }) {
           <p className="lp-summary">{meta.summary}</p>
         </div>
         <div className="lp-lead-badge stitch">
-          <img className="lp-lead-patch" src={`/patches/${lead.patch}.png`} alt="" />
+          <img className="lp-lead-patch" src={iconPath(lead.patch)} alt="" />
           <div className="lp-lead-meta">
             <strong>Built for {meta.grade}</strong>
             <small>{lead.name} · {meta.timeEstimate}</small>
