@@ -32,7 +32,7 @@ function GradeWorkspace({ grade, lessonSlug }: { grade: GradeLesson; lessonSlug:
   }
 
   return (
-    <article className={`grade-workspace ${grade.accent}`}>
+    <article className={`grade-workspace stitch ${grade.accent}`}>
       <header className="grade-header">
         <div className="grade-id"><span>{grade.grade}</span><small>{grade.lesson}</small></div>
         <div className="mode">{grade.mode}</div>

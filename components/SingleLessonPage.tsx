@@ -89,31 +89,33 @@ export function SingleLessonPage({ lesson }: { lesson: SingleLessonTopic }) {
 
   return (
     <div className="lp-page lesson-page" data-char={charKey(lead.name)}>
-      <div className="lp-topbar">
-        <nav className="lp-breadcrumb" aria-label="Breadcrumb">
-          <Link href="/" className="lp-bc-home" aria-label="Home"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /><polyline points="9 22 9 12 15 12 15 22" /></svg></Link>
-          <span className="lp-bc-sep">›</span><span>{meta.gradeBand}</span>
-          <span className="lp-bc-sep">›</span><span>{meta.subject}</span>
-          <span className="lp-bc-sep">›</span><span className="lp-bc-current">{meta.category}</span>
-        </nav>
-        <span className="lp-grade-chip">{meta.grade}</span>
-      </div>
-
-      <header className="lp-header">
-        <div className="lp-header-copy">
-          <h1>{meta.title}<span className="lp-sparkle" aria-hidden="true">✦</span></h1>
-          <p className="lp-summary">{meta.summary}</p>
+      <section className="lp-hero stitch">
+        <div className="lp-topbar">
+          <nav className="lp-breadcrumb" aria-label="Breadcrumb">
+            <Link href="/" className="lp-bc-home" aria-label="Home"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /><polyline points="9 22 9 12 15 12 15 22" /></svg></Link>
+            <span className="lp-bc-sep">›</span><span>{meta.gradeBand}</span>
+            <span className="lp-bc-sep">›</span><span>{meta.subject}</span>
+            <span className="lp-bc-sep">›</span><span className="lp-bc-current">{meta.category}</span>
+          </nav>
+          <span className="lp-grade-chip">{meta.grade}</span>
         </div>
-        <div className="lp-lead-badge stitch">
-          <img className="lp-lead-patch" src={iconPath(lead.patch)} alt="" />
-          <div className="lp-lead-meta">
-            <strong>Built for {meta.grade}</strong>
-            <small>{lead.name} · {meta.timeEstimate}</small>
+
+        <header className="lp-header">
+          <div className="lp-header-copy">
+            <h1>{meta.title}<span className="lp-sparkle" aria-hidden="true">✦</span></h1>
+            <p className="lp-summary">{meta.summary}</p>
           </div>
-        </div>
-      </header>
+          <div className="lp-lead-badge stitch">
+            <img className="lp-lead-patch" src={iconPath(lead.patch)} alt="" />
+            <div className="lp-lead-meta">
+              <strong>Built for {meta.grade}</strong>
+              <small>{lead.name} · {meta.timeEstimate}</small>
+            </div>
+          </div>
+        </header>
+      </section>
 
-      <section className="lp-academics" aria-label="Curriculum alignment">
+      <section className="lp-academics stitch" aria-label="Curriculum alignment">
         <div><span>Curriculum lesson</span><strong>{curriculumLesson}</strong></div>
         <div><span>Standards</span><strong>{standards || "Standards pending"}</strong></div>
         <div><span>Recommended source</span><strong>{curriculumSource || "Source pending"}</strong>{meta.externalResource && <a href={meta.externalResource} target="_blank" rel="noreferrer">Open source ↗</a>}</div>
