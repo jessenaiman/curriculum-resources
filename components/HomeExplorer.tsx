@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { SubjectDiscovery } from "./SubjectDiscovery";
 import { ResourcePreview, type PreviewLesson } from "./ResourcePreview";
-import { iconPath } from "../lib/char-icon";
+import { iconPathSmall } from "../lib/char-icon";
 
 type SlimLesson = {
   slug: string;
@@ -39,7 +39,7 @@ export function HomeExplorer({ hero, lessons, previewLessons }: HomeData) {
             <div className="hero-crew-teaser">
               <Link className="hero-crew-teaser-link" href="/cast-guide">
                 <span className="hero-crew-teaser-patches">
-                  {CREW_TEASER.map((p) => <img key={p} src={iconPath(p)} alt="" />)}
+                  {CREW_TEASER.map((p) => <img key={p} src={iconPathSmall(p)} alt="" />)}
                 </span>
                 <span className="hero-crew-teaser-copy">
                   <strong>Meet the crew who teaches each subject</strong>

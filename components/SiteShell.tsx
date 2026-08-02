@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ThemeSwitcher } from "./ThemeSwitcher";
-import { iconPath } from "../lib/char-icon";
+import { iconPathSmall } from "../lib/char-icon";
 import { CLUSTERS } from "./SubjectDiscovery";
 
 export type ActivePage =
@@ -37,7 +37,7 @@ export function SiteShell({ children, active }: { children: React.ReactNode; act
       <nav className="band-nav" aria-label="Browse by grade band">
         {BANDS.map((b) => (
           <Link key={b.key} href={b.href} className={`band-btn ${b.key}${active === b.key ? " is-active" : ""}`} aria-current={active === b.key ? "page" : undefined}>
-            <span className="band-btn-patch"><img src={iconPath(b.patch)} alt="" /></span>
+            <span className="band-btn-patch"><img src={iconPathSmall(b.patch)} alt="" /></span>
             <span className="band-btn-copy"><small>{b.age}</small><strong>{b.label}</strong></span>
           </Link>
         ))}
