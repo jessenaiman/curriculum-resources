@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { STAFF, STUDENTS } from "../lib/cast";
-import { iconPath } from "../lib/char-icon";
+import { CharacterBadge } from "./CharacterBadge";
 
 const ChevronIcon = ({ open }: { open: boolean }) => (
   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ transform: open ? "rotate(180deg)" : undefined, transition: "transform .15s ease" }}>
@@ -38,7 +38,7 @@ export function CastGuidePage() {
             return (
               <article className="cast-card stitch" key={s.key}>
                 <button className="cast-card-head" onClick={() => toggleOpen(s.key)} aria-expanded={isOpen}>
-                  <img className="cast-card-patch" src={iconPath(s.key)} alt="" />
+                  <CharacterBadge className="cast-card-patch" charKey={s.key} color={s.color} name={s.name} size={52} />
                   <span className="cast-card-copy">
                     <strong>{s.name}</strong>
                     <small>{s.role}</small>
@@ -65,7 +65,7 @@ export function CastGuidePage() {
             return (
               <article className="cast-card stitch" key={s.key}>
                 <button className="cast-card-head" onClick={() => toggleOpen(s.key)} aria-expanded={isOpen}>
-                  <img className="cast-card-patch" src={iconPath(s.key)} alt="" />
+                  <CharacterBadge className="cast-card-patch" charKey={s.key} color={s.color} name={s.name} size={52} />
                   <span className="cast-card-copy">
                     <strong>{s.name}</strong>
                     <small>{s.species}{s.note ? ` · ${s.note}` : ""}</small>

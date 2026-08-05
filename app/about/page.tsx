@@ -24,7 +24,7 @@ export default function AboutPage() {
             </article>
           ))}
         </div>
-        <aside className="hire-card">
+        <aside className="hire-card stitch">
           <span className="eyebrow">Work with me</span>
           <h2>{page.meta.hireTitle}</h2>
           <p>{page.meta.hireSummary}</p>

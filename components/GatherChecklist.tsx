@@ -50,7 +50,7 @@ export function GatherChecklist({ lessonSlug, grade }: { lessonSlug: string; gra
   const done = items.filter((item) => checked[item]).length;
 
   return (
-    <section className="gather-checklist" aria-label={`Gather materials for ${grade.grade}`}>
+    <section className="gather-checklist stitch" aria-label={`Gather materials for ${grade.grade}`}>
       <div className="gather-head">
         <div>
           <span className="eyebrow">Before you teach</span>

@@ -4,7 +4,8 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import type { PrintableDoc, SingleLessonTopic } from "../lib/mdx-content";
 import { charKey } from "../lib/char-key";
-import { iconPath } from "../lib/char-icon";
+import { CharacterBadge } from "./CharacterBadge";
+import { STAFF } from "../lib/cast";
 
 /* ── icons ── */
 const WatchIcon = () => (<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="2" y="4" width="20" height="14" rx="2" /><polygon points="10,8 16,11 10,14" fill="currentColor" stroke="none" /></svg>);
@@ -106,7 +107,7 @@ export function SingleLessonPage({ lesson }: { lesson: SingleLessonTopic }) {
             <p className="lp-summary">{meta.summary}</p>
           </div>
           <div className="lp-lead-badge stitch">
-            <img className="lp-lead-patch" src={iconPath(lead.patch)} alt="" />
+            <CharacterBadge className="lp-lead-patch" charKey={lead.patch} color={STAFF.find((s) => s.key === lead.patch)?.color ?? "var(--gold)"} name={lead.name} size={48} />
             <div className="lp-lead-meta">
               <strong>Built for {meta.grade}</strong>
               <small>{lead.name} · {meta.timeEstimate}</small>
@@ -125,7 +126,7 @@ export function SingleLessonPage({ lesson }: { lesson: SingleLessonTopic }) {
         <section className="lp-interact" aria-label="Lesson sequence">
           <div className="lp-map" role="tablist" aria-label="Lesson steps">
             {STEPS.map((s, i) => (
-              <button key={s.key} role="tab" aria-selected={i === active} className={i === active ? "active" : ""} onClick={() => setActive(i)}>
+              <button key={s.key} role="tab" aria-selected={i === active} className={`stitch${i === active ? " active" : ""}`} onClick={() => setActive(i)}>
                 <span className="lp-map-num">{i + 1}</span>
                 <span className="lp-map-icon">{s.icon}</span>
                 <span className="lp-map-text"><strong>{s.label}</strong><small>{s.sub}</small></span>
@@ -250,7 +251,7 @@ export function SingleLessonPage({ lesson }: { lesson: SingleLessonTopic }) {
         </aside>
       </div>
 
-      <nav className="lp-course-nav" aria-label="Lesson navigation">
+      <nav className="lp-course-nav stitch" aria-label="Lesson navigation">
         {meta.previousSlug ? <Link href={`/topics/${meta.previousSlug}`}><span>← Previous lesson</span><strong>{meta.previousTitle}</strong></Link> : <div><span>Previous lesson</span><strong>{meta.previousTitle || "Start of sequence"}</strong></div>}
         <div><span>Current lesson</span><strong>{meta.title}</strong></div>
         {meta.nextSlug ? <Link href={`/topics/${meta.nextSlug}`}><span>Next lesson →</span><strong>{meta.nextTitle}</strong></Link> : <div><span>Next lesson</span><strong>{meta.nextTitle || "End of sequence"}</strong></div>}

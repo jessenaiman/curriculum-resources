@@ -9,6 +9,7 @@ export type StaffMember = {
   species: string;
   role: string;
   gradeBand: string;
+  color: string; // subject-coded signature color, bold/bright — see color-coding review
   personality: string[];
   worksheetLens: string;
   guides: string[];
@@ -19,6 +20,7 @@ export type Student = {
   key: string;
   name: string;
   species: string;
+  color: string; // canonical signature color from CAST_AND_ROLES.md / character deck
   personality: string[];
   learningStrengths: string[];
   pairsWith: string[];
@@ -29,7 +31,7 @@ export type Student = {
 export const STAFF: StaffMember[] = [
   {
     key: "old-macdonald", name: "Old MacDonald", species: "Human adult", role: "Headmaster & band leader",
-    gradeBand: "Whole school",
+    gradeBand: "Whole school", color: "#8B5E34",
     personality: ["Welcoming, attentive and playful", "Anchors whole-school gatherings", "Invites participation without taking over"],
     worksheetLens: "Whole-school review — community, review, cross-curricular checks, shared challenges.",
     guides: ["Morning meetings and assemblies", "Reading and shared stories", "Band leadership and community events"],
@@ -37,7 +39,7 @@ export const STAFF: StaffMember[] = [
   },
   {
     key: "miss-puddles", name: "Miss Puddles", species: "Duck adult", role: "Daycare teacher",
-    gradeBand: "Daycare (0–2) & Preschool (3–4)",
+    gradeBand: "Daycare (0–2) & Preschool (3–4)", color: "#E8A227",
     personality: ["Nurturing, patient and practical", "Meets younger learners at their level", "Turns routines into calm participation"],
     worksheetLens: "Early learning & SEL — routines, sharing, simple instructions, art, calm participation.",
     guides: ["Play-based early learning", "Classroom routines and sharing", "Fingerplays, art and simple movement"],
@@ -45,7 +47,7 @@ export const STAFF: StaffMember[] = [
   },
   {
     key: "mr-rusty", name: "Mr Rusty", species: "Horse adult", role: "Music & dance teacher",
-    gradeBand: "Kindergarten – Grade 1/2",
+    gradeBand: "Kindergarten – Grade 1/2", color: "#2C6C9B",
     personality: ["Warm, rhythmic and encouraging", "Grounded energy rather than showmanship", "Helps shy students join in"],
     worksheetLens: "Rhythm & movement — music, patterns, sequencing, syllables, fluency.",
     guides: ["Music, singing and fiddle", "Movement and dance sequences", "Patterns, rhythm, syllables and fluency"],
@@ -53,7 +55,7 @@ export const STAFF: StaffMember[] = [
   },
   {
     key: "miss-hayley", name: "Miss Hayley", species: "Human adult", role: "Grade 1/2 & drama",
-    gradeBand: "Grade 1/2",
+    gradeBand: "Grade 1/2", color: "#C9527A",
     personality: ["Expressive, encouraging and imaginative", "Gets the class singing", "Uses imagination, drama and class plays"],
     worksheetLens: "Language & communication — phonics, reading, writing, vocabulary, drama.",
     guides: ["Phonics, reading and vocabulary", "Writing and oral communication", "Drama, storytelling and performance"],
@@ -61,7 +63,7 @@ export const STAFF: StaffMember[] = [
   },
   {
     key: "mr-sam", name: "Mr Sam", species: "Pig adult", role: "Math & building",
-    gradeBand: "Grade 1/2",
+    gradeBand: "Grade 1/2", color: "#1F6B6B",
     personality: ["Inventive, patient and hands-on", "Makes room for “I don’t know yet”", "Builds to understand how things work"],
     worksheetLens: "Math & STEM — number sense, measurement, geometry, science, building.",
     guides: ["Number sense and operations", "Measurement and geometry", "Science, engineering and practical problem-solving"],
@@ -69,7 +71,7 @@ export const STAFF: StaffMember[] = [
   },
   {
     key: "mr-maisy", name: "Mr Maisy", species: "Cow adult", role: "Physical education teacher",
-    gradeBand: "Whole school",
+    gradeBand: "Whole school", color: "#B5272C",
     personality: ["Energetic, encouraging and team-minded", "Models safe movement", "Celebrates effort and participation"],
     worksheetLens: "Physical education — movement, health, teamwork, safety, games.",
     guides: ["Physical education and gross motor skills", "Games, teamwork and outdoor activity", "Health, safety and body awareness"],
@@ -77,7 +79,7 @@ export const STAFF: StaffMember[] = [
   },
   {
     key: "mr-puddles", name: "Mr Puddles", species: "Duck adult", role: "Art & photography teacher",
-    gradeBand: "Whole school",
+    gradeBand: "Whole school", color: "#4F5FA0",
     personality: ["Observant, curious and gently funny", "A devoted birdwatcher", "Notices small visual details"],
     worksheetLens: "Visual observation — art, photography, senses, classification, nature.",
     guides: ["Drawing, colour, texture and composition", "Photography and careful observation", "Nature study through looking closely"],
@@ -85,7 +87,7 @@ export const STAFF: StaffMember[] = [
   },
   {
     key: "miss-maisy", name: "Miss Maisy", species: "Cow adult", role: "School secretary & gardening lead",
-    gradeBand: "Whole school",
+    gradeBand: "Whole school", color: "#55705A",
     personality: ["Organized, welcoming and observant", "Helps the school day run smoothly", "Makes information easy to follow"],
     worksheetLens: "Practical organization — calendar, time, lists, sequencing, clear messages.",
     guides: ["Schedules, calendars and time", "Sequencing and organizing information", "Clear messages and practical communication"],
@@ -95,56 +97,56 @@ export const STAFF: StaffMember[] = [
 
 export const STUDENTS: Student[] = [
   {
-    key: "hopper", name: "Hopper", species: "Rabbit", note: "Eager mover",
+    key: "hopper", name: "Hopper", species: "Rabbit", color: "#D9713C", note: "Eager mover",
     personality: ["Energetic, optimistic and ready to join", "Buoyant rather than chaotic", "Often first to try"],
     learningStrengths: ["Skip-counting through movement", "Calendar and days of the week", "Gross motor skills and action cues"],
     pairsWith: ["Daisy for number patterns", "Puddles for energetic participation", "Scout for exploration and movement"],
     recognizable: ["Cream rabbit with pink-lined ears", "Orange vest and denim shorts", "Olive backpack and blue sneakers"],
   },
   {
-    key: "whiskers", name: "Whiskers", species: "Cat", note: "Curious observer",
+    key: "whiskers", name: "Whiskers", species: "Cat", color: "#7B4FA8", note: "Curious observer",
     personality: ["Curious, gentle and thoughtful", "Notices details before others", "Asks careful questions"],
     learningStrengths: ["Five senses and observation", "Sorting and classifying", "Weather and nature study"],
     pairsWith: ["Sam for quiet problem-solving", "Scout for outdoor discovery", "Penny for careful first attempts"],
     recognizable: ["Soft gray tabby with green eyes", "Lavender knitted scarf", "Teal flowered satchel"],
   },
   {
-    key: "scout", name: "Scout", species: "Dog", note: "Helpful explorer",
+    key: "scout", name: "Scout", species: "Dog", color: "#4A7A3A", note: "Helpful explorer",
     personality: ["Adventurous, observant and dependable", "Leads the way physically", "Helps classmates who are stuck"],
     learningStrengths: ["Directions and positional words", "Phonics as following a sound trail", "Teamwork and community helpers"],
     pairsWith: ["Whiskers for discovery", "Rusty for steady teamwork", "Sam for figuring out how things work"],
     recognizable: ["Cream dog with brown ears and eye patch", "Explorer hat and blue neckerchief", "Utility vest, backpack and boots"],
   },
   {
-    key: "penny", name: "Penny", species: "Chick", note: "Brave beginner",
+    key: "penny", name: "Penny", species: "Chick", color: "#C9962E", note: "Brave beginner",
     personality: ["Earnest, careful and growing in confidence", "Shows courage through small attempts", "Never rushes past beginner feelings"],
     learningStrengths: ["ABCs and earliest phonics", "Counting to ten", "Courage and trying new things"],
     pairsWith: ["Daisy for encouragement", "Whiskers for a gentle approach", "Puddles for sharing aloud"],
     recognizable: ["Smallest student", "Fluffy yellow chick with pink bow", "Pale-blue wing-shaped backpack"],
   },
   {
-    key: "maisy", name: "Daisy", species: "Cow", note: "Confident participant — recommended rename from Maisy",
+    key: "maisy", name: "Daisy", species: "Cow", color: "#1F4E5F", note: "Confident participant — recommended rename from Maisy",
     personality: ["Warm, confident and encouraging", "Models the action before inviting others", "Helps nervous classmates participate"],
     learningStrengths: ["Patterns and shapes through her spots", "Sorting, counting and simple addition", "Leadership and encouragement"],
     pairsWith: ["Penny for confidence", "Hopper for patterns and counting", "Sam for careful number work"],
     recognizable: ["Black-and-white calf with pink muzzle", "Blue bandana and yellow backpack"],
   },
   {
-    key: "puddles", name: "Puddles", species: "Duck", note: "Enthusiastic sharer",
+    key: "puddles", name: "Puddles", species: "Duck", color: "#4FA0C9", note: "Enthusiastic sharer",
     personality: ["Expressive, sociable and enthusiastic", "Uses big readable gestures", "Eager to share with the class"],
     learningStrengths: ["Vocabulary building", "Show-and-tell and oral storytelling", "Music and rhythm"],
     pairsWith: ["Rusty for music and rhythm", "Penny for speaking up", "Daisy for leading a fun activity"],
     recognizable: ["Pale-yellow duck with orange bill", "Denim-blue cap", "Matching blue backpack"],
   },
   {
-    key: "sam", name: "Sam", species: "Pig", note: "Thoughtful problem-solver",
+    key: "sam", name: "Sam", species: "Pig", color: "#7A9A3D", note: "Thoughtful problem-solver",
     personality: ["Thoughtful, patient and detail-focused", "Pauses before answering", "Enjoys figuring out how things work"],
     learningStrengths: ["Math and practical building", "Reading diagrams and instructions", "Science observation and problem-solving"],
     pairsWith: ["Whiskers for noticing details", "Scout for how-things-work challenges", "Daisy for numbers and patterns"],
     recognizable: ["Pink pig with round glasses", "Denim overalls and green backpack"],
   },
   {
-    key: "rusty", name: "Rusty", species: "Horse", note: "Steady teammate",
+    key: "rusty", name: "Rusty", species: "Horse", color: "#8B5030", note: "Steady teammate",
     personality: ["Steady, patient and dependable", "Keeps a calm pace", "Supports the group without needing attention"],
     learningStrengths: ["Rhythm and ordered routines", "Sequencing and repeated patterns", "Teamwork and patient practice"],
     pairsWith: ["Puddles for music", "Scout for dependable teamwork", "Hopper for contrasting movement speeds"],

@@ -10,7 +10,7 @@ function ResourceState({ step }: { step: Step }) {
   if (step.resourceState === "missing") return <div className="resource-state missing"><span className="state-icon">○</span><div><strong>No verified resource yet</strong><p>{step.resourceNote}</p></div></div>;
   if (step.resourceState === "none") return <div className="resource-state teacher-led"><span className="state-icon">✓</span><div><strong>Teacher-led</strong><p>{step.resourceNote || "No external resource needed for this step."}</p></div></div>;
   return (
-    <div className="resource-card">
+    <div className="resource-card stitch">
       <div className="resource-kicker">{step.resourceRole || "Selected starting resource"}</div>
       <div className="resource-row"><div><h4>{step.resourceTitle}</h4><p className="publisher">{step.resourceSource}</p></div><a className="open-button" href={step.resourceUrl} target="_blank" rel="noreferrer">Open ↗</a></div>
       {step.resourceNote && <p className="resource-note">{step.resourceNote}</p>}
@@ -77,7 +77,7 @@ export function LessonWorkspace({ lesson }: { lesson: LessonTopic }) {
       </header>
       <section className={`split-workspace${lesson.grades.length === 1 ? " single-workspace" : ""}`} aria-label={lesson.grades.length === 1 ? `${lesson.grades[0].grade} lesson workspace` : "Grade 1 and Grade 2 lesson workspaces"}>{lesson.grades.map((grade) => <GradeWorkspace grade={grade} lessonSlug={lesson.meta.slug} key={grade.grade} />)}</section>
       <aside className="diagnostic-note"><strong>Planning lens</strong><span>{lesson.planningNote}</span></aside>
-      <nav className="curriculum-path" aria-label="Curriculum path">
+      <nav className="curriculum-path stitch" aria-label="Curriculum path">
         {lesson.meta.previousSlug ? <Link href={`/topics/${lesson.meta.previousSlug}`}><span>← Previous topic</span><strong>{lesson.meta.previousTitle}</strong></Link> : <div><span>Previous topic</span><strong>{lesson.meta.previousTitle}</strong></div>}
         <div><span>Current topic</span><strong>{lesson.meta.title}</strong></div>
         {lesson.meta.nextSlug ? <Link href={`/topics/${lesson.meta.nextSlug}`}><span>Next topic →</span><strong>{lesson.meta.nextTitle}</strong></Link> : <div className="next-unconfirmed"><span>Next topic · confirmation needed</span><strong>{lesson.meta.nextTitle}</strong></div>}

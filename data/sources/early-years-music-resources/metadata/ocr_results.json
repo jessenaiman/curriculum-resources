@@ -1,0 +1,106 @@
+{
+ "swanton-public-library-bounce-rhymes.pdf": {
+  "category": "01-libraries-agencies",
+  "pages": 5,
+  "chars": 5793,
+  "words": 876,
+  "output": "ocr-swanton-public-library-bounce-rhymes.md",
+  "status": "ok"
+ },
+ "sc-school-kindergarten-music-movement-activities.pdf": {
+  "category": "02-educators-publishers",
+  "pages": 6,
+  "chars": 11883,
+  "words": 1540,
+  "output": "ocr-sc-school-kindergarten-music-movement-activities.md",
+  "status": "ok"
+ },
+ "jack-hartmann-a-to-z-flash-cards.pdf": {
+  "category": "03-performers-programs",
+  "pages": 26,
+  "chars": 306,
+  "words": 27,
+  "output": "ocr-jack-hartmann-a-to-z-flash-cards.md",
+  "status": "ok"
+ },
+ "jack-hartmann-stretchy-word-snake-coloring-activity.pdf": {
+  "category": "03-performers-programs",
+  "pages": 1,
+  "chars": 44,
+  "words": 7,
+  "output": "ocr-jack-hartmann-stretchy-word-snake-coloring-activity.md",
+  "status": "ok"
+ },
+ "mother-goose-club-five-little-monkeys-activity-book.pdf": {
+  "category": "03-performers-programs",
+  "pages": 4,
+  "chars": 775,
+  "words": 113,
+  "output": "ocr-mother-goose-club-five-little-monkeys-activity-book.md",
+  "status": "ok"
+ },
+ "mother-goose-club-five-little-monkeys-lyric-book.pdf": {
+  "category": "03-performers-programs",
+  "pages": 6,
+  "chars": 953,
+  "words": 152,
+  "output": "ocr-mother-goose-club-five-little-monkeys-lyric-book.md",
+  "status": "ok"
+ },
+ "mother-goose-club-itsy-bitsy-spider-lyric-book.pdf": {
+  "category": "03-performers-programs",
+  "pages": 6,
+  "chars": 990,
+  "words": 156,
+  "output": "ocr-mother-goose-club-itsy-bitsy-spider-lyric-book.md",
+  "status": "ok"
+ },
+ "raffi-baby-beluga-lyrics-arrangement.pdf": {
+  "category": "03-performers-programs",
+  "pages": 3,
+  "chars": 1425,
+  "words": 163,
+  "output": "ocr-raffi-baby-beluga-lyrics-arrangement.md",
+  "status": "ok"
+ },
+ "raffi-down-by-the-bay-lyrics-arrangement.pdf": {
+  "category": "03-performers-programs",
+  "pages": 2,
+  "chars": 567,
+  "words": 75,
+  "output": "ocr-raffi-down-by-the-bay-lyrics-arrangement.md",
+  "status": "ok"
+ },
+ "raffi-wheels-on-the-bus-lyrics-arrangement.pdf": {
+  "category": "03-performers-programs",
+  "pages": 2,
+  "chars": 756,
+  "words": 114,
+  "output": "ocr-raffi-wheels-on-the-bus-lyrics-arrangement.md",
+  "status": "ok"
+ },
+ "the-learning-station-tony-chestnut-activity-handout.pdf": {
+  "category": "03-performers-programs",
+  "pages": 4,
+  "chars": 3304,
+  "words": 450,
+  "output": "ocr-the-learning-station-tony-chestnut-activity-handout.md",
+  "status": "ok"
+ },
+ "the-wiggles-dice-roll-activity.pdf": {
+  "category": "03-performers-programs",
+  "pages": 1,
+  "chars": 136,
+  "words": 22,
+  "output": "ocr-the-wiggles-dice-roll-activity.md",
+  "status": "ok"
+ },
+ "the-wiggles-wiggle-and-learn-circus-colouring.pdf": {
+  "category": "03-performers-programs",
+  "pages": 1,
+  "chars": 36,
+  "words": 6,
+  "output": "ocr-the-wiggles-wiggle-and-learn-circus-colouring.md",
+  "status": "ok"
+ }
+}

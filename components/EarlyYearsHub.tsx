@@ -2,7 +2,15 @@
 
 import { useState } from "react";
 import type { EarlyYearsTopic } from "../lib/early-years";
-import { iconPath } from "../lib/char-icon";
+import { CharacterBadge } from "./CharacterBadge";
+import { STAFF, STUDENTS } from "../lib/cast";
+
+function charColor(key: string): string {
+  return STAFF.find((s) => s.key === key)?.color ?? STUDENTS.find((s) => s.key === key)?.color ?? "var(--gold)";
+}
+function charName(key: string): string {
+  return STAFF.find((s) => s.key === key)?.name ?? STUDENTS.find((s) => s.key === key)?.name ?? key;
+}
 
 const CloseIcon = () => (<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" /></svg>);
 const ZoomIcon = () => (<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="11" cy="11" r="7" /><line x1="21" y1="21" x2="16.65" y2="16.65" /></svg>);
@@ -38,8 +46,8 @@ export function EarlyYearsHub({
 
       <div className="ey-shelf" role="tablist" aria-label="Choose a song or topic for today">
         {topics.map((t, i) => (
-          <button key={t.slug} role="tab" aria-selected={i === active} className={`ey-shelf-tile${i === active ? " is-active" : ""}`} onClick={() => setActive(i)}>
-            <span className="ey-shelf-patch"><img src={iconPath(t.patch)} alt="" /></span>
+          <button key={t.slug} role="tab" aria-selected={i === active} className={`ey-shelf-tile stitch${i === active ? " is-active" : ""}`} onClick={() => setActive(i)}>
+            <span className="ey-shelf-patch"><CharacterBadge charKey={t.patch} color={charColor(t.patch)} name={charName(t.patch)} size={40} /></span>
             <span className="ey-shelf-title">{t.title}</span>
           </button>
         ))}
@@ -75,7 +83,7 @@ export function EarlyYearsHub({
         </div>
 
         <div className="ey-lead-badge">
-          <img src={iconPath(lead.patch)} alt="" />
+          <CharacterBadge charKey={lead.patch} color={charColor(lead.patch)} name={lead.name} size={40} />
           <div><strong>Led by {lead.name}</strong><small>{tier === "bridge" ? "Picture-led, with a printable the child can mark." : "Practice is the activity itself — no printable for this band."}</small></div>
         </div>
       </section>

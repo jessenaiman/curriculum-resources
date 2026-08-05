@@ -1,0 +1,1719 @@
+<!DOCTYPE html>
+
+
+<html>
+  <head>
+    <title>
+    Fingerplays and Action Songs
+ | ABCJesusLovesMe</title>
+
+    <!-- META -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A comprehensive, research-based preschool curriculum for ages 1-5 that focuses on academics, development, and the Bible."
+    />
+    <meta name="keywords" content="" />
+    <meta name="robots" content="index, follow" />
+    <meta name="Revisit-after" content="15 Days" />
+
+    <!-- FAV/SOCIAL ICONS -->
+    <link rel="SHORTCUT ICON" href="/static/images/favicon.ico?vs=1" />
+
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap-theme.min.css"
+    />
+    <link href="/static/css/glyphicons.css" rel="stylesheet" />
+    <link href="/static/css/glyphicons-bootstrap.css" rel="stylesheet" />
+    <link type="text/css" rel="stylesheet" href="/static/css/base.css" />
+    <style>
+      body.env-prod .navbar { background-color: #077cab; }
+      body.env-nonprod .navbar { background-color: rebeccapurple; }
+    </style>
+    <link type="text/css" rel="stylesheet" href="/static/css/nav.css" />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="/static/css/front_overrides.css"r
+    />
+
+    <!-- SCRIPTS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/static/js/menu.js"></script>
+    <script type="text/javascript" src="/static/js/user_actions.js"></script>
+    <script src="/static/admin_js/tinymce/tinymce.min.js"></script>
+
+    <!-- FONTS -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway:300,400,400i,500,600,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    
+
+
+    <link type='text/css' rel='stylesheet' href='/static/css/detail.css'>
+
+    
+
+
+
+    <script>
+      var toggleSearch = function () {
+        var search = $("div#search-wrapper");
+        var height = search.height();
+        console.log(height);
+
+        if (height == 0) {
+          search.css("height", 40 + "px");
+        } else {
+          search.css("height", 0);
+        }
+      };
+
+      var toggleSearchActive = function () {
+        var parent = $("div#search-wrapper");
+        var submit = $('div#search-wrapper input[type="image"]');
+        var remove = $("div#search-wrapper img");
+        if (parent.hasClass("focused")) {
+          parent.removeClass("focused");
+          submit.attr("src", "/static/images/search_static.png");
+        } else {
+          parent.addClass("focused");
+          submit.attr("src", "/static/images/search_active.png");
+        }
+      };
+
+      $(document).ready(function () {
+        $('#search-wrapper input[type="text"]')
+          .focus(function () {
+            toggleSearchActive();
+          })
+          .blur(function () {
+            toggleSearchActive();
+          });
+
+        $(".squarify").each(function (i, obj) {
+          var block_width = $(this).innerWidth();
+          $(this).height(block_width);
+        });
+
+
+        // replace tinyMCE created tables with border="0" with correct styles to remove the borders
+        $('table[border="0"]').addClass('rm-table-borders');
+      });
+
+      var waitForFinalEvent = (function () {
+        var timers = {};
+        return function (callback, ms, uniqueId) {
+          if (!uniqueId) {
+            uniqueId = "Don't call this twice without a uniqueId";
+          }
+          if (timers[uniqueId]) {
+            clearTimeout(timers[uniqueId]);
+          }
+          timers[uniqueId] = setTimeout(callback, ms);
+        };
+      })();
+
+      $(window).resize(function () {
+        waitForFinalEvent(
+          function () {
+            $(".squarify").each(function (i, obj) {
+              var block_width = $(this).innerWidth();
+              $(this).height(block_width);
+            });
+          },
+          500,
+          "squarifying"
+        );
+      });
+
+      function go_to_url(url) {
+        location.href = url;
+      }
+    </script>
+
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-KQMX462C");
+    </script>
+    <!-- End Google Tag Manager -->
+  </head>
+
+  <body
+    {%
+    block
+    body-id
+    %}{%
+    endblock
+    %}
+    class="env-prod "
+  >
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-KQMX462C"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- HEADER -->
+    <div id="header-wrapper" class="navbar wrapper" role="navigation">
+      <div id="header" class="container">
+        <div class="top-header">
+          <div
+            class="hamburger pull-right visible-xs visible-sm"
+            onclick="toggleMobileMenu();"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <div id="logo">
+            <a href="/">
+              <img
+                src="/static/images/logo_white.png"
+                alt="abc Jesus Loves Me"
+              />
+            </a>
+          </div>
+
+          
+            <div
+              class="search-img pull-right hidden-md hidden-lg"
+              onclick="toggleSearch();"
+              style="margin: 8px 15px 0 10px"
+            >
+              <span
+                ><img
+                  src="/static/images/icn_search.png"
+                  height="20"
+                  alt="search"
+              /></span>
+            </div>
+          
+
+          <div class="header-cart pull-right hidden-xs hidden-sm">
+            <div class="cart right">
+              <a class="pull-left" href="/cart/ ">
+                <img src="/static/images/cart_icon.png" />
+                <span id="cart_item_count">
+                  ( 0
+                  items )
+                </span>
+              </a>
+            </div>
+
+            <div class="vert-divider right"></div>
+
+            <div class="login right">
+              
+              <a class="pull-left" href="/login/">Login</a>
+              
+            </div>
+
+            <div class="bottom-divider"></div>
+          </div>
+        </div>
+
+        <div class="clear-both"></div>
+
+        <div class="hidden-xs hidden-sm">
+          <ul class="nav navbar-nav" role="navigation">
+
+    
+        <li class='top-level dropdown first'>
+
+            <a class='top-level' href='#'>
+                Products
+            </a>
+
+            
+                <ul class='dropdown-menu'>
+
+                    
+                        <li class='sub-level first'>
+                            
+                            <a class='sub-level' href='/curricula'>
+                                Curricula
+                            </a>
+                            
+                        </li>
+                    
+                        <li class='sub-level '>
+                            
+                            <a class='sub-level' href='/planners'>
+                                Planners
+                            </a>
+                            
+                        </li>
+                    
+                        <li class='sub-level '>
+                            
+                            <a class='sub-level' href='/conference-tickets'>
+                                Conference Tickets
+                            </a>
+                            
+                        </li>
+                    
+                        <li class='sub-level '>
+                            
+                            <a class='sub-level' href='/holiday-activities'>
+                                Holiday Activities
+                            </a>
+                            
+                        </li>
+                    
+                        <li class='sub-level '>
+                            
+                            <a class='sub-level' href='/products/other-products'>
+                                Other Products
+                            </a>
+                            
+                        </li>
+                    
+
+                </ul>
+            
+
+        </li>
+    
+        <li class='top-level'>
+
+            <a class='top-level' href='/free-curriculum/'>
+                Free Curriculum
+            </a>
+
+            
+
+        </li>
+    
+        <li class='top-level dropdown'>
+
+            <a class='top-level' href='/ideas'>
+                Supplemental Ideas
+            </a>
+
+            
+                <ul class='dropdown-menu'>
+
+                    
+                        <li class='sub-level first'>
+                            
+                            <a class='sub-level' href='/ideas'>
+                                Articles
+                            </a>
+                            
+                        </li>
+                    
+                        <li class='sub-level '>
+                            
+                            <a class='sub-level' href='/videos/'>
+                                Videos
+                            </a>
+                            
+                        </li>
+                    
+
+                </ul>
+            
+
+        </li>
+    
+        <li class='top-level dropdown'>
+
+            <a class='top-level' href='#'>
+                Training
+            </a>
+
+            
+                <ul class='dropdown-menu'>
+
+                    
+                        <li class='sub-level first'>
+                            
+                            <a class='sub-level' href='/schedule'>
+                                Schedule
+                            </a>
+                            
+                        </li>
+                    
+                        <li class='sub-level '>
+                            
+                            <a class='sub-level' href='/events'>
+                                Events
+                            </a>
+                            
+                        </li>
+                    
+                        <li class='sub-level '>
+                            
+                            <a class='sub-level' href='/free-training'>
+                                Free Training
+                            </a>
+                            
+                        </li>
+                    
+
+                </ul>
+            
+
+        </li>
+    
+        <li class='top-level dropdown'>
+
+            <a class='top-level' href='#'>
+                Connect
+            </a>
+
+            
+                <ul class='dropdown-menu'>
+
+                    
+                        <li class='sub-level first'>
+                            
+                            <a class='sub-level' href='/social-media'>
+                                Social Media
+                            </a>
+                            
+                        </li>
+                    
+                        <li class='sub-level '>
+                            
+                            <a class='sub-level' href='/newsletter'>
+                                Newsletter
+                            </a>
+                            
+                        </li>
+                    
+                        <li class='sub-level '>
+                            
+                            <a class='sub-level' href='https://parentingtoimpress.com/podcast' target="_blank">
+                                Podcast
+                            </a>
+                            
+                        </li>
+                    
+                        <li class='sub-level '>
+                            
+                            <a class='sub-level' href='http://www.parentingtoimpress.com/' target="_blank">
+                                Blog
+                            </a>
+                            
+                        </li>
+                    
+
+                </ul>
+            
+
+        </li>
+    
+        <li class='top-level dropdown'>
+
+            <a class='top-level' href='#'>
+                About
+            </a>
+
+            
+                <ul class='dropdown-menu'>
+
+                    
+                        <li class='sub-level first'>
+                            
+                            <a class='sub-level' href='/who-we-are'>
+                                Who We Are
+                            </a>
+                            
+                        </li>
+                    
+                        <li class='sub-level '>
+                            
+                            <a class='sub-level' href='/what-sets-abcjesuslovesme-apart'>
+                                What Sets ABCJesusLovesMe Apart?
+                            </a>
+                            
+                        </li>
+                    
+                        <li class='sub-level '>
+                            
+                            <a class='sub-level' href='/doctrinal-statement'>
+                                Doctrinal Statement
+                            </a>
+                            
+                        </li>
+                    
+                        <li class='sub-level '>
+                            
+                            <a class='sub-level' href='/research'>
+                                Research
+                            </a>
+                            
+                        </li>
+                    
+                        <li class='sub-level '>
+                            
+                            <a class='sub-level' href='/state-approval'>
+                                State Approval
+                            </a>
+                            
+                        </li>
+                    
+
+                </ul>
+            
+
+        </li>
+    
+        <li class='top-level dropdown'>
+
+            <a class='top-level' href='#'>
+                Contact
+            </a>
+
+            
+                <ul class='dropdown-menu'>
+
+                    
+                        <li class='sub-level first'>
+                            
+                            <a class='sub-level' href='/advertise'>
+                                Advertise
+                            </a>
+                            
+                        </li>
+                    
+                        <li class='sub-level '>
+                            
+                            <a class='sub-level' href='/contact'>
+                                Contact
+                            </a>
+                            
+                        </li>
+                    
+                        <li class='sub-level '>
+                            
+                            <a class='sub-level' href='/request-a-demo'>
+                                Request a Demo
+                            </a>
+                            
+                        </li>
+                    
+                        <li class='sub-level '>
+                            
+                            <a class='sub-level' href='/speaking'>
+                                Speaking
+                            </a>
+                            
+                        </li>
+                    
+
+                </ul>
+            
+
+        </li>
+    
+
+    <div class="search-img right" onclick="toggleSearch();">
+        <span><img src="/static/images/icn_search.png" alt='search'></span>
+    </div>
+
+</ul>
+
+        </div>
+
+        <div class="visible-xs visible-sm">
+          <div id='mobile-nav-wrapper' class='border-box' role="navigation">
+
+    <div id='mobile-header-cart' class='header-cart pull-left'>
+
+        <div class='login pull-left'>
+
+            
+                <a class='pull-left' href="/login/">Login</a>
+            
+
+        </div>
+
+        <div class='vert-divider pull-left'></div>
+
+        <div class='cart pull-left'>
+
+            <a class='pull-left' href="/cart/ ">
+                <img src='/static/images/cart_icon.png'>
+                <span id="cart_item_count_mobile">
+                    ( 0 items )
+                </span>
+            </a>
+
+        </div>
+
+        <div class='bottom-divider'></div>
+
+    </div>
+
+    <ul id='mobile-nav' class='no-list left '>
+
+         
+            <li>
+
+                <a class='top-level left' href=''>
+                    Products
+                </a>
+
+                
+                <ul class="mobile-submenu">
+
+                    
+                        <li>
+                            
+                            <a href='/curricula'>
+                                Curricula
+                            </a>
+                            
+                        </li>
+                    
+                        <li>
+                            
+                            <a href='/planners'>
+                                Planners
+                            </a>
+                            
+                        </li>
+                    
+                        <li>
+                            
+                            <a href='/conference-tickets'>
+                                Conference Tickets
+                            </a>
+                            
+                        </li>
+                    
+                        <li>
+                            
+                            <a href='/holiday-activities'>
+                                Holiday Activities
+                            </a>
+                            
+                        </li>
+                    
+                        <li>
+                            
+                            <a href='/products/other-products'>
+                                Other Products
+                            </a>
+                            
+                        </li>
+                    
+
+                    </ul>
+                
+
+            </li>
+        
+            <li>
+
+                <a class='top-level left' href='/free-curriculum/'>
+                    Free Curriculum
+                </a>
+
+                
+
+            </li>
+        
+            <li>
+
+                <a class='top-level left' href='/ideas'>
+                    Supplemental Ideas
+                </a>
+
+                
+                <ul class="mobile-submenu">
+
+                    
+                        <li>
+                            
+                            <a href='/ideas'>
+                                Articles
+                            </a>
+                            
+                        </li>
+                    
+                        <li>
+                            
+                            <a href='/videos/'>
+                                Videos
+                            </a>
+                            
+                        </li>
+                    
+
+                    </ul>
+                
+
+            </li>
+        
+            <li>
+
+                <a class='top-level left' href=''>
+                    Training
+                </a>
+
+                
+                <ul class="mobile-submenu">
+
+                    
+                        <li>
+                            
+                            <a href='/schedule'>
+                                Schedule
+                            </a>
+                            
+                        </li>
+                    
+                        <li>
+                            
+                            <a href='/events'>
+                                Events
+                            </a>
+                            
+                        </li>
+                    
+                        <li>
+                            
+                            <a href='/free-training'>
+                                Free Training
+                            </a>
+                            
+                        </li>
+                    
+
+                    </ul>
+                
+
+            </li>
+        
+            <li>
+
+                <a class='top-level left' href=''>
+                    Connect
+                </a>
+
+                
+                <ul class="mobile-submenu">
+
+                    
+                        <li>
+                            
+                            <a href='/social-media'>
+                                Social Media
+                            </a>
+                            
+                        </li>
+                    
+                        <li>
+                            
+                            <a href='/newsletter'>
+                                Newsletter
+                            </a>
+                            
+                        </li>
+                    
+                        <li>
+                            
+                            <a href='https://parentingtoimpress.com/podcast' target="_blank">
+                                Podcast
+                            </a>
+                            
+                        </li>
+                    
+                        <li>
+                            
+                            <a href='http://www.parentingtoimpress.com/' target="_blank">
+                                Blog
+                            </a>
+                            
+                        </li>
+                    
+
+                    </ul>
+                
+
+            </li>
+        
+            <li>
+
+                <a class='top-level left' href=''>
+                    About
+                </a>
+
+                
+                <ul class="mobile-submenu">
+
+                    
+                        <li>
+                            
+                            <a href='/who-we-are'>
+                                Who We Are
+                            </a>
+                            
+                        </li>
+                    
+                        <li>
+                            
+                            <a href='/what-sets-abcjesuslovesme-apart'>
+                                What Sets ABCJesusLovesMe Apart?
+                            </a>
+                            
+                        </li>
+                    
+                        <li>
+                            
+                            <a href='/doctrinal-statement'>
+                                Doctrinal Statement
+                            </a>
+                            
+                        </li>
+                    
+                        <li>
+                            
+                            <a href='/research'>
+                                Research
+                            </a>
+                            
+                        </li>
+                    
+                        <li>
+                            
+                            <a href='/state-approval'>
+                                State Approval
+                            </a>
+                            
+                        </li>
+                    
+
+                    </ul>
+                
+
+            </li>
+        
+            <li>
+
+                <a class='top-level left' href=''>
+                    Contact
+                </a>
+
+                
+                <ul class="mobile-submenu">
+
+                    
+                        <li>
+                            
+                            <a href='/advertise'>
+                                Advertise
+                            </a>
+                            
+                        </li>
+                    
+                        <li>
+                            
+                            <a href='/contact'>
+                                Contact
+                            </a>
+                            
+                        </li>
+                    
+                        <li>
+                            
+                            <a href='/request-a-demo'>
+                                Request a Demo
+                            </a>
+                            
+                        </li>
+                    
+                        <li>
+                            
+                            <a href='/speaking'>
+                                Speaking
+                            </a>
+                            
+                        </li>
+                    
+
+                    </ul>
+                
+
+            </li>
+        
+
+    </ul>
+
+</div>
+
+        </div>
+
+        
+          <div class="social-links pull-right hidden-xs hidden-sm">
+            <a href="https://www.facebook.com/abcjlm" target="_blank">
+              <img src="/static/images/facebook.png" />
+            </a>
+
+            <a href="https://www.youtube.com//ABCJesusLovesMe" target="_blank">
+              <img src="/static/images/social_icons/youtube.png" />
+            </a>
+
+            <a href="https://www.instagram.com/abcjesuslovesme/" target="_blank">
+              <img
+                src="/static/images/social_icons/instagram.png"
+                width="30"
+              />
+            </a>
+
+            <a href="https://www.pinterest.com/abcjlm/" target="_blank">
+              <img src="/static/images/pinterest.png" />
+            </a>
+          </div>
+        
+      </div>
+    </div>
+
+    <div id="search-wrapper" class="hide-with-nav">
+        <form method="GET" action="/search/">
+            <div class="input-wrapper container">
+                <div class="col-xs-12">
+                    <input style="color: #fff" type="text" name="q" id="searchParam"/>
+
+                    <div class="submit-wrapper">
+                        <button type="submit" style="position: relative; top: -2px; padding: 0; outline: none;" class="btn btn-transparent">
+                            <span>Search</span>
+                            <img style="position: relative; top: -1px; left: 5px;" src="/static/images/icn_search.png" alt="search"/>
+                        </button>
+                    </div>
+
+                    <div class="remove" onclick="toggleSearch();">
+                        <img style="position: relative; top: -3px;" src="/static/images/remove_static.png"/>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <!-- END HEADER -->
+
+    <div class="clear-both"></div>
+
+    <!-- CONTENT -->
+    <div id="content-wrapper">
+       
+      <div class="clear-both"></div>
+      
+
+    <div class="content-gutter container">
+
+        <div class="row">
+
+            <div class="col-xs-12">
+
+                <div class="header-share-button btn-group hidden-print pull-right">
+
+                    <button type="button" class="btn dropdown-toggle"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="glyphicon glyphicon-share" aria-hidden="true"></span> Share <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="http://www.facebook.com/sharer/sharer.php?u=https%3A//www.abcjesuslovesme.com/ideas/fingerplays-and-action-songs" target="_blank">Facebook</a>
+
+</li>
+                        <li><a href="http://twitter.com/intent/tweet?text=%20https%3A//www.abcjesuslovesme.com/ideas/fingerplays-and-action-songs" class="meta-act-link meta-tweet">Twitter</a>
+
+</li>
+                        <li id="pinterest-social-link"><a href="http://pinterest.com/pin/create/button/?url=https%3A//www.abcjesuslovesme.com/ideas/fingerplays-and-action-songs" target="_blank">Pinterest</a></li>
+
+
+
+
+
+                        <li><a href="mailto:?subject=Shared from ABCJesusLovesMe&amp;body=Check out this site https%3A//www.abcjesuslovesme.com/ideas/fingerplays-and-action-songs" target="_blank">Email</a>
+</li>
+                    </ul>
+
+                </div>
+
+                <div class='page-header-wrapper'>
+                    
+                        
+                    
+                </div>
+
+                <div class='row'>
+
+                    <div class="col-xs-12 col-md-12">
+
+                        <div id='cms-content'>
+
+                            
+                            
+
+                        </div>
+
+                        
+	
+
+<div id=''
+     class='section-wrapper wrapper ideas    '
+     >
+
+    <div class='container'>
+
+        <div class='row'>
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+                <div class='left-col-skinny col-xs-12 col-sm-5 col-md-4'>
+
+                    <p><img src="../media/images/Landscape_Poem.png" alt="Poem Cards" width="600" /></p>
+
+                    <div class='clearfix'></div>
+
+                </div>
+
+                <div class='right-col-wide col-xs-12 col-sm-7 col-md-8'>
+
+                    
+
+                    <h1 style="box-sizing: border-box; padding: 0px; -webkit-font-smoothing: antialiased; font-size: 42px; font-weight: 500;">Fingerplays and Action Songs</h1>
+<p><a href="https://pinterest.com/pin/create/button/?url=http%3A%2F%2Fwww.abcjesuslovesme.com%2Frhymes-finger-plays-a-songs%2F736-preschool-fingerplays&amp;media=http%3A%2F%2Fabcjesuslovesme.com%2Fimages%2FFingerplays%2520Action%2520Songs&amp;description=A%20list%20of%20preschool%20fingerplays%20and%20action%20songs%20that%20all%20children%20should%20know.%20%20" data-pin-config="above" data-pin-do="buttonPin"><img src="../media/assets.pinterest.com/images/pidgets/pin_it_button.png" alt="" /></a>Research shows a strong correlation between early knowledge of nursery rhymes, songs, and finger plays and a child's success in<strong> reading and spelling</strong>.&nbsp; Fingerplays also increase<strong> fine motor skills</strong>. &nbsp;Remember to take the nursery rhymes, finger plays, and songs <strong>very slowly</strong> at first and wait for the child to do the action before moving on.&nbsp; Have fun with these and the kids will too!&nbsp;</p>
+
+                </div>
+            
+
+
+            
+
+            
+
+            
+
+            
+
+            
+
+        </div>
+
+    </div>
+
+</div>
+
+
+	
+
+<div id=''
+     class='section-wrapper wrapper ideas    '
+     >
+
+    <div class='container'>
+
+        <div class='row'>
+
+            
+
+            
+                <div class='one-col col-xs-12'>
+
+                    
+
+                    <h2>Preschool Song Selections</h2>
+
+                    <div class='clearfix'></div>
+
+                </div>
+            
+
+            
+
+            
+
+            
+
+            
+
+
+            
+
+            
+
+            
+
+            
+
+            
+
+        </div>
+
+    </div>
+
+</div>
+
+
+	
+
+<div id=''
+     class='section-wrapper wrapper ideas    '
+     >
+
+    <div class='container'>
+
+        <div class='row'>
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+
+            
+                <div class='left-col col-xs-12 col-sm-6 col-md-6'>
+
+                    <ul>
+<li><a title="top" name="top"></a> <a href="#Fish"> 1-2-3-4-5 Once I Caught a Fish </a></li>
+<li><a href="#Five">Five Fat Peas </a></li>
+<li><a href="#Bells">Five Little Bells </a></li>
+<li><a title="Going on a Bear Hunt" href="active-games#Bear">Going on a Bear Hunt </a> </li>
+<li><a title="Going on a Lion Hunt" href="active-games#Lion">Going on a Lion Hunt </a> </li>
+<li><a href="#Hands">Hands and Fingers </a> </li>
+<li><a href="#Happy">Happy All the Time </a></li>
+<li><a href="#Head">Head and Shoulders, Knees and Toes </a></li>
+</ul>
+
+                    <div class='clearfix'></div>
+
+                </div>
+
+                <div class='right-col col-xs-12 col-sm-6 col-md-6'>
+
+                    
+
+                    <ul>
+<li><a href="#Brain">I Use My Brain</a></li>
+<li><a href="#Itsy">The Itsy Bitsy Spider </a> </li>
+<li><a href="#One">One, Two Buckle My Shoe </a> </li>
+<li><a href="#Right">Right Hand, Left Hand </a> </li>
+<li><a href="#This">This Little Piggie </a> </li>
+<li><a href="#Teddy">Teddy Bear, Teddy Bear </a> </li>
+<li><a href="#Where">Where is Thumbkin? </a></li>
+</ul>
+
+                </div>
+            
+
+            
+
+            
+
+            
+
+            
+
+        </div>
+
+    </div>
+
+</div>
+
+
+	
+
+<div id=''
+     class='section-wrapper wrapper ideas    '
+     >
+
+    <div class='container'>
+
+        <div class='row'>
+
+            
+
+            
+                <div class='one-col col-xs-12'>
+
+                    
+
+                    <h3><a title="Fish" name="Fish"></a> <strong> <em>1-2-3-4-5 Once I Caught a Fish</em></strong></h3>
+<p><em>Author Unknown</em><br /><br />One, two, three, four five! (count with your fingers)<br />Once I caught a fish alive; (place palms together to make a swimming fish)<br />Six, seven, eight, nine, ten.&nbsp; (count with your fingers)<br />Then I let it go again.&nbsp; (throw hands in the air)<br />Why did you let it go?&nbsp; (shrug shoulders)<br />Because it bit my finger so.&nbsp; (one hand bite pinkie finger on right hand)<br />Which finger did it bite?&nbsp; (shrug shoulders)<br />This little finger on my right.&nbsp; (wiggle pinkie finger on right hand)<br /><br /></p>
+<h3><a title="Five" name="Five"></a> <em><strong> Five Fat Peas </strong></em></h3>
+<p>Five fat peas in a pea pod pressed (hold hand in a fist)<br />One grew, two grew, so did all the rest (put thumb and fingers up one by one)<br />They grew and grew (raise hands in the air very slowly)<br />And did not stop, Until one day<br />The pod went POP! (clap)<br /><br /><a class="btn" title=" Green Activities" href="https://www.abcjesuslovesme.com/ideas/green">Discover More Green Activities</a></p>
+<p>&nbsp;</p>
+<h3><a title="Hands" name="Bells"></a><em><strong>Five&nbsp;Little Bells</strong></em></h3>
+<p><em>Author Unknown</em><br /><br />Five little bells hanging in a row; (Fingers hanging down)<br />The first one said, "Ring me slow." (Wiggle thumb)<br />The second one said, "Ring me fast." (Wiggle index finger)<br />The third one said, "Ring me last." (Wiggle second finger)<br />The fourth one said, "I'm like a chime." (Wiggle third finger)<br />The fifth one said, "Ring me at Christmas time." (Wiggle fourth finger)<br /><br /></p>
+<h3><a title="Hands" name="Hands"></a><em> <strong> Hands and Fingers</strong></em></h3>
+<p><em>Author Unknown</em><br /><br />Up and down<br />Round and round (draw circles in the air)<br />Put your fingers on the ground<br />Over (hold hands above lap)<br />Under (move hands below legs)<br />In between (you've hidden your hands in between your legs)<br />Now my fingers can't be seen!<br />Hands in front<br />Hands behind<br />Now my hands I cannot find<br />Here's my left hand<br />Here's my right<br />Hands and fingers back in sight (wriggle fingers)</p>
+
+                    <div class='clearfix'></div>
+
+                </div>
+            
+
+            
+
+            
+
+            
+
+            
+
+
+            
+
+            
+
+            
+
+            
+
+            
+
+        </div>
+
+    </div>
+
+</div>
+
+
+	
+
+<div id=''
+     class='section-wrapper wrapper ideas    '
+     style='background: url("https://www.abcjesuslovesme.com/media/images/e1ecf4.png")'>
+
+    <div class='container'>
+
+        <div class='row'>
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+                <div class='left-col-skinny col-xs-12 col-sm-5 col-md-4'>
+
+                    <p><a title="Pre-Reading Packets" href="../pre-reading-packets"><img style="margin: 25px 10px 0 10px; padding: 0 17px 10px 0;" src="../media/images/poem_ad.png" alt="Poem Posters" width="675" /></a></p>
+
+                    <div class='clearfix'></div>
+
+                </div>
+
+                <div class='right-col-wide col-xs-12 col-sm-7 col-md-8'>
+
+                    
+
+                    <h2 class="boxed"><br />Jumpstart Pre-Reading Fun with Engaging Poems! 📚</h2>
+<p>Give your preschooler a head start on pre-reading skills with age-appropriate poems that your child or students will enjoy.&nbsp; Colorfully created packet contain recognizable images and fun actions for the pre-reading activities.&nbsp;</p>
+<p style="text-align: left;"><a class="btn blue" title="ABCJesusLovesMe Poem Packets" href="../pre-reading-packets/">&nbsp; &nbsp; &nbsp;Poem Packets&nbsp; &nbsp; &nbsp;</a></p>
+
+                </div>
+            
+
+
+            
+
+            
+
+            
+
+            
+
+            
+
+        </div>
+
+    </div>
+
+</div>
+
+
+	
+
+<div id=''
+     class='section-wrapper wrapper ideas    '
+     >
+
+    <div class='container'>
+
+        <div class='row'>
+
+            
+
+            
+                <div class='one-col col-xs-12'>
+
+                    
+
+                    <h3><a title="Happy" name="Happy"></a> <em><strong> Happy All the Time</strong></em></h3>
+<p><iframe src="//www.youtube.com/embed/yKttJ26gmXw" width="350" height="197" frameborder="0" allowfullscreen="allowfullscreen"></iframe></p>
+<p>Chorus:&nbsp; (gradually get faster)<br />I&rsquo;m inright (point at self)<br />Outright (point out)<br />Upright (point up)<br />Downright (point down)<br />Happy all the time (clap 3x)<br />(Repeat)</p>
+<p>&nbsp;</p>
+<h3><a title="Head" name="Head"></a> <em><strong> Head and Shoulders, Knees and Toes</strong></em></h3>
+<p><em>Tune: Mary Had a Little Lamb</em><br /><br />Head and shoulders, knees and toes<br />Knees and toes (Repeat 2x)<br />Head and shoulders, knees and toes<br />Clap your hands together<br /><em>(Start slow and gradually increase the speed as you sing and do actions) </em></p>
+<p>&nbsp;</p>
+<h3><a title="Brain" name="Brain"></a><em> <strong>I Use My Brain</strong></em></h3>
+<p><em>By:&nbsp; Jackie Silberg</em><br /><br />I use my brain to think, think, think (touch head)<br />I use my nose to smell (touch nose)<br />I use my eyes to blink, blink, blink (touch eyes)<br />I use my throat to yell (touch throat and yell on word &ldquo;yell&rdquo;)</p>
+<p>I use my mouth to giggle, giggle, giggle (touch mouth)<br />I use my hips to bump (touch hips)<br />I use my toes to wiggle, wiggle, wiggle (touch toes)<br />And I use my legs to jump (jump)</p>
+
+                    <div class='clearfix'></div>
+
+                </div>
+            
+
+            
+
+            
+
+            
+
+            
+
+
+            
+
+            
+
+            
+
+            
+
+            
+
+        </div>
+
+    </div>
+
+</div>
+
+
+	
+
+<div id=''
+     class='section-wrapper wrapper ideas    '
+     style='background: url("https://www.abcjesuslovesme.com/media/images/e1ecf4.png")'>
+
+    <div class='container'>
+
+        <div class='row'>
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+                <div class='left-col-skinny col-xs-12 col-sm-5 col-md-4'>
+
+                    <p><a title="ABCJesusLovesMe Academic Packets" href="../academic-packets/"><img style="margin: 25px 10px 0; padding: 0 17px 10px 0;" src="../media/images/color_ad.png" alt="Color Song Posters" width="500" /></a></p>
+
+                    <div class='clearfix'></div>
+
+                </div>
+
+                <div class='right-col-wide col-xs-12 col-sm-7 col-md-8'>
+
+                    
+
+                    <h2 class="boxed"><br />Teach Colors Through Song! ♫</h2>
+<p>Embark on a kaleidoscope of learning with our Color Packet. Bursting with vibrant colors and endless opportunities for creativity, this printable resource invites children on an exciting educational journey.</p>
+<p style="text-align: left;"><a class="btn blue" title="Color Packets" href="../academic-packets/">&nbsp; &nbsp; &nbsp;Color Packets&nbsp; &nbsp; &nbsp;</a></p>
+
+                </div>
+            
+
+
+            
+
+            
+
+            
+
+            
+
+            
+
+        </div>
+
+    </div>
+
+</div>
+
+
+	
+
+<div id=''
+     class='section-wrapper wrapper ideas    '
+     >
+
+    <div class='container'>
+
+        <div class='row'>
+
+            
+
+            
+                <div class='one-col col-xs-12'>
+
+                    
+
+                    <h3><a title="Itsy" name="Itsy"></a> <em><strong> The Itsy Bitsy Spider </strong></em></h3>
+<p>The itsy, bitsy spider, climbed up the water spout.<br />Down came the rain and washed the spider out.<br />Out came the sun and dried up all the rain,<br />So the itsy, bitsy spider went up the spout again</p>
+<p>&nbsp;</p>
+<h3><a title="One" name="One"></a> <em><strong> One, Two Buckle My Shoe</strong></em></h3>
+<p><em>Tune of: Twinkle Twinkle Little Star </em><br /><br />One, two, buckle my shoe<br />Three, four, shut the door<br />Five, six, pick up sticks<br />Seven, eight, lay them straight<br />Nine, ten, it's time to end<br />Next time, let&rsquo;s do it again</p>
+<p>&nbsp;</p>
+<h3><a title="Right" name="Right"></a><strong> <em> Right Hand, Left Hand</em></strong></h3>
+<p><em>Based on a poem </em><em>by Jackie Silberg</em><br />(Have the child echo each phrase and copy your actions)<br /><br />This is my right hand (This is my right hand)<br />I raise it up high (I raise it up high)<br />This is my left hand (This is my left hand)<br />I&rsquo;ll touch the sky (I'll touch the sky)<br />Right hand (Right hand)<br />Left hand (Left hand)<br />Whirl them around (Whirl them around)<br />Right hand (Right hand)<br />Left hand (Left hand)<br />Pound, pound, pound (Pound, pound, pound)</p>
+<p>&nbsp;</p>
+<h3><a title="This" name="This"></a> <em><strong> This Little Piggie </strong></em></h3>
+<p>This little piggie went to market.&nbsp; (wiggle thumbs)<br />This little piggie stayed at home.&nbsp; (wiggle index fingers)<br />This little piggie had roast beef.&nbsp; (wiggle middle fingers)<br />This little piggie had none.&nbsp; (wiggle ring fingers)<br />And this little piggie cried &ldquo;Wee, wee,&rdquo; all the way home. (wiggle pinky fingers)</p>
+<p>&nbsp;</p>
+<h3><a title="Teddy" name="Teddy"></a> <em><strong> Teddy Bear, Teddy Bear </strong></em></h3>
+<p>Teddy Bear, Teddy Bear, turn around,<br />Teddy Bear, Teddy Bear, touch the ground.<br />Teddy Bear, Teddy Bear, reach up high,<br />Teddy Bear, Teddy Bear, wink one eye.<br />Teddy Bear, Teddy Bear, touch your nose,<br />Teddy Bear, Teddy Bear, touch your toes.<br />Teddy Bear, Teddy Bear, shut the door,<br />Teddy Bear, Teddy Bear, count to four.<br />Teddy Bear, Teddy Bear, climb the stairs,<br />Teddy Bear, Teddy Bear, say your prayers.<br />Teddy Bear, Teddy Bear, turn out the light,<br />Teddy Bear, Teddy Bear, say goodnight.</p>
+<p>&nbsp;</p>
+<h3><a title="Where" name="Where"></a> <em><strong> Where is Thumbkin?</strong></em></h3>
+<p><em>Tune of: Fr&egrave;re Jacques or Are You Sleeping</em><br /><br />Where is thumbkin? (Start with hands behind back)<br />Where is thumbkin?<br />Here I am&nbsp; (Bring right thumb to front)<br />Here I am&nbsp; (Bring left thumb to front)<br />How are you today sir?<br />Very well, I thank you&nbsp; (Wiggle thumbs as if they are "talking" to each other)<br />Run away&nbsp; (Hide right hand behind back)<br />Run away&nbsp; (Hide left hand behind back)<br /><br />Additional verses:<br />Where is pointer?<br />Where is tall man?<br />Where is ring man?<br />Where is pinkie?<br />Where is whole family?</p>
+<p><br /><em>All fingerplays and action songs are "Traditional" unless otherwise noted.</em></p>
+
+                    <div class='clearfix'></div>
+
+                </div>
+            
+
+            
+
+            
+
+            
+
+            
+
+
+            
+
+            
+
+            
+
+            
+
+            
+
+        </div>
+
+    </div>
+
+</div>
+
+
+	
+
+<div id=''
+     class='section-wrapper wrapper ideas    '
+     >
+
+    <div class='container'>
+
+        <div class='row'>
+
+            
+
+            
+                <div class='one-col col-xs-12'>
+
+                    
+
+                    <h2>Discover More Ideas</h2>
+<p><iframe src="https://www.youtube.com/embed/FhFjMN6NMrY" width="350" height="196" allowfullscreen="allowfullscreen"></iframe></p>
+<ul>
+<li><a title="Tips for Teaching Children to Sing " href="/ideas/teaching-songs">Tips for Teaching Children to Sing and Move&nbsp;</a></li>
+<li><a title="Bible Songs" href="/ideas/bible-songs">Bible Songs and Motions</a></li>
+<li><a title="Preschool Active Games" href="/ideas/active-games">Preschool Active Games</a></li>
+<li><a title="How to Teach Poems to Preschoolers" href="/ideas/poems">How to Teach Poems to Preschoolers</a></li>
+</ul>
+<h6>&nbsp;</h6>
+<h6><em>This page may contain affiliate links. Please read our disclosure policy.</em></h6>
+
+                    <div class='clearfix'></div>
+
+                </div>
+            
+
+            
+
+            
+
+            
+
+            
+
+
+            
+
+            
+
+            
+
+            
+
+            
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+                    </div>
+
+                    <div class="col-xs-12 col-md-12">
+
+                        
+
+                        
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+            
+
+
+
+      <div class="clear-both"></div>
+       
+      <div class="clear-both"></div>
+    </div>
+
+    <div id="cart-review-wrapper"></div>
+
+    <!-- FOOTER -->
+    <div class="clear-both"></div>
+
+    <div id="footer-wrapper" class="wrapper hidden-print">
+      <div class="container">
+        <div class="row" style="margin-bottom: 10px">
+          <div class="left-col col-xs-12 col-sm-7 col-lg-8">
+            <div class="paragraph">
+              
+                
+                  <h3 class="footer-header">About Us</h3>
+                
+              
+
+              <!-- spacer -->
+
+              
+                <p>ABCJesusLovesMe&trade; is an educational ministry that equips adults with materials needed to be intentional in educating children. ABCJesusLovesMe provides five comprehensive, research-based curricula for ages 1-5 that focus on academics, development, and Bible learning through play. Additionally, a Bible curriculum, unit studies, digital downloads, and the Be Intentional Planner accompany the core curricula. These materials are sufficient on their own, but the heart of ABCJesusLovesMe is to offer guidance, support, trainings, and direction to make your educational efforts at home, preschool, or church successful.</p>
+<h6><span style="color: #ecf0f1;"><em style="box-sizing: border-box; margin: 0px; padding: 0px; -webkit-font-smoothing: antialiased; font-size: 11px;">This page may contain affiliate links. Please read our disclosure policy.</em></span></h6>
+              
+            </div>
+          </div>
+
+          <div class="right-col col-xs-12 col-sm-5 col-lg-4">
+            <ul id="footer-links" class="no-list">
+              
+              <li class="top-level">
+                <a class="top-level" href="/about">
+                  About
+                </a>
+              </li>
+              
+              <li class="top-level">
+                <a class="top-level" href="/contact">
+                  Contact
+                </a>
+              </li>
+              
+              <li class="top-level">
+                <a class="top-level" href="/faq">
+                  FAQ
+                </a>
+              </li>
+              
+              <li class="top-level">
+                <a class="top-level" href="/return-policy">
+                  Return Policy
+                </a>
+              </li>
+              
+              <li class="top-level">
+                <a class="top-level" href="/pricing">
+                  Pricing
+                </a>
+              </li>
+              
+              <li class="top-level last">
+                <a class="top-level" href="/terms-and-conditions">
+                  Terms and Conditions
+                </a>
+              </li>
+              
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <div class="copyright col-xs-6">
+            
+              <p>&copy; 2026 ABCJesusLovesMe&trade; &bull; All Rights Reserved &bull; <a href="https://www.doc4design.com/" target="_blank" rel="noopener">Website by Doc4 Design</a></p>
+            
+          </div>
+
+          <div class="social-links col-xs-6 col-md-6 col-lg-6 text-right">
+            <a href="https://www.facebook.com/abcjlm" target="_blank">
+              <img src="/static/images/facebook.png" width="30" />
+            </a>
+
+            <a href="https://www.youtube.com//ABCJesusLovesMe" target="_blank">
+              <img
+                src="/static/images/social_icons/youtube.png"
+                width="30"
+              />
+            </a>
+
+            <a
+              href="https://www.instagram.com/abcjesuslovesme/"
+              target="_blank"
+            >
+              <img
+                src="/static/images/social_icons/instagram.png"
+                width="30"
+              />
+            </a>
+
+            <a href="https://www.pinterest.com/abcjlm/" target="_blank">
+              <img src="/static/images/pinterest.png" width="30" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END FOOTER -->
+
+    <!-- END CONTENT -->
+
+    <!-- USER ACTIONS -->
+    
+    
+      <!-- Start of LiveChat (www.livechatinc.com) code -->
+
+      <script type="text/javascript">
+        window.__lc = window.__lc || {};
+
+        window.__lc.license = 10432677;
+
+        (function () {
+          var lc = document.createElement("script");
+          lc.type = "text/javascript";
+          lc.async = true;
+
+          lc.src =
+            ("https:" == document.location.protocol ? "https://" : "http://") +
+            "cdn.livechatinc.com/tracking.js";
+
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(lc, s);
+        })();
+
+        // utility to open the live chat with a button
+        const openLiveChat = () => {
+          window.LC_API.open_chat_window();
+        };
+      </script>
+
+      <noscript>
+        <a href="https://www.livechatinc.com/chat-with/10432677/">Chat with us</a
+        >, powered by
+        <a
+          href="https://www.livechatinc.com/?welcome"
+          rel="noopener"
+          target="_blank"
+          >LiveChat</a
+        >
+      </noscript>
+
+      <!-- End of LiveChat code -->
+    
+  </body>
+
+  
+
+  <!-- Google tag (gtag.js) -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-4CELH8LK3P"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-4CELH8LK3P");
+  </script>
+</html>

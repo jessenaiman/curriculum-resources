@@ -33,7 +33,7 @@ export function ResourcePreview({ lessons }: { lessons: PreviewLesson[] }) {
 
       <div className="lp-map rp-map" role="tablist" aria-label="Choose a lesson to preview">
         {lessons.map((l, i) => (
-          <button key={l.slug} role="tab" aria-selected={i === active} className={i === active ? "active" : ""} onClick={() => { setActive(i); setPreview(null); }}>
+          <button key={l.slug} role="tab" aria-selected={i === active} className={`stitch${i === active ? " active" : ""}`} onClick={() => { setActive(i); setPreview(null); }}>
             <span className="lp-map-text"><strong>{l.title}</strong><small>{l.gradeBand}</small></span>
           </button>
         ))}

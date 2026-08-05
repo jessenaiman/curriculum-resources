@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Old MacDonald's School — Database Schema (Interactive)</title>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<style>
+  :root { --border: #d8dce2; --bg: #f4f5f7; --accent: #3498db; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: var(--bg); color: #1c2733; }
+  header { background: #22303f; color: #fff; padding: 14px 22px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+  header h1 { font-size: 17px; margin: 0; }
+  header .sub { font-size: 12px; opacity: .85; }
+  .tabs { display: flex; gap: 6px; flex-wrap: wrap; padding: 10px 22px; background: #fff; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 5; }
+  .tab { padding: 8px 14px; border: 1px solid var(--border); border-radius: 8px; cursor: pointer; font-size: 13px; background: #fff; color: #22303f; transition: all .15s; }
+  .tab:hover { border-color: var(--accent); }
+  .tab.active { background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 600; }
+  .toolbar { display: flex; align-items: center; gap: 8px; padding: 10px 22px; background: #fff; border-bottom: 1px solid var(--border); flex-wrap: wrap; }
+  .btn { padding: 6px 12px; border: 1px solid var(--border); border-radius: 6px; background: #fff; cursor: pointer; font-size: 13px; }
+  .btn:hover { background: #f0f3f6; }
+  .btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .zoom-level { font-size: 13px; color: #555; min-width: 60px; text-align: center; font-variant-numeric: tabular-nums; }
+  .hint { font-size: 12px; color: #777; margin-left: auto; }
+  #stage-wrap { position: relative; margin: 16px 22px; height: calc(100vh - 210px); min-height: 480px; border: 1px solid var(--border); border-radius: 10px; background: #fff; overflow: hidden; }
+  #stage { position: absolute; inset: 0; transform-origin: 0 0; }
+  #stage svg { display: block; max-width: none; }
+  .note { max-width: 1100px; margin: 14px 22px 0; font-size: 13px; color: #44505c; background: #fffbe6; border-left: 4px solid #e6b800; padding: 10px 14px; border-radius: 0 6px 6px 0; }
+  .legend { display: flex; gap: 18px; flex-wrap: wrap; font-size: 12.5px; color: #44505c; padding: 4px 22px; }
+  .legend span { display: flex; align-items: center; gap: 6px; }
+  .sw { width: 12px; height: 12px; border-radius: 3px; display: inline-block; border: 1px solid rgba(0,0,0,.15); }
+  .sw.core { background: #2ecc71; }
+  .sw.junction { background: #f39c12; }
+  .sw.support { background: #95a5a6; }
+  .sw.gen { background: #9b59b6; }
+  .mermaid-def { display: none; }
+</style>
+</head>
+<body>
+<header>
+  <div>
+    <h1>🗄️ Old MacDonald's School — Database Schema Viewer</h1>
+    <div class="sub">Interactive · zoom &amp; pan · split into readable clusters</div>
+  </div>
+</header>
+
+<div class="tabs" id="tabs"></div>
+
+<div class="legend">
+  <span><i class="sw core"></i> Core entity</span>
+  <span><i class="sw junction"></i> Junction (many-to-many)</span>
+  <span><i class="sw support"></i> Supporting / reference</span>
+  <span><i class="sw gen"></i> Generated (regeneratable)</span>
+</div>
+
+<div class="note" id="note"></div>
+
+<div class="toolbar">
+  <button class="btn primary" id="zin">＋ Zoom in</button>
+  <button class="btn" id="zout">－ Zoom out</button>
+  <button class="btn" id="zreset">Reset</button>
+  <span class="zoom-level" id="zlevel">100%</span>
+  <span class="hint">Scroll to zoom · drag the canvas to pan</span>
+</div>
+
+<div id="stage-wrap">
+  <div id="stage"></div>
+</div>
+
+<script>
+// ===== Diagram definitions (one per cluster, kept narrow on purpose) =====
+const DIAGRAMS = {
+  curriculum: {
+    label: "① Curriculum & Standards",
+    note: "The heart: 264 curriculum topics across 8 subjects + 3 grades (plus early-years). Standards (Ontario+US) hang off topics. Early-years topics form their own ELOF-aligned branch.",
+    def: `erDiagram
+    CURRICULUM_TOPICS ||--o{ SONGS_CURRICULUM : "has"
+    CURRICULUM_TOPICS ||--o{ RESOURCES_TOPICS : "links"
+    CURRICULUM_TOPICS ||--o{ CIRCLE_TIME_SONGS_CURRICULUM : "maps"
+
+    CURRICULUM_TOPICS {
+        int id PK
+        text subject
+        text category
+        text grade
+        int seq_num
+        text lesson_topic
+        text skill_statement
+        text ontario_code
+        text us_code
+        text taught
+    }
+    STANDARDS_CODES {
+        int id PK
+        text jurisdiction
+        text grade
+        text strand
+        text code
+        text full_text
+    }
+    EARLY_YEARS_TOPICS {
+        int id PK
+        text category
+        text subcategory
+        text lesson_goal
+        text elof_ref
+        text taught
+    }
+    SONGS_CURRICULUM {
+        int id PK
+        int song_id FK
+        int curriculum_id FK
+        text relevance
+    }
+    RESOURCES_TOPICS {
+        int id PK
+        int resource_id FK
+        int topic_id FK
+        text relevance
+    }
+    CIRCLE_TIME_SONGS_CURRICULUM {
+        int id PK
+        int circle_time_song_id FK
+        int curriculum_topic_id FK
+        text relevance
+    }`
+  },
+  songs: {
+    label: "② Songs & Circle Time",
+    note: "Central 561-song catalog (Kathy Reid-Naiman). One side links to curriculum; the other links to Circle-Time planning. Both share the song table.",
+    def: `erDiagram
+    SONGS ||--o{ SONGS_CURRICULUM : "teaches"
+    SONGS ||--o{ SONGS_EARLY_YEARS : "supports"
+    CIRCLE_TIME_SONGS ||--o{ CIRCLE_TIME_SONGS_SONGS : "contains"
+    SONGS ||--o{ CIRCLE_TIME_SONGS_SONGS : "featured in"
+
+    SONGS {
+        int id PK
+        text cd_title
+        int track_num
+        text song_name
+        text topic
+        text theme
+        text actions
+        text lyrics
+        text url
+        text verified
+        text suggested_staff
+        text suggested_students
+    }
+    CIRCLE_TIME_SONGS {
+        int id PK
+        text song_name
+        text category
+        text actions
+        text age_group
+        text teaches
+        text hdh_focus
+    }
+    SONGS_CURRICULUM {
+        int id PK
+        int song_id FK
+        int curriculum_id FK
+        text relevance
+    }
+    SONGS_EARLY_YEARS {
+        int id PK
+        int song_id FK
+        int early_years_id FK
+        text relevance
+    }
+    CIRCLE_TIME_SONGS_SONGS {
+        int id PK
+        int circle_time_song_id FK
+        int song_id FK
+        text relevance
+    }`
+  },
+  resources: {
+    label: "③ Resources",
+    note: "40 curated educational resources (worksheets, videos, activities, games). Linked to curriculum topics via the junction table.",
+    def: `erDiagram
+    RESOURCES ||--o{ RESOURCES_TOPICS : "supports"
+
+    RESOURCES {
+        int id PK
+        text name
+        text url
+        text type
+        text subject
+        text category
+        text grade
+        text description
+        int free
+        int paywalled
+        text verified
+    }
+    RESOURCES_TOPICS {
+        int id PK
+        int resource_id FK
+        int topic_id FK
+        text relevance
+    }`
+  },
+  characters: {
+    label: "④ Characters & Early Years",
+    note: "8 staff + 8 student characters. Early-years topics are staffed/set specifically. Reference images attach to characters.",
+    def: `erDiagram
+    STAFF {
+        int id PK
+        text name
+        text species
+        text teaches
+        text grade_band
+        text strengths
+        text friends
+    }
+    STUDENTS {
+        int id PK
+        text name
+        text species
+        text personality
+        text signature_color
+        text learns_through
+        text friends
+    }
+    EARLY_YEARS_TOPICS {
+        int id PK
+        text category
+        text subcategory
+        text lesson_goal
+        text elof_ref
+        text setting_cast
+        text staff
+        text students
+    }
+    REFERENCE_IMAGES {
+        int id PK
+        text filename
+        text filepath
+        text character_name
+        text category
+        text status
+    }
+    MUSIC_UNITS {
+        int id PK
+        int unit_num
+        text age_band
+        text staff_lead
+        text children
+        text rationale
+    }
+    UNIT_TEMPLATES {
+        int id PK
+        text unit_type
+        text unit_title
+        text age_bands
+        text goals_addressed
+        text song_choices_prompt
+        text story_prompt
+        text fingerplay
+    }`
+  },
+  music: {
+    label: "⑤ Music Learning Layer",
+    note: "Gordon Music Learning Theory stages (7 stages x age bands). Songs and curriculum topics both link to stages. Separate unit-planning tables.",
+    def: `erDiagram
+    MUSIC_ARTS_STAGES ||--o{ SONGS_MUSIC_STAGES : "stage of"
+    MUSIC_ARTS_STAGES ||--o{ CURRICULUM_MUSIC_STAGES : "stage of"
+
+    MUSIC_ARTS_STAGES {
+        int id PK
+        text framework
+        text subcategory
+        text age_band
+        int seq_num
+        text developmental_stage
+        text framework_ref
+        text setting_cast
+    }
+    SONGS_MUSIC_STAGES {
+        int id PK
+        int song_id FK
+        int stage_id FK
+        text relevance
+    }
+    CURRICULUM_MUSIC_STAGES {
+        int id PK
+        int curriculum_id FK
+        int stage_id FK
+        text relevance
+    }`
+  },
+  generated: {
+    label: "⑥ Generated Lessons (separate DB)",
+    note: "This lives in a SEPARATE database. LLM-generated, fully regeneratable — not source data. One blueprint per curriculum topic.",
+    def: `erDiagram
+    LESSON_BLUEPRINTS ||--o{ LESSON_STEPS : "has"
+    LESSON_BLUEPRINTS ||--o{ LESSON_SONG_GUIDANCE : "uses"
+    LESSON_BLUEPRINTS ||--o{ LESSON_RESOURCE_GUIDANCE : "uses"
+    LESSON_BLUEPRINTS ||--o{ LESSON_SEARCH_PROMPTS : "has"
+    LESSON_BLUEPRINTS ||--o{ LESSON_REVIEW : "reviewed by"
+    LESSON_BLUEPRINTS ||--o{ WORKSHEET_BRIEFS : "generates"
+
+    LESSON_BLUEPRINTS {
+        int id PK
+        int curriculum_topic_id UK
+        text slug UK
+        text title
+        text subject
+        text grade_band
+        text summary
+        text lesson_mode
+        int duration_minutes
+        text learning_goals_json
+        text teacher_prep
+        text assessment_plan
+        text staff_lead
+        text editorial_status
+        text review_state
+    }
+    LESSON_STEPS {
+        int id PK
+        int lesson_id FK
+        int step_order
+        text phase
+        int minutes
+        text teacher_actions
+        text student_actions
+    }
+    LESSON_SONG_GUIDANCE {
+        int id PK
+        int lesson_id FK
+        int song_id FK
+        text relevance
+        text use_in_phase
+        text teacher_rationale
+    }
+    LESSON_RESOURCE_GUIDANCE {
+        int id PK
+        int lesson_id FK
+        int resource_id FK
+        text relevance
+        text use_in_phase
+        text teacher_rationale
+    }
+    LESSON_SEARCH_PROMPTS {
+        int id PK
+        int lesson_id FK
+        text prompt_type
+        text prompt
+    }
+    LESSON_REVIEW {
+        int id PK
+        int lesson_id FK
+        int completeness_score
+        text review_state
+        text reviewer_notes
+    }
+    WORKSHEET_BRIEFS {
+        int id PK
+        int lesson_id FK
+        int worksheet_order
+        text title
+        text purpose
+        text activity_type
+        text child_directions
+        text generation_prompt
+        text status
+    }`
+  }
+};
+
+const KEY = Object.keys(DIAGRAMS);
+let active = KEY[0];
+let zoom = 1;
+let scale = 1; // device pixel ratio scaling
+const stage = document.getElementById('stage');
+const wrap = document.getElementById('stage-wrap');
+const zlevel = document.getElementById('zlevel');
+const note = document.getElementById('note');
+
+// Build tabs
+const tabs = document.getElementById('tabs');
+KEY.forEach(k => {
+  const b = document.createElement('div');
+  b.className = 'tab' + (k === active ? ' active' : '');
+  b.textContent = DIAGRAMS[k].label;
+  b.onclick = () => select(k);
+  tabs.appendChild(b);
+});
+
+// Pan state
+let pan = { x: 0, y: 0 };
+let dragging = false, start = { x: 0, y: 0 }, panStart = { x: 0, y: 0 };
+
+function apply() {
+  const bg = window.devicePixelRatio || 1;
+  stage.style.transform = `translate(${pan.x}px, ${pan.y}px) scale(${zoom})`;
+  zlevel.textContent = Math.round(zoom * 100) + '%';
+}
+
+function fit() {
+  zoom = 0.9;
+  pan = { x: 20, y: 20 };
+  apply();
+}
+
+function select(k) {
+  active = k;
+  document.querySelectorAll('.tab').forEach((t, i) => t.classList.toggle('active', KEY[i] === k));
+  note.textContent = DIAGRAMS[k].note;
+  stage.innerHTML = '';
+  fit();
+  render(k);
+}
+
+async function render(k) {
+  const def = DIAGRAMS[k].def;
+  const { svg } = await mermaid.render('mmd-' + k, def);
+  stage.innerHTML = svg;
+  const svgEl = stage.querySelector('svg');
+  svgEl.style.transform = 'scale(1.15)';
+  svgEl.style.transformOrigin = '0 0';
+}
+
+// Zoom controls
+document.getElementById('zin').onclick = () => { zoom = Math.min(zoom * 1.25, 5); apply(); };
+document.getElementById('zout').onclick = () => { zoom = Math.max(zoom / 1.25, 0.2); apply(); };
+document.getElementById('zreset').onclick = () => { fit(); };
+
+// Wheel zoom (centered on cursor)
+wrap.addEventListener('wheel', (e) => {
+  e.preventDefault();
+  const rect = wrap.getBoundingClientRect();
+  const mx = e.clientX - rect.left;
+  const my = e.clientY - rect.top;
+  const factor = e.deltaY < 0 ? 1.15 : 1 / 1.15;
+  const newZoom = Math.min(Math.max(zoom * factor, 0.2), 5);
+  // keep cursor point stable
+  pan.x = mx - (mx - pan.x) * (newZoom / zoom);
+  pan.y = my - (my - pan.y) * (newZoom / zoom);
+  zoom = newZoom;
+  apply();
+}, { passive: false });
+
+// Drag to pan
+wrap.addEventListener('mousedown', (e) => {
+  dragging = true; start.x = e.clientX; start.y = e.clientY; panStart.x = pan.x; panStart.y = pan.y;
+  wrap.style.cursor = 'grabbing';
+});
+window.addEventListener('mousemove', (e) => {
+  if (!dragging) return;
+  pan.x = panStart.x + (e.clientX - start.x);
+  pan.y = panStart.y + (e.clientY - start.y);
+  apply();
+});
+window.addEventListener('mouseup', () => { dragging = false; wrap.style.cursor = 'grab'; });
+wrap.style.cursor = 'grab';
+
+mermaid.initialize({ startOnLoad: false, theme: 'neutral', securityLevel: 'loose',
+  er: { useMaxWidth: false, fontSize: 15, entityPadding: 12, minEntityWidth: 130 } });
+
+select(active);
+</script>
+</body>
+</html>

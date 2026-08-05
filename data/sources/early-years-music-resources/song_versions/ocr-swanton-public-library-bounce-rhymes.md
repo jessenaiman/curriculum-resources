@@ -1,0 +1,175 @@
+---
+source_id: "ocr-swanton-public-library-bounce-rhymes"
+source_file: "swanton-public-library-bounce-rhymes.pdf"
+source_category: "01-libraries-agencies"
+source_title: "Baby Bounce Nursery Rhymes"
+page_section: "OCR'd from image PDF"
+evidence_quote: ""
+educational_domain: ""
+skill_objective: ""
+activity_material: ""
+age_range: ""
+confidence: 0.85
+review_status: "pending_qc"
+ocr_words: 876
+---
+
+# Baby Bounce Nursery Rhymes
+
+"Bounce" Rhymes for Babies/Toddlers with Caregiver
+Hippity Hop
+This is a fun song that can be done sitting with baby in parent and caregiver's lap
+or a child hopping. Sing to the tune of "Row, Row, Row Your Boat".
+Hip, hip, hippity hop
+(bounce baby)
+Hippity, hippity, hop
+(bounce baby)
+We'll hop around the room today
+(bounce baby)
+Until it's time to stop.
+(stop bouncing baby)
+Mama's Little Baby Loves Dancing
+This song has a great rhythm to it. Parents and caregivers can sit or stand with
+baby and bounce and sway to beat. Sing to the tune of "Mama's Little Baby Loves
+Shortenin' Bread". Listen to the song at http://bit.ly/2ST5blu
+Mama's little baby loves dancing, dancing
+Mama's little baby loves getting down
+Mama's little baby loves dancing, dancing
+Mama's little baby loves to turn around!
+You lean to the left
+You lean to the right
+You hug that baby nice and tight
+You lean to the left
+You lean to the right
+You hug that baby nice and tight
+'Cuz Mama's little baby loves dancing, dancing
+Mama's little baby loves getting down
+Mama's little baby loves dancing, dancing
+Mama's little baby loves to turn around!
+
+Little Red Wagon
+for the first verse and move side to side for the second verse. Listen and see the
+actions at http://bit.ly/2Fqmifi
+Bumpin' up and down in my little red wagon.
+Bumpin' up and down in my little red wagon.
+Bumpin' up and down in my little red wagon,
+Won't you be my darlin'.
+One wheel's off and the axle's broken.
+One wheel's off and the axle's broken.
+One wheel's off and the axle's broken,
+Won't you be my darlin'!
+Buffalo Gals
+Encourage parents and caregivers to stand up and gently bounce baby to the beat.
+Listen to thesong at http://bit.ly/2snUWKi
+As I was walking down the street, down the street, down the street
+A pretty girl I chanced to meet
+And we danced by the light of the moon.
+Buffalo gals won't you come out tonight, come out tonight, come out tonight
+Buffalo gals won't you come out tonight
+And we'll dance by the light of the moon.
+There Was a Little Grasshopper
+with their feet touching the floor. While supporting baby, gently bounce them to
+the rhythm of the chant.
+There was a little grasshopper,
+Always on the jump.
+Because he never looked ahead,
+He always went 'Bump'! (gently drop baby between legs)
+
+Did You Ever See a Baby?
+Parents and caregivers can gently bounce baby on their lap and then move from
+side to side. Sing to the tune of "Did You Ever See a Lassie". Listen to the song at
+http://bit.ly/2TFZaZs
+Did you ever see a baby, a baby, a baby?
+Did you ever see a baby go this way and that.
+(lean left, then right)
+Go this way and that way, and that way and this way,
+Did you ever see a baby go this way and that.
+(lean left, then right)
+For additional verses, change the word baby to mommy, daddy, grandma,
+grandpa, brother, sister, or friend.
+This Is The Way The Ladies Ride
+In this fun bouncing chant, parents and caregivers will place the baby in their lap
+or on their knees. For young infants, baby should lie on the caregiver's legs facing
+them. For older babies who can support their head, place on raised knees. Begin
+the rhyme bouncing baby.
+This is the way the ladies ride,
+Prim, prim, prim, prim.
+(very gently bounce)
+This is the way the gentlemen ride,
+Trim, trim, trim, trim.
+(slightly larger bounce)
+This is the way the hunters ride,
+A gallop, a gallop, a gallop, a gallop.
+(larger bounce)
+This is the way the farmers ride,
+A trot, a trot, a trot, a trot.
+(very large bounce)
+This is the way the cowboys ride,
+A whoopy-i-ay, a whoop-i-ay, and a whoopy-i-ay.
+(large bounces from knee to knee)
+
+Bounce and Bounce and Bounce and Stop
+For this song, parent and caregivers should put their legs together in front of
+them. Place baby on knees or lap and support body while doing the actions. Sing
+to the tune of "skip to My Lou". To listen to the song and see the actions, visit
+http://bit.ly/2FtRDck
+Bounce and bounce and bounce and stop
+Bounce and bounce and bounce and stop
+Bounce and bounce and bounce and stop
+Now bounce that baby right up to the top
+(lift baby up)
+Additional Verses:
+Rockin', rockin', rockin stop
+Tickle and tickle and tickle and stop
+Popcorn, Popcorn
+Popcorn, popcorn, sizzle in the pan.
+(bounce back and forth on knees)
+Shake it, shake it, bam bam bam!
+(up and down bounces)
+Popcorn, popcorn, now it's getting hot.
+(bounce back and forth on knees)
+Shake it, shake it, pop, pop, pop!
+(up and down bounces)
+A Smooth Road
+A smooth road ... a smooth road ... a smooth road ... a smooth road
+(very gentle bounces)
+A bumpy road ... a bumpy road ... a bumpy road ... a bumpy road
+(slightly bigger bounces)
+A rough road ... a rough road ... a rough road ... a rough road
+(even bigger bounces)
+A hole!
+(gently lower baby down)
+
+A-Bouncing We Will Go
+A-bouncing we will go
+A-bouncing we will go
+Hi ho the derry-o
+A-bouncing we will go
+Add your own verses depending on what you're doing: "We walk around the
+a ,'bny big ahtu b aaih am, 'ybu pue al oi oh am, ,'aois
+The Noble Duke of York
+For this song, parents and caregivers should place their baby on their knees or
+lap and bounce along to the song. To hear the song, visit http://bit.ly/2srOVfD
+Oh, the noble duke of York,
+(bounce baby on your knee)
+He had ten thousand men.
+He marched them up to the top of the hill,
+(lift baby up high)
+And marched them down again.
+(bring baby back down)
+Oh, and when they're up, they're up.
+(lift baby up high)
+And when they're down, they're down.
+(bring baby back down)
+And when they're only half way up,
+(hold baby only half as high)
+They're neither up nor down.
+(hold baby up, bring baby down)
+He marched them to the left.
+(lean baby to the left)
+He marched them to the right.
+(lean baby to the right)
+He even marched them upside down.
+(gently turn baby upside down)
+Now wasn't that a sight!
+(bring baby back up)
