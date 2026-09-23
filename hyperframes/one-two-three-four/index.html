@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1080, height=1920">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        width: 1080px;
+        height: 1920px;
+        overflow: hidden;
+        background: #0f1b33;
+      }
+      #root {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+      }
+
+      /* ---------- static scene (untimed) ---------- */
+      #sky {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg, #0f1b33 0%, #1c3057 55%, #3a5f8f 100%);
+      }
+      #moon {
+        position: absolute;
+        top: 200px;
+        right: 160px;
+        width: 130px;
+        height: 130px;
+        border-radius: 50%;
+        background: #fff7d6;
+        box-shadow: 0 0 60px 18px rgba(255, 247, 214, 0.35);
+      }
+      .star {
+        position: absolute;
+        border-radius: 50%;
+        background: #fff7d6;
+      }
+      #star-1 { top: 130px; left: 190px; width: 18px; height: 18px; }
+      #star-2 { top: 320px; left: 90px; width: 12px; height: 12px; }
+      #star-3 { top: 90px; left: 640px; width: 14px; height: 14px; }
+      #star-4 { top: 300px; left: 820px; width: 10px; height: 10px; }
+      #star-5 { top: 480px; left: 260px; width: 10px; height: 10px; }
+      #star-6 { top: 520px; left: 700px; width: 16px; height: 16px; }
+
+      #ground {
+        position: absolute;
+        left: -60px;
+        right: -60px;
+        bottom: -220px;
+        height: 560px;
+        border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+        background: #2f5d3c;
+      }
+
+      /* ---------- cottage ---------- */
+      #cottage {
+        position: absolute;
+        left: 50%;
+        top: 1080px;
+        width: 620px;
+        height: 520px;
+        margin-left: -310px;
+      }
+      #cottage-body {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 360px;
+        background: #c96f4a;
+        border: 6px solid #7a3b2e;
+        border-bottom: none;
+        border-radius: 18px 18px 0 0;
+      }
+      #roof {
+        position: absolute;
+        left: -46px;
+        right: -46px;
+        bottom: 356px;
+        height: 210px;
+        background: #7a3b2e;
+        clip-path: polygon(50% 0, 100% 100%, 0 100%);
+      }
+      #chimney {
+        position: absolute;
+        left: 84px;
+        bottom: 420px;
+        width: 92px;
+        height: 130px;
+        background: #9e2b25;
+        border-radius: 8px 8px 0 0;
+      }
+      #door {
+        position: absolute;
+        left: 50%;
+        top: 120px;
+        width: 150px;
+        height: 240px;
+        margin-left: -75px;
+        background: #8a5a3b;
+        border: 6px solid #5f3a24;
+        border-bottom: none;
+        border-radius: 75px 75px 0 0;
+      }
+      #window {
+        position: absolute;
+        left: 90px;
+        top: 70px;
+        width: 120px;
+        height: 120px;
+        background: #ffd166;
+        border: 6px solid #5f3a24;
+        border-radius: 10px;
+      }
+      #window-cross-h {
+        position: absolute;
+        left: 90px;
+        top: 124px;
+        width: 120px;
+        height: 6px;
+        background: #5f3a24;
+      }
+      #window-cross-v {
+        position: absolute;
+        left: 144px;
+        top: 70px;
+        width: 6px;
+        height: 120px;
+        background: #5f3a24;
+      }
+
+      /* jingle bell under the roof eave, over the door */
+      #bell {
+        position: absolute;
+        left: 50%;
+        top: -56px;
+        width: 74px;
+        height: 92px;
+        margin-left: -37px;
+        transform-origin: top center;
+      }
+      #bell-body {
+        position: absolute;
+        left: 0;
+        top: 16px;
+        width: 74px;
+        height: 64px;
+        background: #ffd166;
+        clip-path: polygon(0 55%, 50% 0, 100% 55%, 82% 100%, 18% 100%);
+      }
+      #bell-knob {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        width: 22px;
+        height: 16px;
+        margin-left: -11px;
+        border-radius: 4px;
+        background: #e8b64c;
+      }
+
+      /* ---------- counting slot ---------- */
+      .clip {
+        position: absolute;
+        inset: 0;
+        display: grid;
+        place-items: center;
+      }
+      .num-slot.clip {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 18px;
+        padding-bottom: 320px;
+      }
+      .digit {
+        font-size: 360px;
+        font-weight: 800;
+        line-height: 1;
+        color: #ffd166;
+        text-shadow: 0 10px 40px rgba(0, 0, 0, 0.45);
+      }
+      .word {
+        font-size: 64px;
+        font-weight: 700;
+        letter-spacing: 0.35em;
+        text-indent: 0.35em;
+        color: #fff7d6;
+        text-shadow: 0 4px 24px rgba(0, 0, 0, 0.45);
+      }
+    </style>
+  </head>
+  <body>
+    <div data-hf-id="hf-gr2s" id="root" data-composition-id="main" data-start="0" data-duration="8" data-width="1080" data-height="1920">
+      <!-- static scene -->
+      <div data-hf-id="hf-f7j0" id="sky"></div>
+      <div data-hf-id="hf-vixe" id="moon"></div>
+      <div data-hf-id="hf-i204" id="star-1" class="star"></div>
+      <div data-hf-id="hf-qpvz" id="star-2" class="star"></div>
+      <div data-hf-id="hf-mrry" id="star-3" class="star"></div>
+      <div data-hf-id="hf-xn9l" id="star-4" class="star"></div>
+      <div data-hf-id="hf-uo00" id="star-5" class="star"></div>
+      <div data-hf-id="hf-5jhn" id="star-6" class="star"></div>
+
+      <div data-hf-id="hf-4upk" id="cottage">
+        <div data-hf-id="hf-0qzi" id="chimney"></div>
+        <div data-hf-id="hf-3oi3" id="roof"></div>
+        <div data-hf-id="hf-cx2l" id="cottage-body">
+          <div data-hf-id="hf-sqh1" id="window"></div>
+          <div data-hf-id="hf-1g6h" id="window-cross-h"></div>
+          <div data-hf-id="hf-337b" id="window-cross-v"></div>
+          <div data-hf-id="hf-vlzh" id="door"></div>
+        </div>
+        <div data-hf-id="hf-4u96" id="bell">
+          <div data-hf-id="hf-noyn" id="bell-knob"></div>
+          <div data-hf-id="hf-tc9f" id="bell-body"></div>
+        </div>
+      </div>
+
+      <div data-hf-id="hf-9xcl" id="ground" data-layout-allow-overflow="true"></div>
+
+      <!-- counting numbers: one slot, 1..4 cycle through it -->
+      <section data-hf-id="hf-4fj4" id="n1" class="clip num-slot" data-start="0" data-duration="2" data-track-index="0">
+        <span data-hf-id="hf-xryz" class="digit">1</span>
+        <span data-hf-id="hf-yrtn" class="word">ONE</span>
+      </section>
+      <section data-hf-id="hf-3tfw" id="n2" class="clip num-slot" data-start="2" data-duration="2" data-track-index="1">
+        <span data-hf-id="hf-xdny" class="digit">2</span>
+        <span data-hf-id="hf-b1rp" class="word">TWO</span>
+      </section>
+      <section data-hf-id="hf-332w" id="n3" class="clip num-slot" data-start="4" data-duration="2" data-track-index="2">
+        <span data-hf-id="hf-wzcx" class="digit">3</span>
+        <span data-hf-id="hf-bxhb" class="word">THREE</span>
+      </section>
+      <section data-hf-id="hf-hp5s" id="n4" class="clip num-slot" data-start="6" data-duration="2" data-track-index="3">
+        <span data-hf-id="hf-wl1w" class="digit">4</span>
+        <span data-hf-id="hf-d38p" class="word">FOUR</span>
+      </section>
+
+      <!-- audio: first 8s of the song -->
+      <audio data-hf-id="hf-4e9q" id="song-audio" src="assets/one-two-three-four.mp3" data-start="0" data-duration="8" data-track-index="10" data-volume="1"></audio>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+
+      const pops = [
+        { id: "#n1 .digit", word: "#n1 .word", t: 0, exit: 1.55 },
+        { id: "#n2 .digit", word: "#n2 .word", t: 2, exit: 3.55 },
+        { id: "#n3 .digit", word: "#n3 .word", t: 4, exit: 5.55 },
+        { id: "#n4 .digit", word: "#n4 .word", t: 6, exit: 7.55 },
+      ];
+
+      pops.forEach((p) => {
+        // number pops into the slot
+        tl.fromTo(
+          [p.id, p.word],
+          { opacity: 0, scale: 0.62 },
+          { opacity: 1, scale: 1, duration: 0.42, ease: "back.out(1.7)" },
+          p.t + 0.12
+        );
+        // holds the window, then exits cleanly before the clip hides
+        tl.to(
+          [p.id, p.word],
+          { opacity: 0, scale: 0.72, duration: 0.30, ease: "power2.in" },
+          p.exit
+        );
+        // bell rocks once on the beat
+        tl.to("#bell", { rotation: 11, duration: 0.14, ease: "power1.out" }, p.t + 0.18);
+        tl.to("#bell", { rotation: -9, duration: 0.16, ease: "power1.inOut" }, p.t + 0.34);
+        tl.to("#bell", { rotation: 0, duration: 0.22, ease: "power2.out" }, p.t + 0.52);
+      });
+
+      // gentle ambient motion; ends exactly where it started (seamless loop)
+      tl.to("#moon", { y: 22, duration: 4, ease: "sine.inOut" }, 0);
+      tl.to("#moon", { y: 0, duration: 4, ease: "sine.inOut" }, 4);
+      tl.fromTo("#star-1", { opacity: 0.45 }, { opacity: 1, duration: 2, ease: "sine.inOut", immediateRender: false }, 0);
+      tl.fromTo("#star-1", { opacity: 1 }, { opacity: 0.45, duration: 2, ease: "sine.inOut", immediateRender: false }, 2);
+      tl.fromTo("#star-6", { opacity: 0.5 }, { opacity: 1, duration: 2, ease: "sine.inOut", immediateRender: false }, 0.6);
+      tl.fromTo("#star-6", { opacity: 1 }, { opacity: 0.5, duration: 2, ease: "sine.inOut", immediateRender: false }, 2.6);
+
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>
