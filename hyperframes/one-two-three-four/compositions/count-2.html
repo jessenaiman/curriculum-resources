@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <!-- head is metadata for this source file only; the runtime clones ONLY <template> -->
+  </head>
+  <body>
+    <template>
+      <style>
+        /* Root styled by #root (lint: subcomposition_root_styled_by_class). */
+        #root {
+          position: absolute;
+          inset: 0;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 18px;
+          /* v1 wrong #1: the word label sat on the roof apex. Flex centering plus
+             padding-bottom N shifts the stack up by N/2. 620 -> 310px of lift. */
+          padding-bottom: 620px;
+          font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+        }
+        .digit {
+          font-size: 360px;
+          font-weight: 800;
+          line-height: 1;
+          color: #ffd166;
+          text-shadow: 0 10px 40px rgba(0, 0, 0, 0.45);
+        }
+        .word {
+          font-size: 64px;
+          font-weight: 700;
+          letter-spacing: 0.35em;
+          text-indent: 0.35em;
+          color: #fff7d6;
+          text-shadow: 0 4px 24px rgba(0, 0, 0, 0.45);
+        }
+      </style>
+
+      <div data-hf-id="hf-c0yd" id="root" data-composition-id="count-2" data-width="1080" data-height="1920">
+        <span data-hf-id="hf-901x" id="c2-digit" class="digit">2</span>
+        <span data-hf-id="hf-52wh" id="c2-word" class="word">TWO</span>
+      </div>
+
+      <script>
+        window.__timelines = window.__timelines || {};
+        const tl = gsap.timeline({ paused: true });
+        /* Uniquely scoped: all four numerals share one document, so an unscoped
+           ".digit" selector would cross-animate every instance. */
+        const targets = ["#c2-digit", "#c2-word"];
+        tl.fromTo(
+          targets,
+          { opacity: 0, scale: 0.62 },
+          { opacity: 1, scale: 1, duration: 0.42, ease: "back.out(1.7)", immediateRender: false },
+          0.18
+        );
+        tl.to(targets, { opacity: 0, scale: 0.72, duration: 0.3, ease: "power2.in" }, 1.55);
+        window.__timelines["count-2"] = tl;
+      </script>
+    </template>
+  </body>
+</html>

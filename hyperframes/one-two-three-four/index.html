@@ -170,37 +170,6 @@
         border-radius: 4px;
         background: #e8b64c;
       }
-
-      /* ---------- counting slot ---------- */
-      .clip {
-        position: absolute;
-        inset: 0;
-        display: grid;
-        place-items: center;
-      }
-      .num-slot.clip {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 18px;
-        padding-bottom: 320px;
-      }
-      .digit {
-        font-size: 360px;
-        font-weight: 800;
-        line-height: 1;
-        color: #ffd166;
-        text-shadow: 0 10px 40px rgba(0, 0, 0, 0.45);
-      }
-      .word {
-        font-size: 64px;
-        font-weight: 700;
-        letter-spacing: 0.35em;
-        text-indent: 0.35em;
-        color: #fff7d6;
-        text-shadow: 0 4px 24px rgba(0, 0, 0, 0.45);
-      }
     </style>
   </head>
   <body>
@@ -232,55 +201,29 @@
 
       <div data-hf-id="hf-9xcl" id="ground" data-layout-allow-overflow="true"></div>
 
-      <!-- counting numbers: one slot, 1..4 cycle through it -->
-      <section data-hf-id="hf-4fj4" id="n1" class="clip num-slot" data-start="0" data-duration="2" data-track-index="0">
-        <span data-hf-id="hf-xryz" class="digit">1</span>
-        <span data-hf-id="hf-yrtn" class="word">ONE</span>
-      </section>
-      <section data-hf-id="hf-3tfw" id="n2" class="clip num-slot" data-start="2" data-duration="2" data-track-index="1">
-        <span data-hf-id="hf-xdny" class="digit">2</span>
-        <span data-hf-id="hf-b1rp" class="word">TWO</span>
-      </section>
-      <section data-hf-id="hf-332w" id="n3" class="clip num-slot" data-start="4" data-duration="2" data-track-index="2">
-        <span data-hf-id="hf-wzcx" class="digit">3</span>
-        <span data-hf-id="hf-bxhb" class="word">THREE</span>
-      </section>
-      <section data-hf-id="hf-hp5s" id="n4" class="clip num-slot" data-start="6" data-duration="2" data-track-index="3">
-        <span data-hf-id="hf-wl1w" class="digit">4</span>
-        <span data-hf-id="hf-d38p" class="word">FOUR</span>
-      </section>
+      <!--
+        v2: each numeral is its own sub-composition, so it is an independent
+        timeline row and an independently movable element in Studio (v1 wrong #4).
+        Host data-composition-id must match the file's inner id and timeline key.
+      -->
+      <div data-hf-id="hf-eutk" id="count-1" data-composition-id="count-1" data-composition-src="compositions/count-1.html" data-start="0" data-duration="2" data-track-index="0" data-width="1080" data-height="1920"></div>
+      <div data-hf-id="hf-v5oq" id="count-2" data-composition-id="count-2" data-composition-src="compositions/count-2.html" data-start="2" data-duration="2" data-track-index="1" data-width="1080" data-height="1920"></div>
+      <div data-hf-id="hf-ulq4" id="count-3" data-composition-id="count-3" data-composition-src="compositions/count-3.html" data-start="4" data-duration="2" data-track-index="2" data-width="1080" data-height="1920"></div>
+      <div data-hf-id="hf-s1km" id="count-4" data-composition-id="count-4" data-composition-src="compositions/count-4.html" data-start="6" data-duration="2" data-track-index="3" data-width="1080" data-height="1920"></div>
 
       <!-- audio: first 8s of the song -->
       <audio data-hf-id="hf-4e9q" id="song-audio" src="assets/one-two-three-four.mp3" data-start="0" data-duration="8" data-track-index="10" data-volume="1"></audio>
     </div>
     <script>
+      window.__timelines = window.__timelines || {};
       const tl = gsap.timeline({ paused: true });
 
-      const pops = [
-        { id: "#n1 .digit", word: "#n1 .word", t: 0, exit: 1.55 },
-        { id: "#n2 .digit", word: "#n2 .word", t: 2, exit: 3.55 },
-        { id: "#n3 .digit", word: "#n3 .word", t: 4, exit: 5.55 },
-        { id: "#n4 .digit", word: "#n4 .word", t: 6, exit: 7.55 },
-      ];
-
-      pops.forEach((p) => {
-        // number pops into the slot
-        tl.fromTo(
-          [p.id, p.word],
-          { opacity: 0, scale: 0.62 },
-          { opacity: 1, scale: 1, duration: 0.42, ease: "back.out(1.7)" },
-          p.t + 0.12
-        );
-        // holds the window, then exits cleanly before the clip hides
-        tl.to(
-          [p.id, p.word],
-          { opacity: 0, scale: 0.72, duration: 0.30, ease: "power2.in" },
-          p.exit
-        );
-        // bell rocks once on the beat
-        tl.to("#bell", { rotation: 11, duration: 0.14, ease: "power1.out" }, p.t + 0.18);
-        tl.to("#bell", { rotation: -9, duration: 0.16, ease: "power1.inOut" }, p.t + 0.34);
-        tl.to("#bell", { rotation: 0, duration: 0.22, ease: "power2.out" }, p.t + 0.52);
+      // The bell rocks on each count. The numeral pops now live inside each
+      // sub-composition at local t=0.18, so these stay aligned at 0.18/2.18/4.18/6.18.
+      [0.18, 2.18, 4.18, 6.18].forEach((t) => {
+        tl.to("#bell", { rotation: 11, duration: 0.14, ease: "power1.out" }, t);
+        tl.to("#bell", { rotation: -9, duration: 0.16, ease: "power1.inOut" }, t + 0.16);
+        tl.to("#bell", { rotation: 0, duration: 0.22, ease: "power2.out" }, t + 0.34);
       });
 
       // gentle ambient motion; ends exactly where it started (seamless loop)
