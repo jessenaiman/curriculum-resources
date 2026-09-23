@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- head is metadata for this source file only; the runtime clones ONLY <template> -->
+  </head>
+  <body>
+    <template>
+      <style>
+        /* Root styled by #root (lint: subcomposition_root_styled_by_class). */
+        #root {
+          position: absolute;
+          inset: 0;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 18px;
+          /* sit the numeral above the door: centering + padding-bottom lifts by half */
+          padding-bottom: 620px;
+          font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+        }
+        .digit {
+          font-size: 340px;
+          font-weight: 800;
+          line-height: 1;
+          color: #ffe8b0;
+          text-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+        }
+        .word {
+          font-size: 60px;
+          font-weight: 700;
+          letter-spacing: 0.32em;
+          text-indent: 0.32em;
+          color: #fff4e0;
+          text-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
+        }
+      </style>
+
+      <div id="root" data-composition-id="count-4" data-width="1080" data-height="1920">
+        <span id="b4-digit" class="digit">4</span>
+        <span id="b4-word" class="word">FOUR</span>
+      </div>
+
+      <script>
+        window.__timelines = window.__timelines || {};
+        const tl = gsap.timeline({ paused: true });
+        /* Uniquely scoped: all numerals share one document, so an unscoped
+           ".digit" selector would cross-animate every instance. */
+        const targets = ["#b4-digit", "#b4-word"];
+        /* Slot window is 2.46s (beat at 5.54 -> end of loop at 8.0). The exit
+           finishes at local 1.88, leaving the tail clear so the loop returns
+           to its t=0 rest state. */
+        tl.fromTo(
+          targets,
+          { opacity: 0, scale: 0.62 },
+          { opacity: 1, scale: 1, duration: 0.42, ease: "back.out(1.7)", immediateRender: false },
+          0.06
+        );
+        tl.to(targets, { opacity: 0, scale: 0.78, duration: 0.3, ease: "power2.in" }, 1.58);
+        window.__timelines["count-4"] = tl;
+      </script>
+    </template>
+  </body>
+</html>

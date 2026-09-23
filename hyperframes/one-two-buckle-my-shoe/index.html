@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        width: 1080px;
+        height: 1920px;
+        overflow: hidden;
+        background: #2d1b4e;
+      }
+      #root {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+      }
+
+      /* ---------- dusk scene (untimed) ---------- */
+      #sky {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg, #2d1b4e 0%, #6b3566 48%, #e8836b 100%);
+      }
+      .glow {
+        position: absolute;
+        border-radius: 50%;
+        background: #ffd9a0;
+      }
+      #sun {
+        top: 250px;
+        right: 170px;
+        width: 150px;
+        height: 150px;
+        box-shadow: 0 0 90px 30px rgba(255, 217, 160, 0.35);
+      }
+      #dust-1, #dust-2, #dust-3, #dust-4 {
+        position: absolute;
+        border-radius: 50%;
+        background: #ffe8b0;
+      }
+      #dust-1 { top: 200px; left: 180px; width: 14px; height: 14px; }
+      #dust-2 { top: 420px; left: 110px; width: 10px; height: 10px; }
+      #dust-3 { top: 160px; left: 620px; width: 12px; height: 12px; }
+      #dust-4 { top: 520px; left: 840px; width: 9px; height: 9px; }
+
+      #ground {
+        position: absolute;
+        left: -60px;
+        right: -60px;
+        bottom: -240px;
+        height: 600px;
+        border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+        background: #3c2450;
+      }
+
+      /* ---------- the door (animated: slams on the "four" beat) ---------- */
+      #doorway {
+        position: absolute;
+        left: 50%;
+        top: 880px;
+        width: 440px;
+        height: 780px;
+        margin-left: -220px;
+      }
+      #door-frame {
+        position: absolute;
+        inset: 0;
+        background: #4a2c3d;
+        border-radius: 220px 220px 0 0;
+        border: 8px solid #331d2c;
+        border-bottom: none;
+      }
+      /* No CSS transform here: GSAP owns scaleX (lint: gsap_css_transform_conflict).
+         A door reads as swinging in the picture plane, so it is foreshortened
+         with scaleX anchored at the hinge. Rotating instead arcs the panel
+         upward through the numeral above. */
+      #door {
+        position: absolute;
+        inset: 16px;
+        transform-origin: left center;
+        background: #a4573a;
+        border: 8px solid #6d3524;
+        border-bottom: none;
+        border-radius: 200px 200px 0 0;
+      }
+      #door-panel {
+        position: absolute;
+        left: 50%;
+        top: 270px;
+        width: 170px;
+        height: 250px;
+        margin-left: -85px;
+        border: 7px solid #6d3524;
+        border-radius: 12px;
+        opacity: 0.55;
+      }
+      #door-knob {
+        position: absolute;
+        right: 44px;
+        top: 400px;
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        background: #ffd166;
+        border: 5px solid #6d3524;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-start="0"
+      data-duration="8"
+      data-width="1080"
+      data-height="1920"
+    >
+      <div id="sky"></div>
+      <div id="sun" class="glow"></div>
+      <div id="dust-1"></div>
+      <div id="dust-2"></div>
+      <div id="dust-3"></div>
+      <div id="dust-4"></div>
+      <div id="ground" data-layout-allow-overflow="true"></div>
+
+      <div id="doorway">
+        <div id="door-frame"></div>
+        <div id="door">
+          <div id="door-panel"></div>
+          <div id="door-knob"></div>
+        </div>
+      </div>
+
+      <!--
+        Numerals are mounted at DETECTED BEAT times, not a fixed cadence.
+        Source: beats/assets/buckle.mp3.json (56 beats, 176 BPM, song 25.515s).
+        Slice starts at 3.989s; local onsets chosen on the strongest beats in
+        the 8s window: 0.94 / 1.81 / 3.66 / 5.54.
+        Each numeral is its own sub-composition => independently movable element.
+      -->
+      <div id="count-1" data-composition-id="count-1" data-composition-src="compositions/count-1.html" data-start="0.94" data-duration="0.87" data-track-index="0" data-width="1080" data-height="1920"></div>
+      <div id="count-2" data-composition-id="count-2" data-composition-src="compositions/count-2.html" data-start="1.81" data-duration="1.85" data-track-index="1" data-width="1080" data-height="1920"></div>
+      <div id="count-3" data-composition-id="count-3" data-composition-src="compositions/count-3.html" data-start="3.66" data-duration="1.88" data-track-index="2" data-width="1080" data-height="1920"></div>
+      <div id="count-4" data-composition-id="count-4" data-composition-src="compositions/count-4.html" data-start="5.54" data-duration="2.46" data-track-index="3" data-width="1080" data-height="1920"></div>
+
+      <!--
+        Pre-cut 8.000s phrase-aligned loop. The final 0.75s is crossfaded into
+        the first 0.75s, so the Canvas seam flows instead of clicking.
+        (8s cannot be a whole number of bars at 176 BPM, so trimming alone
+        can never produce a seamless loop.)
+      -->
+      <audio
+        id="music"
+        src="assets/buckle-loop.mp3"
+        data-timeline-role="music"
+        data-start="0"
+        data-duration="8"
+        data-track-index="10"
+        data-volume="1"
+      ></audio>
+    </div>
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+
+      /* The lyric's second action is "shut the door". Slam it on the "four"
+         beat (5.54s) so the strongest visual event lands on the strongest
+         detected onset in the window, then reopen so t=8 matches t=0.
+         scaleX foreshortening: 0.12 = open (seen edge-on), 1 = shut. */
+      tl.fromTo("#door", { scaleX: 0.12 }, { scaleX: 1, duration: 0.3, ease: "power4.in" }, 5.6);
+      tl.to("#door", { scaleX: 0.12, duration: 0.8, ease: "power2.inOut" }, 6.9);
+
+      /* ambient drift; ends where it started so the loop is seamless */
+      tl.to("#sun", { y: 26, duration: 4, ease: "sine.inOut" }, 0);
+      tl.to("#sun", { y: 0, duration: 4, ease: "sine.inOut" }, 4);
+      tl.fromTo("#dust-1", { opacity: 0.4 }, { opacity: 1, duration: 2, ease: "sine.inOut", immediateRender: false }, 0);
+      tl.fromTo("#dust-1", { opacity: 1 }, { opacity: 0.4, duration: 2, ease: "sine.inOut", immediateRender: false }, 2);
+      tl.fromTo("#dust-4", { opacity: 0.45 }, { opacity: 1, duration: 2, ease: "sine.inOut", immediateRender: false }, 0.5);
+      tl.fromTo("#dust-4", { opacity: 1 }, { opacity: 0.45, duration: 2, ease: "sine.inOut", immediateRender: false }, 2.5);
+
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>
